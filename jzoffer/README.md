@@ -136,9 +136,10 @@ Output:
     而链表 2->3 可以看成一个新的链表，要逆序打印该链表可以继续使用求解函数，也就是在求解函数中调用自己，这就是递归函数。
   - 知识点：
     - add方法与addAll方法的区别：
-      Add方法是将传入的参数作为当前List中的一个item存储，即使你传入一个List也只会令当前的List增加1个元素
-      AddAll是传入一个List，将此List中的所有元素加入到当前List中，也就是当前List会增加的元素个数为传入的List的大小
-      `addAll(Collection c)`--   `add(int index,Elelemt e)`
+      - Add方法是将传入的参数作为当前List中的一个item存储，即使传入一个List也只令当前的List增加1个元素
+      - AddAll是传入一个List，将此List中的所有元素加入到当前List中，也就是当前List会增加的元素个数为传入的List的大小
+      - `addAll(Collection c)`
+      - `add(int index,Elelemt e)`
   
   ### 使用头插法
   - 使用头插法可以得到一个逆序的链表。
@@ -146,28 +147,8 @@ Output:
      - 头结点是在头插法中使用的一个额外节点，这个节点不存储值；
      - 第一个节点就是链表的第一个真正存储值的节点。
 
-```java
-public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-    // 头插法构建逆序链表
-    ListNode head = new ListNode(-1);
-    while (listNode != null) {
-        ListNode memo = listNode.next;
-        listNode.next = head.next;
-        head.next = listNode;
-        listNode = memo;
-    }
-    // 构建 ArrayList
-    ArrayList<Integer> ret = new ArrayList<>();
-    head = head.next;
-    while (head != null) {
-        ret.add(head.val);
-        head = head.next;
-    }
-    return ret;
-}
-```
 - ## 代码链接
-  - [从尾到头打印链表]()
+  - [从尾到头打印链表](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/06_%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.java)
  
   
   
