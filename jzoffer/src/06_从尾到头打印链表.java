@@ -25,7 +25,7 @@ public class Solution {
 }
 
 /*
-思路2 - 递归：
+思路2 - 递归：先调用后输出，直到结点指向为空
 */
 import java.util.ArrayList;
 public class Solution {
