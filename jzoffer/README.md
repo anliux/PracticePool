@@ -82,3 +82,103 @@ Given target = 20, return false.
 
 # 5. 替换空格
 
+- ## 题目描述
+  - 将一个字符串中的空格替换成 "%20"。
+
+```text
+Input:
+"A B"
+
+Output:
+"A%20B"
+```
+
+- ## 解题思路
+  - 对于URL参数：无法识别特殊字符，故空格替换为"%20"，#替换为"%23"
+  - 由于空格的一个字符变为三个字符，替换后变长，两种思路：创建新字符串和在原字符串修改。
+  - 原字符串修改且空间充足时：正遍历-多空格时，部分字符会移动多次，时间复杂度太高；逆遍历-O(n)
+  - 首先计算空格数得到最终字符串末尾，P1 指向字符串原来的末尾位置，P2 指向字符串现在的末尾位置。
+  - P1 和 P2 从后向前遍历，当 P1 遍历到一个空格时，就需要令 P2 指向的位置依次填充 02%（注意是逆序的），否则就填充上 P1 指向字符的值。
+  - 从后向前遍是为了在改变 P2 所指向的内容时，不会影响到 P1 遍历原来字符串的内容。
+  - 知识点 - str函数：
+    - `str.charAt(i)`-获取i处某值
+    - `str.setCharAt(i,'m')`-m赋值给i处
+    - `str.length()`-获取str长度
+    - `str.append("abc")`-在str新增
+  - 注意：`str.charAt()`获取到的是字符型，用单引号；`str.setCharAt(int, char)`中Char的C大写
+
+- ## 代码链接
+  - [替换空格](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/05_%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.java)
+  
+
+
+# 6. 从尾到头打印链表
+  
+- ## 题目描述
+  - 从尾到头反过来打印出单链表的每个结点的值。
+
+- ## 解题思路
+  ### 使用栈
+  - 栈具有后进先出的特点，从第一个结点开始遍历后最后一个第一个输出，是典型的“后进先出”。
+  - 思路：新建栈 -- 遍历并压栈直至尾结点为空 -- 新建容器 -- 遍历并弹栈直至栈空 -- 返回容器
+  - 知识点：
+    - 新建栈：`Stack<Integer> stack = new Stack<>();`
+    - 压栈：`stack.add(i);`  弹栈：`stack.pop();`  栈空：`stack.isEmpty()==true;`
+    - java链表：`ListNode listnode`  取值：`listNode.val;`  下一值：`listNode.next;`
+    - 容器泛型之类的（不太会..）：`ArrayList<Integer> ret = new ArrayList<>();`
+   - 注意：使用栈Stack要加这句：`import java.util.Stack;`
+
+  ### 使用递归
+  - 递归在本质上是一个栈结构，故可以考虑递归。
+  - 先递归输出后面的结点，再输出该结点本身。
+  - 思路：新建容器 -- 判断结点是否为空，空则调用本身并传入next结点，直到为空时打印，然后返回上一个函数调用并打印，直到最外层 -- 返回容器
+  - 要逆序打印链表 1->2->3（3,2,1)，可以先逆序打印链表 2->3(3,2)，最后再打印第一个节点 1。
+    而链表 2->3 可以看成一个新的链表，要逆序打印该链表可以继续使用求解函数，也就是在求解函数中调用自己，这就是递归函数。
+  - 知识点：
+    - add方法与addAll方法的区别：
+      Add方法是将传入的参数作为当前List中的一个item存储，即使你传入一个List也只会令当前的List增加1个元素
+      AddAll是传入一个List，将此List中的所有元素加入到当前List中，也就是当前List会增加的元素个数为传入的List的大小
+      `addAll(Collection c)`--   `add(int index,Elelemt e)`
+  
+  ### 使用头插法
+  - 使用头插法可以得到一个逆序的链表。
+  - 头结点和第一个节点的区别：
+     - 头结点是在头插法中使用的一个额外节点，这个节点不存储值；
+     - 第一个节点就是链表的第一个真正存储值的节点。
+
+```java
+public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+    // 头插法构建逆序链表
+    ListNode head = new ListNode(-1);
+    while (listNode != null) {
+        ListNode memo = listNode.next;
+        listNode.next = head.next;
+        head.next = listNode;
+        listNode = memo;
+    }
+    // 构建 ArrayList
+    ArrayList<Integer> ret = new ArrayList<>();
+    head = head.next;
+    while (head != null) {
+        ret.add(head.val);
+        head = head.next;
+    }
+    return ret;
+}
+```
+- ## 代码链接
+  - [从尾到头打印链表]()
+ 
+  
+  
+# 7. 重建二叉树
+  
+  
+  
+  
+# 8. 二叉树的下一个结点
+
+
+
+
+# 9. 用两个栈实现队列
