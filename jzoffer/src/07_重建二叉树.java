@@ -1,3 +1,9 @@
+/*
+08-重建二叉树
+
+注意：将由前序和中序重构二叉树的方法正确地转换为代码形式。
+*/
+
 import java.util.Arrays;
 public class Solution {
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
