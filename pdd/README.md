@@ -29,7 +29,7 @@
     - Math的求最值max，min，（最值因为排序好像没用到？）以及求绝对值abs
 
 - ## 代码链接
-  - ### [两两配对差值最小](https://github.com/anliux/PracticePool/blob/master/pdd/src/19aut3-%E4%B8%A4%E4%B8%A4%E9%85%8D%E5%AF%B9%E5%B7%AE%E5%80%BC%E6%9C%80%E5%B0%8F.java)
+  - [两两配对差值最小](https://github.com/anliux/PracticePool/blob/master/pdd/src/19aut3-%E4%B8%A4%E4%B8%A4%E9%85%8D%E5%AF%B9%E5%B7%AE%E5%80%BC%E6%9C%80%E5%B0%8F.java)
 
 
 
