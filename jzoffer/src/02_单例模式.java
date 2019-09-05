@@ -21,7 +21,7 @@ public class Test2
 	//对外提供公共、静态的访问接口，并创建对象
 	public static Test2 getInstance()
 	{
-		if(uniqueInstance==null)
+		if(uniqueInstance2==null)
 			uniqueInstance2 = new Test2();
 		return uniqueInstance2;
 	}
