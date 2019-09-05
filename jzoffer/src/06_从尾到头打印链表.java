@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 public class Solution {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-        Stack<Integer> stack = new Stack<>(); //
+        Stack<Integer> stack = new Stack<>(); //新建栈
 		while(listNode != null) //遍历并压栈直至遍历所有结点
 		{
 			stack.add(listNode.val); //压栈
