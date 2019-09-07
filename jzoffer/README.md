@@ -95,6 +95,7 @@
   - 分为懒汉式和饿汉式。
   - 饿汉式：直接new，开发常用
   - 懒汉式：单例的延迟加载，当调用到时再new，面试多见
+    - 懒汉式并发访问：加入同步机制解决安全问题，通过双重判断是否为空来减少访问锁的次数以提高效率
 
 - ## 代码链接
   - [单例模式](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/02_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.java)
