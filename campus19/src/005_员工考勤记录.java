@@ -1,5 +1,6 @@
 //5-员工考勤记录
 //思路：纯数学问题，可用排列组合公式分别取0,1,2，并求和。注意边界值是否符合。
+
 import java.util.Scanner;
 public class Main
 {
