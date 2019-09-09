@@ -1,5 +1,6 @@
-//
-//
+//7-非递减序列
+//思路：见GitHub文档。但是此程序通过了牛客的ac，但是通不过自测的456123-0的测试用例，不知道咋回事
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
