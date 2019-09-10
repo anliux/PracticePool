@@ -33,6 +33,6 @@ public class SelectSort
 		int[] array = {12,34,32,56,18,42};
 		selectSort(array);
 		for(int i=0; i<array.length; i++)
-     		System.out.println("array[i]="+array[i]);
+     		System.out.println("array["+i+"]="+array[i]);
 	}
 }

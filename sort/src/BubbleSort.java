@@ -34,6 +34,6 @@ public class BubbleSort
 		int[] array = {12,34,32,56,18,42};
 		bubbleSort(array);
 		for(int i=0; i<array.length; i++)
-     		System.out.println("array[i]="+array[i]);
+     		System.out.println("array["+i+"]="+array[i]);
 	}
 }
