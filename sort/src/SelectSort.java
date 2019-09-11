@@ -16,14 +16,20 @@ public class SelectSort
 		int len = arr.length;
 		for (int i=0; i<len-1; i++)
 		{
+			//注意：选择排序每一趟只有一次交换，而比较过程中只是角标在变化。
+			int min = i;
 			for (int j=i+1; j<len; j++)
 			{
-				if(arr[j]<arr[i])
+				if(arr[j]<arr[min])
 				{
-					int temp = arr[j];
-					arr[j] = arr[i];
-					arr[i] = temp;
+					min = j;
 				}
+			}
+			if(min!=i)
+			{
+				int temp = arr[i];
+				arr[i] = arr[min];
+				arr[min] = temp;
 			}
 		}
 	}
