@@ -4,7 +4,7 @@
 public class Solution {
     public boolean hasPath(char[] matrix, int rows, int cols, char[] str)
     {
-        //标志位，初始化为false
+        //标志位，初始化为false。注：给定matrix是一维，但实际表示的是二维。
         boolean[] flag = new boolean[matrix.length];
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
@@ -14,6 +14,7 @@ public class Solution {
                  }
             }
         }
+		//别忘了这句。
         return false;
     }
      
