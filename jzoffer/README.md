@@ -449,9 +449,10 @@ Output:
   - 具体思路同上题，同时加一个位数和的限制条件
   - 注意：
     - flag是二维数组，定义还有传参的时候，别少写方括号[]
+    - do{}while(); while之后的分号千万别忘写了。
 
 - ## 代码链接
-  - [机器人的运动范围]()
+  - [机器人的运动范围](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/13_%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4.java)
 
 
 
