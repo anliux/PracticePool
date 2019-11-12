@@ -15,3 +15,15 @@ public class Solution {
         return sum;
     }
 }
+
+//注：用双或也可以
+/*
+
+public class Solution {
+    public int Sum_Solution(int n) {
+        boolean falg=(n==0)||((n+=Sum_Solution(n-1))>-1);
+        return n;
+    }
+}
+
+*/
