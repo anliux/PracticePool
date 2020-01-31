@@ -806,11 +806,12 @@ Output:
   - 例如，字符序列S=”abcXYZdef”,要求输出循环左移3位后的结果，即“XYZdefabc”。是不是很简单？OK，搞定它！
 
 - ## 解题思路
-  - 可以参考上一个题目的思路，进行两次翻转
+  - 可以参考上一个题目的思路，进行三次翻转
   - 具体地，先将 "abc" 和 "XYZdef" 分别翻转，得到 "cbafedZYX"，然后再把整个字符串翻转得到 "XYZdefabc"
+  - 注意：仍然是先转成字符数组进行操作，最后再转成String返回
 
 - ## 代码链接
-  - []()
+  - [左旋转字符串](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/58_2_%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.java)
 
 
 
