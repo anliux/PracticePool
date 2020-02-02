@@ -40,11 +40,21 @@
 * []()
 <!-- GFM-TOC -->
 
-# 1. 两数之和
-- ## 简述：（easy）
 
-- ## 代码
-  - []()
+
+# 1. 两数之和
+- ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
+  - ### 题目描述
+    - 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+    - 假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+  - ### 解题思路
+    - 1. 暴力法：思路简单，双层循环时间复杂度高 O(n^2), O(1)
+    - 2. 哈希表：用空间换时间，降低时间复杂度 O(n), O(n)
+    - 哈希表有两种思路：
+      - 一种是先保存到表，后进行匹配
+      - 一种是在保存到表的同时进行匹配
+- ## 代码链接：
+  - [两数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0001_Two%20Sum.java)
   
 
 
