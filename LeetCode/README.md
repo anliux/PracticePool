@@ -1,21 +1,22 @@
 # 前言
-- src文件夹按照难度分类，仅展示代码
-- docs文件夹按照标签分类，详述题解与思路
+- src文件夹：展示代码
+- 按照难度分类文档：按照序号详述题解与思路
+- 按照标签分类文档：提供内含题目索引与简述
 
 
 
 # 难度分类
-- [1-easy](https://github.com/anliux/PracticePool/tree/master/LeetCode/src/1-easy)
-- [2-medium](https://github.com/anliux/PracticePool/tree/master/LeetCode/src/2-medium)
-- [3-hard](https://github.com/anliux/PracticePool/tree/master/LeetCode/src/3-hard)
+- [1-easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+- [2-medium](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+- [3-hard](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
 
 
 
 # 数据结构相关
-- [数组220]()
+- [数组220](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
 - [字符串157]()
 - [树127]()
-- [哈希表122]()
+- [哈希表122](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
 - [栈54]()
 - [位运算42]()
 - [图39]()
