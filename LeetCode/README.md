@@ -51,7 +51,7 @@
 
 
 # 数学相关
-- [数学167]()
+- [数学167](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
 - [设计43]()
 - [极小极大化8]()
 - [Random6]()
