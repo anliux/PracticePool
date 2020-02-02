@@ -96,18 +96,28 @@
   - 哈希表有两种思路：
     - 一种是先保存到表，后进行匹配
     - 一种是在保存到表的同时进行匹配
+  - 两遍哈希表：
+    - 在第一次迭代中，将每个元素的值和它的索引添加到表中。
+    - 在第二次迭代中，检查每个元素所对应的目标元素（target - nums[i]target−nums[i]）是否存在于表中。
+    - 注意，该目标元素不能是 nums[i] 本身！
+    - tips：此处的反推思路
+      - 因为判断存在的`map.containsKey(key)`找的是key，为了方便求和等式计算，把key值设置为数组的值，同时因此把value值设置为数组索引（这就跟常规思路有点反了）。基于以上，在判断不能是nums[i]本身时，就要用`map.get(complement) != i`
+      - 如果是正常的键值对应，`map.containsKey(key)`中，判断是否包含某个键key是没有意义的。因此虽然上面的思路有点别扭，但是改过来的思路不能通过。
+  - 一遍哈希表：
+    - 在进行迭代并将元素插入到表中的同时，检查表中是否已经存在当前元素所对应的目标元素。
+    - 如果它存在，那我们已经找到了对应解，并立即将其返回。
   - 注意：哈希表的使用方式
     - 定义：`Map<Integer, Integer> map = new HashMap<>();`
     - 存入数据：map.put(K key, V value)
-    - 获取数据：map.get(key)
-    - 判断是否存在某键：map.containsKey(key)
+    - 获取数据：map.get(key) -- 根据键key，获取key对应的值value
+    - 判断是否存在某键：map.containsKey(key) -- 找的是键key，即，是否包含某个key，与值value无关；注意不要漏掉小s
     - 
   - 找到所求：
-    - 暴力法：新建匿名数组并将所求得的i和j传入新数组，然后return
+    - 新建匿名数组并将所求得的i和j传入新数组，然后return
   - 找不到所求：抛出异常 `throw new IllegalArgumentException("No two sum solution");`
 
 - ## 代码链接：
-  - []()
+  - [两数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0001_Two%20Sum.java)
   
   
   
