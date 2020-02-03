@@ -14,7 +14,7 @@
 
 # 数据结构相关
 - [数组220](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-- [字符串157]()
+- [字符串157](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
 - [树127]()
 - [哈希表122](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
 - [栈54]()
