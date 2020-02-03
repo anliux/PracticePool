@@ -54,7 +54,7 @@
       - 一种是先保存到表，后进行匹配
       - 一种是在保存到表的同时进行匹配
 - ## 代码链接：
-  - [两数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0001_Two%20Sum.java)
+  - [两数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0001-two-sum.java)
   
 
 
