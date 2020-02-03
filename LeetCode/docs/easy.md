@@ -12,6 +12,9 @@
 
 
 # 1. 两数之和
+- ## 题目链接：
+  - [two-sum](https://leetcode-cn.com/problems/two-sum/)
+  
 - ## 题目描述
   - 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
   - 假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
@@ -37,10 +40,9 @@
     - 如果它存在，那我们已经找到了对应解，并立即将其返回。
   - 注意：哈希表的使用方式
     - 定义：`Map<Integer, Integer> map = new HashMap<>();`
-    - 存入数据：map.put(K key, V value)
-    - 获取数据：map.get(key) -- 根据键key，获取key对应的值value
-    - 判断是否存在某键：map.containsKey(key) -- 找的是键key，即，是否包含某个key，与值value无关；注意不要漏掉小s
-    - 
+    - 存入数据：`map.put(K key, V value)`
+    - 获取数据：`map.get(key`) -- 根据键key，获取key对应的值value
+    - 判断是否存在某键：`map.containsKey(key)` -- 找的是键key，即，是否包含某个key，与值value无关；注意不要漏掉小s
   - 找到所求：
     - 新建匿名数组并将所求得的i和j传入新数组，然后return
   - 找不到所求：抛出异常 `throw new IllegalArgumentException("No two sum solution");`
@@ -51,6 +53,9 @@
   
   
 # 7. 整数反转
+- ## 题目链接：
+  - [reverse-integer](https://leetcode-cn.com/problems/reverse-integer/)
+  
 - ## 题目描述
   - 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
   - 示例 1: 输入: 123, 输出: 321
@@ -62,27 +67,35 @@
   - 思路：使用数学方法取单个位，并重新组合；注意题目的临界条件。
   - 要在没有辅助堆栈 / 数组的帮助下 “弹出” 和 “推入” 数字，使用数学方法:
     - 通过整除取余取出最低位，通过整除得到除去最低位以外的数字：
-      - //pop operation:
-      - pop = x % 10;
-      - x /= 10;
+      - `//pop operation:`
+      - `pop = x % 10;`
+      - `x /= 10;`
     - 定义临时变量，将临时变量乘以10以提升位数，并在此基础上加上新取出的最低位，循环这个过程
-      - //push operation:
-      - temp = rev * 10 + pop;
-      - rev = temp;
+      - `//push operation:`
+      - `temp = rev * 10 + pop;`
+      - `rev = temp;`
   - 只能存储得下 32 位的有符号整数，则其数值范围为 [−2^31,2^31−1]，在`temp = rev * 10 + pop;`这一步很容易越界
-    - int最大值是2147483647，最小值是-2147483648
+    - int最大值是2147483647，最小值是-2147483648，题目明确要求，因此不能定义long来防止越界
     - 因此要在这一步之前加保险，仔细判断
     - 注意：正数和负数这两段都需要判断
   - 对于正数部分：
-    - 考虑常规：rev > Integer.MAX_VALUE/10 时，rev * 10 必定大于Integer的Max值，不符合条件
-    - 考虑临界：rev == Integer.MAX_VALUE / 10 时，整除会削去个位的值，因此，若再乘以10，个位是0。这时再加某值，这个值需要小于MAX值的个位，否则越界。因此：pop > Integer.MAX_VALUE % 10
+    - 考虑常规：`rev > Integer.MAX_VALUE/10` 时，`rev * 10` 必定大于Integer的Max值，不符合条件
+    - 考虑临界：`rev == Integer.MAX_VALUE / 10` 时，整除会削去个位的值，因此，若再乘以10，个位是0。这时再加某值，这个值需要小于MAX值的个位，否则越界。因此：`pop > Integer.MAX_VALUE % 10`
   - 对于负数部分：
-    - 同理：rev < Integer.MIN_VALUE / 10， 以及 rev == Integer.MIN_VALUE / 10 && x < Integer.MIN_VALUE % 10
+    - 同理
+    - `rev < Integer.MIN_VALUE / 10`， 以及 `rev == Integer.MIN_VALUE / 10 && x < Integer.MIN_VALUE % 10`
+  - 判停条件：
+    - 先取最低位，后进行x的整除运算，因此当x变为个位数的时候，取出最低位再整除之后，x得0
+    - 因此循环的判停条件是：当x等于0的时候停止循环
+  - 注意：运算符优先级
+    - &&的优先级高于||的优先级，在if判断中可以省略小括号
+    - 但是保险起见，同时方便阅读，建议加上小括号进行区分“先算双与，后算双或”的顺序
   - 复杂度分析:
     - 时间复杂度：O(log(x))，x 中大约有 log10(x) 位数字。
     - 空间复杂度：O(1)。
+    
 - ## 代码链接：
-  - []()
+  - [整数反转](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0002-reverse-integer.java)
 
 
 
