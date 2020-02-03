@@ -14,6 +14,10 @@
 # 1. 两数之和
 - ## 题目链接：
   - [two-sum](https://leetcode-cn.com/problems/two-sum/)
+
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [哈希表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
   
 - ## 题目描述
   - 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
@@ -48,13 +52,16 @@
   - 找不到所求：抛出异常 `throw new IllegalArgumentException("No two sum solution");`
 
 - ## 代码链接：
-  - [两数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0001_Two%20Sum.java)
+  - [两数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0001-two-sum.java)
   
   
   
 # 7. 整数反转
 - ## 题目链接：
   - [reverse-integer](https://leetcode-cn.com/problems/reverse-integer/)
+  
+- ## 题目标签：
+  - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
   
 - ## 题目描述
   - 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
@@ -95,13 +102,16 @@
     - 空间复杂度：O(1)。
     
 - ## 代码链接：
-  - [整数反转](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0002-reverse-integer.java)
+  - [整数反转](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0007-reverse-integer.java)
 
 
 
 # 9. 回文数
 - ## 题目链接：
   - [palindrome-number](https://leetcode-cn.com/problems/palindrome-number/)
+  
+- ## 题目标签：
+  - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
   
 - ## 题目描述
   - 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
@@ -129,7 +139,7 @@
     - 当原始数字小于反转后的数字时，就意味着已经处理了一半位数的数字。
     
 - ## 代码链接：
-  - [回文数]()
+  - [回文数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0009-palindrome-number.java)
 
 
 
