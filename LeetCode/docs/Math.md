@@ -4,7 +4,7 @@
 # 目录
 <!-- GFM-TOC -->
 * [7. 整数反转](#7-整数反转)
-* []()
+* [9. 回文数](#9-回文数)
 * []()
 * []()
 * []()
@@ -36,7 +36,24 @@
     - 只能存储得下32位的有符号整数，则其数值范围为 [−2^31,2^31−1]，在`temp=rev*10 + pop;`这一步容易越界，应事先判断
     
 - ## 代码链接：
-  - [整数反转](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0002-reverse-integer.java)
+  - [整数反转](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0007-reverse-integer.java)
+
+
+
+# 9. 回文数
+- ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
+  - ### 题目描述
+    - 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+  - ### 解题思路
+    - 回文数：即反转之后与原数值相等
+    - 改进：为防止溢出，考虑只反转一半，并与原始数值比较
+    - 临界：负数，0，个位是0但本身非0，奇数位数的数字，偶数位数的数字
+    - 判停：当剩余x不再大于反转数字rev时，表示已经反转到一半（等于为数字0的情况，不包含在循环中）
+    
+- ## 代码链接：
+  - [回文数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0009-palindrome-number.java)
+
+
 
 
 
