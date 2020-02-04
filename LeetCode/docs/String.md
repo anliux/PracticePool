@@ -19,9 +19,21 @@
 # 13. 罗马数字转整数
 - ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
   - ### 题目描述
+    - 要求：给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。
+    - 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M，分别对应1,5,10,50,100,500,1000
+    - 规则：通常情况下，罗马数字中小的数字在大的数字的右边。否则，用右边的大数减去左边的小数
+  - ### 解题思路
+    - 多个字符对应不同的数字，考虑“查表法”，可用哈希表 或者 “switch”
+    - 比较相邻两个字符，若高位不小于低位，直接相加；否则，要用低位的大数减去高位的小数。
+    - 将每位对应的数字累加：可以从高位到低位，即从字符串的0到length-1
 
 - ## 代码链接：
   - [罗马数字转整数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0013-roman-to-integer.java)
+
+
+
+
+
 
 
 ### END
