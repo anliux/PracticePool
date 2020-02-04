@@ -5,7 +5,7 @@
 * [7. 整数反转](#7-整数反转)
 * [9. 回文数](#9-回文数)
 * [13. 罗马数字转整数](#13-罗马数字转整数)
-* []()
+* [14. 最长公共前缀](#14-最长公共前缀)
 * []()
 * []()
 
@@ -213,17 +213,49 @@
 
 
 
-# 
-- ## 题目描述
+# 14. 最长公共前缀
+- ## 题目链接：
+  - [longest-common-prefix](https://leetcode-cn.com/problems/longest-common-prefix/)
+  
+- ## 题目标签：
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
 
+- ## 题目描述
+  - 编写一个函数来查找字符串数组中的最长公共前缀，如果不存在公共前缀，返回空字符串 ""。
+  - 示例 1: 输入: ["flower","flow","flight"]，输出: "fl"
+  - 示例 2: 输入: ["dog","racecar","car"]，输出: ""，解释: 输入不存在公共前缀。
+  - 说明: 所有输入只包含小写字母 a-z 。
 
 - ## 解题思路
-
+  - 思路：官方题解给了多种方法（水平扫描法，水平扫描，二分，分治，字典树），重点看第一种
+  - 水平扫描法：减法思想
+    - 复杂度分析：时间复杂度低（战胜100%），空间复杂度高（战胜14%），相当于空间换时间了
+    - 当字符串数组为空时，即长度为0时，即不存在公共前缀，返回空字符串""；
+    - 以字符串数组中的第一个元素为基准，遍历整个数组，进行比较；
+    - prefix保存当前最长公共前缀，如果prefix不是当前字符串的前缀，则删除最后一个字符再进行比较，一直到prefix变成当前字符串的前缀，或者变成空字符串
+    - 注意是求公共前缀，不是最长公共子序列，因此可以从后面减，也是while判0的原因
+  - 字符串相关使用：
+    - indexOf():
+      - 功能：查找字符串，或字符 Unicode 编码在字符串出现的位置
+      - 语法：`indexOf(int ch, int fromIndex)`或`indexOf(String str, int fromIndex)` -- 注意字符char是int型
+      - 索引值从0开始
+      - 返回从 fromIndex 位置开始查找指定字符或字符串在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回-1。
+      - 使用fromIndex=i时，从索引位置i开始查找，包括位置i；查找所得的索引位置仍然是从整个字符串排序所得的位置，并不重新计算
+      - fromIndex可省略：省略时默认为从索引0开始查找
+    - substring():
+      - 功能：返回字符串的子字符串
+      - 语法：`substring(int beginIndex)`或`substring(int beginIndex, int endIndex)`
+      - 索引值从0开始
+      - 左闭右开：包括begin，不包括end
+      - end可省略：省略时默认截取到字符串的最后
+    - isEmpty():
+      - 功能：判断字符串是否为空的布尔型返回值
+      - isEmpty完全等同于`string.length()==0`
+      - 如果String本身是null，那么使用`string.isEmpty()`会报空指针异常（NullPointerException)
+      - 判断一个String为空的最安全的方法，还是`string ==null || string.isEmpty();`
 
 - ## 代码链接：
-
-
-
+  - [最长公共前缀](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0014-longest-common-prefix.java)
 
 
 
