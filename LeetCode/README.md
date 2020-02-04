@@ -17,7 +17,7 @@
 - [字符串157](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
 - [树127]()
 - [哈希表122](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
-- [栈54]()
+- [栈54](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Stack.md)
 - [位运算42]()
 - [图39]()
 - [链表37]()
