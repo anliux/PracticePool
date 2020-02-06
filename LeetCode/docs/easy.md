@@ -393,7 +393,7 @@
       - 注：参数为结点值
 
 - ## 代码链接：
-  - [合并两个有序链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0021-merge-two-sorted-lists)
+  - [合并两个有序链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0021-merge-two-sorted-lists.java)
 
 
 
