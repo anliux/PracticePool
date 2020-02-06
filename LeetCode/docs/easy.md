@@ -8,6 +8,16 @@
 * [14. 最长公共前缀](#14-最长公共前缀)
 * [20. 有效的括号](#20-有效的括号)
 * [21. 合并两个有序链表](#21-合并两个有序链表)
+* [26. 删除排序数组中的重复项](#26-删除排序数组中的重复项)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
 <!-- GFM-TOC -->
 
 
@@ -369,7 +379,7 @@
 
 # 21. 合并两个有序链表
 - ## 题目链接：
-  - [valid-parentheses](https://leetcode-cn.com/problems/valid-parentheses/)
+  - [merge-two-sorted-lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
   
 - ## 题目标签：
   - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
@@ -422,9 +432,16 @@
 
 
 
-# 
+# 26. 删除排序数组中的重复项
+- ## 题目链接：
+  - [remove-duplicates-from-sorted-array](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  
 - ## 题目描述
-
+  - 
 
 - ## 解题思路
 
