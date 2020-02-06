@@ -129,6 +129,10 @@ Output: 2
 - ## 代码链接：
   - [数组中重复的数字](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/03_%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 4. 二维数组中的查找
@@ -164,6 +168,10 @@ Given target = 20, return false.
  - ## 代码链接：
    - [二维数组中的查找](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/04_%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 5. 替换空格
@@ -195,7 +203,11 @@ Output:
 
 - ## 代码链接
   - [替换空格](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/05_%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.java)
-  
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 6. 从尾到头打印链表
@@ -236,7 +248,11 @@ Output:
 - ## 代码链接
   - [从尾到头打印链表](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/06_%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8.java)
  
-  
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
+
   
 # 7. 重建二叉树
 - ## 题目描述
@@ -257,7 +273,11 @@ Output:
  - ## 代码链接
    - [重建二叉树](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/07_%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91.java)
   
-  
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
+
   
 # 8. 二叉树的下一个结点
 - ## 题目描述
@@ -274,6 +294,10 @@ Output:
   
 - ## 代码链接
   - [二叉树的下一个结点](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/08_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
 
 
 
@@ -298,6 +322,10 @@ Output:
 - ## 代码链接
   - [用两个栈实现队列](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/09_%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.java)
   
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 10.1 斐波那契数列
@@ -315,6 +343,10 @@ Output:
 
 - ## 代码链接
   - [斐波那契数列](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/10_1_%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
 
 
 
@@ -338,6 +370,10 @@ Output:
 - ## 代码链接
   - [矩阵覆盖](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/10_2_%E7%9F%A9%E9%98%B5%E8%A6%86%E7%9B%96.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 10.3 跳台阶
@@ -356,6 +392,10 @@ Output:
 - ## 代码链接
   - [跳台阶](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/10_3_%E8%B7%B3%E5%8F%B0%E9%98%B6.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 10.4 变态跳台阶
@@ -373,6 +413,10 @@ Output:
 
 - ## 代码链接
   - [变态跳台阶](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/10_4_%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
 
 
 
@@ -412,6 +456,10 @@ Output:
 - ## 代码链接
   - [旋转数组的最小数字](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/11_%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 12. 矩阵中的路径
@@ -437,6 +485,10 @@ Output:
 - ## 代码链接
   - [矩阵中的路径](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/12_%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
+
 
 
 # 13. 机器人的运动范围
@@ -457,6 +509,10 @@ Output:
 
 - ## 代码链接
   - [机器人的运动范围](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/13_%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#剑指offer题解目录)
+<!-- GFM-TOC -->
 
 
 
