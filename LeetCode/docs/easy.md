@@ -553,6 +553,7 @@
     - 对于本题而言，当 needle 是空字符串时应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
 
 - ## 解题思路
+  - 思路：暴力法（超时）；kmp（未尝试）；indexOf()（直接用内置函数）
   - 题目标签是"字符串"和"双指针"，题解是kmp算法，但因为是简单题所以好多人用indexOf()
   - 双指针暴力解决会超时
   - 尝试用indexOf()解决：（一行代码）
@@ -576,16 +577,63 @@
 
 
 
-# 
+# 35. 搜索插入位置
+- ## 题目链接：
+  - [search-insert-position](https://leetcode-cn.com/problems/search-insert-position/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [二分查找](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
+  
 - ## 题目描述
-
+  - 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。
+  - 如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+  - 假设数组中无重复元素。
+  - 示例 1: 输入: [1,3,5,6], 5，输出: 2
+  - 示例 2: 输入: [1,3,5,6], 2，输出: 1
+  - 示例 3: 输入: [1,3,5,6], 7，输出: 4
+  - 示例 4: 输入: [1,3,5,6], 0，输出: 0
 
 - ## 解题思路
-
+  - 思路：暴力法；二分查找
+  - 暴力法：
+    - 遍历并比较，直到`nums[i] < target`不再成立
+  - 二分法：
+    - 题目要求是排序数组中找目标值，考虑二分查找
+    - 定义min, max, mid
+    - mid不停与目标值比较，并进行相应的操作
+      - 在min<max的情况下进行循环
+      - 如果mid等于目标值，就返回mid
+      - 如果mid大于目标值，就将mid-1的值赋给max并循环
+      - 如果mid小于目标值，就将mid+1的值赋给min并循环
+    - 内置二分查找函数：binarySearch()
+      - binarySearch(Object[], Object key)
+        - 方法的object[]参数是要查找的数组，key参数为要查找的key值。
+        - 方法的返回值有几种：
+          - 1.找到的情况下：如果key在数组中，则返回搜索值的索引。
+          - 2.找不到的情况下：
+            - [1] 搜索值不是数组元素，且在数组范围内，从1开始计数，得“ - 插入点索引值”；
+            - [2] 搜索值是数组元素，从0开始计数，得搜索值的索引值；
+            - [3] 搜索值不是数组元素，且大于数组内元素，索引值为 – (length + 1);
+            - [4] 搜索值不是数组元素，且小于数组内元素，索引值为 – 1。
+      -  binarySearch(Object[], int fromIndex, int toIndex, Object key)
+         - 方法的object[]参数为要查找的数组，
+         - fromindex参数为开始索引（包括），toindex为结束索引（不包括），两个参数之间为查找的范围。
+         - key为要查找的key。
+         - 方法的返回值有几种：
+           - 1.找到的情况下：如果key在数组中，则返回搜索值的索引。
+           - 2.找不到的情况下：
+             - [1] 该搜索键在范围内，但不是数组元素，由1开始计数，得“ - 插入点索引值”；
+             - [2] 该搜索键在范围内，且是数组元素，由0开始计数，得搜索值的索引值；
+             - [3] 该搜索键不在范围内，且小于范围（数组）内元素，返回–(fromIndex + 1)；
+             - [4] 该搜索键不在范围内，且大于范围（数组）内元素，返回 –(toIndex + 1)。
+      - 返回值：
+        - `int a = Arrays.binarySearch(nums, target);`
+        - `if(a<0) a = - a - 1;`
+        - `return a;`
 
 - ## 代码链接：
-
-
+  - [搜索插入位置](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0035-search-insert-position.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
