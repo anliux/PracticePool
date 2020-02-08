@@ -536,21 +536,39 @@
 
 # 28. 实现strStr()
 - ## 题目链接：
-  - [remove-element](https://leetcode-cn.com/problems/remove-element/)
+  - [implement-strstr](https://leetcode-cn.com/problems/implement-strstr/)
   
 - ## 题目标签：
   - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
   - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
   
 - ## 题目描述
-  - 
+  - 实现 strStr() 函数。
+  - 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。
+  - 如果不存在，则返回 -1。
+  - 示例 1: 输入: haystack = "hello", needle = "ll"，输出: 2
+  - 示例 2: 输入: haystack = "aaaaa", needle = "bba"，输出: -1
+  - 说明:
+    - 当 needle 是空字符串时，应当返回什么值呢？这是一个在面试中很好的问题。
+    - 对于本题而言，当 needle 是空字符串时应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
 
 - ## 解题思路
-
+  - 题目标签是"字符串"和"双指针"，题解是kmp算法，但因为是简单题所以好多人用indexOf()
+  - 双指针暴力解决会超时
+  - 尝试用indexOf()解决：（一行代码）
+  - public int indexOf(String str)
+    - 返回指定子字符串在此字符串中第一次出现处的索引。
+    - 返回的整数是  this.startsWith(str, k), 为 true 的最小 k 值。 
+    - 参数：str - 任意字符串。 
+    - 返回：
+      - 如果字符串参数作为一个子字符串在此对象中出现，则返回第一个这种子字符串的第一个字符的索引；
+      - 如果它不作为一个子字符串出现，则返回 -1。
+      - (与题目要求完全相符)
+  - 待续：
+    - 以后可尝试用kmp算法或其他算法而不是碉堡侠
 
 - ## 代码链接：
-
-
+  - [实现strStr()](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0028-implement-strstr.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
