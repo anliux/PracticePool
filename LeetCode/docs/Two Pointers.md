@@ -5,6 +5,9 @@
 <!-- GFM-TOC -->
 * [26. 删除排序数组中的重复项](#26-删除排序数组中的重复项)
 * [27. 移除元素](#27-移除元素)
+* [28. 实现strStr()](#28-实现strstr)
+* []()
+* []()
 * []()
 * []()
 * []()
@@ -69,6 +72,23 @@
 
 
 
+# 28. 实现strStr()
+- ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
+  - ### 题目描述
+    - 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+    - 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+  - ### 解题思路
+    - 思路：暴力法（超时）；kmp（未尝试）；indexOf()（直接用内置函数）
+    - 题目标签是"字符串"和"双指针"，题解是kmp算法，但因为是简单题所以好多人用indexOf()
+    - 双指针暴力解决会超时
+    - 尝试用indexOf()解决：（一行代码）
+
+- ## 代码链接：
+  - [实现strStr()](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0028-implement-strstr.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 ### END 
