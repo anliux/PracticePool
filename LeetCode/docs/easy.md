@@ -606,7 +606,8 @@
       - 如果mid等于目标值，就返回mid
       - 如果mid大于目标值，就将mid-1的值赋给max并循环
       - 如果mid小于目标值，就将mid+1的值赋给min并循环
-    - 内置二分查找函数：binarySearch()
+    - 注：常规二分法写出来会超时（无语...）
+  - 内置二分查找函数：binarySearch()
     - binarySearch(Object[], Object key)
       - 方法的object[]参数是要查找的数组，key参数为要查找的key值。
       - 方法的返回值有几种：
