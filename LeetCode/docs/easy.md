@@ -10,7 +10,7 @@
 * [21. 合并两个有序链表](#21-合并两个有序链表)
 * [26. 删除排序数组中的重复项](#26-删除排序数组中的重复项)
 * [27. 移除元素](#27-移除元素)
-* []()
+* [28. 实现strStr()](#28-实现strstr())
 * []()
 * []()
 * []()
@@ -534,9 +534,16 @@
 
 
 
-# 
+# 28. 实现strStr()
+- ## 题目链接：
+  - [remove-element](https://leetcode-cn.com/problems/remove-element/)
+  
+- ## 题目标签：
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  
 - ## 题目描述
-
+  - 
 
 - ## 解题思路
 
