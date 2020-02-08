@@ -5,7 +5,7 @@
 <!-- GFM-TOC -->
 * [13. 罗马数字转整数](#13-罗马数字转整数)
 * [14. 最长公共前缀](#14-最长公共前缀)
-* []()
+* [20. 有效的括号](#20-有效的括号)
 * []()
 * []()
 * []()
@@ -29,6 +29,10 @@
 
 - ## 代码链接：
   - [罗马数字转整数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0013-roman-to-integer.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -54,6 +58,10 @@
 - ## 代码链接：
   - [最长公共前缀](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0014-longest-common-prefix.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
 
 
 # 20. 有效的括号
@@ -77,6 +85,9 @@
 - ## 代码链接：
   - [有效的括号](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0020-valid-parentheses.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 

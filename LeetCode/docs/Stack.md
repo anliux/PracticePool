@@ -35,6 +35,9 @@
 - ## 代码链接：
   - [有效的括号](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0020-valid-parentheses.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
