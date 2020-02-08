@@ -608,7 +608,7 @@
       - 如果mid小于目标值，就将mid+1的值赋给min并循环
     - 注：常规二分法写出来会超时（无语...）
   - 内置二分查找函数：binarySearch()
-    - binarySearch(Object[], Object key)
+    - 形式一：binarySearch(Object[], Object key)
       - 方法的object[]参数是要查找的数组，key参数为要查找的key值。
       - 方法的返回值有几种：
         - 1.找到的情况下：如果key在数组中，则返回搜索值的索引。
@@ -617,7 +617,7 @@
           - [2] 搜索值是数组元素，从0开始计数，得搜索值的索引值；
           - [3] 搜索值不是数组元素，且大于数组内元素，索引值为 – (length + 1);
           - [4] 搜索值不是数组元素，且小于数组内元素，索引值为 – 1。
-    - 内置二分查找函数: binarySearch(Object[], int fromIndex, int toIndex, Object key)
+    - 形式二: binarySearch(Object[], int fromIndex, int toIndex, Object key)
       - 方法的object[]参数为要查找的数组，
       - fromindex参数为开始索引（包括），toindex为结束索引（不包括），两个参数之间为查找的范围。
       - key为要查找的key。
