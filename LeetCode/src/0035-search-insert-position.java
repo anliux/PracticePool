@@ -50,7 +50,8 @@ class Solution {
     }
 }
 
-//补一个强行“二分查找”：使用Arrays的内置函数
+//补一个强行“二分查找”：0ms，击败100%的用户
+//使用Arrays的内置函数
 class Solution {
     public int searchInsert(int[] nums, int target) {
         int a = Arrays.binarySearch(nums, target);
