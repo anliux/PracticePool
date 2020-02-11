@@ -33,7 +33,7 @@
 
 
 # 算法思想相关
-- [动态规划180]()
+- [动态规划183](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Dynamic%20Programming.md)
 - [深度优先搜索117]()
 - [二分查找83](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
 - [贪心算法70]()
@@ -42,7 +42,7 @@
 - [回溯算法53]()
 - [排序41]()
 - [滑动窗口20]()
-- [分治算法19]()
+- [分治算法19](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Divide%20and%20Conquer.md)
 - [递归15]()
 - [扫描线算法6]()
 - [拓扑排序6]()
