@@ -54,8 +54,6 @@
 - ## 代码链接：
   - [最大子序和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0053-maximum-subarray.java)
 
-
-
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
