@@ -5,8 +5,8 @@
 
 //暴力法：57ms，击败了8.5%的用户（竟然没有超时..）
 /*
-    算法：
-	- 寻找所有的可能子序和，并求最大值
+  算法：
+  - 寻找所有的可能子序和，并求最大值
     - 复杂度：时间O(N^2)，空间O(1)
     - 首先定义并初始化max为数组第一个元素
     - 按照一定规律遍历数组，比如从i开始遍历到末尾，不断取和，比较并取max，然后i++
@@ -37,12 +37,12 @@ class Solution {
 
 //贪心：1ms，击败99.96%的用户
 /*
-    算法：
-	- 从左向右遍历，一个个数累加；当sum<0，重新开始找子序列
+  算法：
+  - 从左向右遍历，一个个数累加；当sum<0，重新开始找子序列
     - 所求最大值max可由if判断语句比较得到，也可由Math.max(i,j)直接求得
     - sum初始化为0，小于0的sum说明累加后比初始值更小了
     - "重新找"指的是：sum归0， 并从下一个元素起，重新累加
-	- 复杂度：时间O(n)，空间O(1)
+  - 复杂度：时间O(n)，空间O(1)
 
 */
 class Solution {
@@ -71,10 +71,50 @@ class Solution {
 
 
 
-//动态规划：
+//动态规划：1ms，击败99.96%的用户；48.6M，击败5%的用户
+/*
+    - 复杂度：时间O(n), 空间O(n)，可优化到O(1)
+      - 只用到dp数组中的前一项，因此可以用int代替一维数组，对空间复杂度优化
+    - dp[i]: nums中，以nums[i]结尾的最大子序和
+    - dp[i]=max(dp[i-1]+nums[i], nums[i]);
+*/
+class Solution {
+    public int maxSubArray(int[] nums) {
+        //定义结果result和int数组dp，并初始化为nums数组的第一个元素
+        int result = nums[0];
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+
+        //循环遍历nums数组
+        for(int i=1; i<nums.length; i++){
+            dp[i] = Math.max(dp[i-1] + nums[i], nums[i]);
+            result = Math.max(dp[i], result);
+        }
+
+        return result;
+    }
+}
+
+//动态规划改进空间复杂度：经测试，改进后与改进前几乎没有差别
+class Solution {
+    public int maxSubArray(int[] nums) {
+        //定义结果result和int数组dp，并初始化为nums数组的第一个元素
+        int result = nums[0];
+        int dp = nums[0];
+
+        //循环遍历nums数组
+        for(int i=1; i<nums.length; i++){
+            dp = Math.max(dp + nums[i], nums[i]);
+            result = Math.max(dp, result);
+        }
+
+        return result;
+    }
+}
+
+
+
+//分治
 /*
 
-
-
 */
-
