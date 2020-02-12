@@ -14,7 +14,7 @@
 * [35. 搜索插入位置](#35-搜索插入位置)
 * [38. 外观数列](#38-外观数列)
 * [53. 最大子序和](#53-最大子序和)
-* []()
+* [58. 最后一个单词的长度](#58-最后一个单词的长度)
 * []()
 * []()
 * []()
@@ -761,16 +761,30 @@
 
 
 
-# 
-- ## 题目描述
+# 58. 最后一个单词的长度
+- ## 题目链接：
+  - [length-of-last-word](https://leetcode-cn.com/problems/length-of-last-word/)
+  
+- ## 题目标签：
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
 
+- ## 题目描述
+  - 给定一个仅包含大小写字母和空格 ' ' 的字符串 s，返回其最后一个单词的长度。
+  - 如果字符串从左向右滚动显示，那么最后一个单词就是最后出现的单词。
+  - 英文：(last word means the last appearing word if we loop from left to right) in the string.
+    - 由英文表述可知：是从左向右遍历字符串
+  - 如果不存在最后一个单词，请返回 0 。
+  - 说明：一个单词是指仅由字母组成、不包含任何空格的 最大子字符串。
 
 - ## 解题思路
-
+  - 标签字符串的简单题
+  - 因为是从左向右遍历，因此可以从末尾开始，即从最右侧的非空格开始计数
+    - 需要考虑最右侧的空格和不是空格的情况
+  - 初始化count为0，从length-1开始往回遍历，从非空格开始计数，当开始计数以后，且再次遇到空格时停止计数并返回
+  - 需要考虑多种临界：比如单个字母返回1
 
 - ## 代码链接：
-
-
+  - [最后一个单词的长度](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0058-length-of-last-word.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
