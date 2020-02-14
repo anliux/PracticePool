@@ -21,7 +21,7 @@
 * [70. 爬楼梯](#70-爬楼梯)
 * [83. 删除排序链表中的重复元素](#83-删除排序链表中的重复元素)
 * [88. 合并两个有序数组](#88-合并两个有序数组)
-* []()
+* [100. 相同的树](#100-相同的树)
 * []()
 * []()
 * []()
@@ -1010,7 +1010,6 @@
   - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
   - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
 
-
 - ## 题目描述
   - 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
   - 说明:
@@ -1053,15 +1052,31 @@
 
 
 
-# 
-- ## 题目描述
+# 100. 相同的树
+- ## 题目链接：
+  - [same-tree](https://leetcode-cn.com/problems/same-tree/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
 
+- ## 题目描述
+  - 给定两个二叉树，编写一个函数来检验它们是否相同。
+  - 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
+  - 图和示例略，具体而言，是按“中-左-右”的顺序对两棵树进行遍历和判断是否相等
 
 - ## 解题思路
-
+  - 思路：递归；迭代
+  - 递归：
+    - 复杂度：时间O(n)，平衡二叉树是最优为O(logn)，空间O(n)
+    - 先判断根节点是否相同，在调用本体分别对左节点和右节点进行判断
+    - 首先：判空，即全空true，一空false
+    - 根节点的值判断是否相等：不等false，相等返回对左和右的调用本体结果
+  - 迭代：
+    - 复杂度：时间O(n)，平衡二叉树是最优为O(logn)，空间O(n)
 
 - ## 代码链接：
-
+  - [相同的树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0100-same-tree.java)
 
 
 <!-- GFM-TOC -->
