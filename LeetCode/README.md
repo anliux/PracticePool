@@ -15,7 +15,7 @@
 # 数据结构相关
 - [数组220](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
 - [字符串157](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
-- [树127]()
+- [树152](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
 - [哈希表122](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
 - [栈54](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Stack.md)
 - [位运算42]()
@@ -34,7 +34,7 @@
 
 # 算法思想相关
 - [动态规划183](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Dynamic%20Programming.md)
-- [深度优先搜索117]()
+- [深度优先搜索129](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md#100-相同的树)
 - [二分查找83](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
 - [贪心算法70]()
 - [广度优先搜索64]()
