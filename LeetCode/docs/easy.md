@@ -20,7 +20,7 @@
 * [69. x的平方根](#69-x的平方根)
 * [70. 爬楼梯](#70-爬楼梯)
 * [83. 删除排序链表中的重复元素](#83-删除排序链表中的重复元素)
-* []()
+* [88. 合并两个有序数组](#88-合并两个有序数组)
 * []()
 * []()
 * []()
@@ -1002,15 +1002,49 @@
 
 
 
-# 
-- ## 题目描述
+# 88. 合并两个有序数组
+- ## 题目链接：
+  - [merge-sorted-array](https://leetcode-cn.com/problems/merge-sorted-array/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
 
+
+- ## 题目描述
+  - 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
+  - 说明:
+    - 初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+    - 假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
+  - 示例:
+    - 输入:
+    - nums1 = [1,2,3,0,0,0], m = 3
+    - nums2 = [2,5,6],       n = 3
+    - 输出: [1,2,2,3,5,6]
 
 - ## 解题思路
-
-
+  - 相似题目：（0021-合并两个有序链表）
+  - 思路：暴力法；双指针从前遍历；双指针从后遍历
+  - 暴力法
+    - 先复制数组2到数组1，后排序
+    - 复杂度：时间O((m+n)log(m+n))，空间O(1)
+  - 双指针从前往后：
+    - 先把数组1存起来，然后选值存入数组1，最后如果仍有剩余，直接存入
+    - 复杂度：时间O(n)，空间O(n)
+  - 双指针从后往前：
+    - 改进：优化了空间复杂度，不用另外存数组1
+    - 复杂度：时间O(n)，空间O(1)
+  - System.arraycopy()复制数组：src复制到dest
+    -  arraycopy(Object src,int srcPos,Object dest, int destPos,int length)
+    - src：源数组；dest：目标数组
+    - Pos：位置；srcPos：源数组的起始位置；destPos：目标数组的起始位置
+    - length：复制的长度
+  - 注意
+    - 数组是引用型数据变量，操作即改变本体，不需要return，结果保存在数组1中即可  
+    - 本身不难，但要特别注意临界值
+  
 - ## 代码链接：
-
+  - [合并两个有序数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0088-merge-sorted-array.java)
 
 
 <!-- GFM-TOC -->
