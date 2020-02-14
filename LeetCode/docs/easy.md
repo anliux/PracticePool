@@ -19,7 +19,7 @@
 * [67. 二进制求和](#67-二进制求和)
 * [69. x的平方根](#69-x的平方根)
 * [70. 爬楼梯](#70-爬楼梯)
-* []()
+* [83. 删除排序链表中的重复元素](#83-删除排序链表中的重复元素)
 * []()
 * []()
 * []()
@@ -975,16 +975,26 @@
 
 
 
-# 
-- ## 题目描述
+# 83. 删除排序链表中的重复元素
+- ## 题目链接：
+  - [remove-duplicates-from-sorted-list](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+  
+- ## 题目标签：
+  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
 
+- ## 题目描述
+  - 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+  - 示例 1: 输入: 1->1->2，输出: 1->2
+  - 示例 2: 输入: 1->1->2->3->3，输出: 1->2->3
 
 - ## 解题思路
-
-
+  - 思路：简单链表操作
+  - 因为是已排序链表，因此只需比较next值，相同则更新next，不同则更新current
+    - 相同时next指向next的next，不同时移动当前结点current到它的next
+  - 注意是head，不是current，current相当于for循环中的int i
+  
 - ## 代码链接：
-
-
+  - [删除排序链表中的重复元素](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0083-remove-duplicates-from-sorted-list.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
