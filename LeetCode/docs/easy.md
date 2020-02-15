@@ -10,7 +10,7 @@
 * [21. 合并两个有序链表](#21-合并两个有序链表)
 * [26. 删除排序数组中的重复项](#26-删除排序数组中的重复项)
 * [27. 移除元素](#27-移除元素)
-* [28. 实现strStr()](#28-实现strstr)
+* [28. 实现strSetr()](#28-实现strstr)
 * [35. 搜索插入位置](#35-搜索插入位置)
 * [38. 外观数列](#38-外观数列)
 * [53. 最大子序和](#53-最大子序和)
@@ -1094,7 +1094,7 @@
 - ## 题目标签：
   - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
   - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
-  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
 
 - ## 题目描述
   - 给定一个二叉树，检查它是否是镜像对称的。注：数组层序遍历树。
@@ -1128,7 +1128,7 @@
 
 
 
-# 
+# 104. 
 - ## 题目描述
 
 
