@@ -28,7 +28,20 @@ class Solution {
     }
 }
 
+//优化代码：
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if(p==null && q==null) 
+            return true; 
+        else if(p!=null && q!=null && p.val==q.val)
+            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+        else
+            return false; 
+    }
+}
 
 
-//迭代：
-//思路：
+
+//迭代：？
+//思路：从根开始，每次迭代将当前结点从双向队列中弹出。然后判断：非空且值相等时，压入子结点
+//注：代码太多了，用递归就好
