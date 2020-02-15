@@ -22,7 +22,7 @@
 * [83. 删除排序链表中的重复元素](#83-删除排序链表中的重复元素)
 * [88. 合并两个有序数组](#88-合并两个有序数组)
 * [100. 相同的树](#100-相同的树)
-* []()
+* [101. 对称二叉树](#101-对称二叉树)
 * []()
 * []()
 * []()
@@ -1057,8 +1057,8 @@
   - [same-tree](https://leetcode-cn.com/problems/same-tree/)
   
 - ## 题目标签：
-  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
 
 - ## 题目描述
   - 给定两个二叉树，编写一个函数来检验它们是否相同。
@@ -1087,6 +1087,47 @@
 
 
 
+# 101. 对称二叉树
+- ## 题目链接：
+  - [same-tree](https://leetcode-cn.com/problems/same-tree/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+
+- ## 题目描述
+  - 给定一个二叉树，检查它是否是镜像对称的。注：数组层序遍历树。
+  - 示例1：二叉树 [1,2,2,3,4,4,3] 是对称的。
+  - 示例2：二叉树 [1,2,2,null,3,null,3] 则不是镜像对称的:
+  - 图略
+
+- ## 解题思路
+  - 思路：递归；迭代
+  - 递归
+    - 复杂度：时间O(n)，空间O(n)
+    - 如果一个树的左子树与右子树镜像对称，那么这个树是对称的。
+    - 如果同时满足下面的条件，两个树互为镜像：
+      - 它们的两个根结点具有相同的值。
+      - 每个树的右子树都与另一个树的左子树镜像对称。
+    - 定义镜像函数：
+      - 判空：全空；一空一不空；
+      - 根结点相等时，返回调用本体判断（结点1的左和结点2的右）以及（结点1的右和结点2度左）；
+      - 注：借鉴100题的递归优化方法先判全空，后判根结点值相等，最后false这种设置可能用空指针异常，判相等一定记得 && 全不空
+  - 迭代
+    - 复杂度：时间O(n)，空间O(n)
+    - 利用队列进行迭代。队列中每两个连续的结点应该是相等的，而且它们的子树互为镜像。最初，队列中包含的是 root 以及 root。该算法的工作原理类似于 BFS，但存在一些关键差异。每次提取两个结点并比较它们的值。然后，将两个结点的左右子结点按相反的顺序插入队列中。当队列为空时，或者我们检测到树不对称（即从队列中取出两个不相等的连续结点）时，该算法结束
+     - 注：代码太多了，用递归就好
+
+- ## 代码链接：
+  - [对称二叉树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0101-symmetric-tree.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
 # 
 - ## 题目描述
 
@@ -1102,6 +1143,20 @@
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
 
+# 
+- ## 题目描述
+
+
+- ## 解题思路
+
+
+- ## 代码链接：
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
 
 
 
