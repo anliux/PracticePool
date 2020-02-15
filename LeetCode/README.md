@@ -34,10 +34,10 @@
 
 # 算法思想相关
 - [动态规划183](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Dynamic%20Programming.md)
-- [深度优先搜索129](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md#100-相同的树)
+- [深度优先搜索129](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
 - [二分查找83](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
 - [贪心算法70]()
-- [广度优先搜索64]()
+- [广度优先搜索72](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
 - [双指针60](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
 - [回溯算法53]()
 - [排序41]()
