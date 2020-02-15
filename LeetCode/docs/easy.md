@@ -1089,12 +1089,12 @@
 
 # 101. 对称二叉树
 - ## 题目链接：
-  - [same-tree](https://leetcode-cn.com/problems/same-tree/)
+  - [symmetric-tree](https://leetcode-cn.com/problems/symmetric-tree/)
   
 - ## 题目标签：
   - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
   - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
-  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md.md)
 
 - ## 题目描述
   - 给定一个二叉树，检查它是否是镜像对称的。注：数组层序遍历树。
