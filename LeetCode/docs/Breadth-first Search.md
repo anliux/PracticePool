@@ -5,7 +5,7 @@
 <!-- GFM-TOC -->
 * [101. 对称二叉树](#101-对称二叉树)
 * [102. 二叉树的层次遍历](#102-二叉树的层次遍历)
-* []()
+* [107. 二叉树的层次遍历II](#107-二叉树的层次遍历ii)
 * []()
 * []()
 * []()
@@ -76,6 +76,24 @@
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
+
+
+# 107. 二叉树的层次遍历
+- ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
+  - ### 题目描述
+    - 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
+  - ### 解题思路
+    - 参考102题：二叉树的层次遍历([medium.md](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md))
+    - 层序遍历，考虑广度优先
+    - 与102题的区别：
+      - 最后需要反转结果:`Collections.reverse(levels);`
+    
+- ## 代码链接：
+  - [二叉树的层次遍历II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0107-binary-tree-level-order-traversal-ii.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
