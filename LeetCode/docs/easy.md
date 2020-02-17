@@ -24,7 +24,7 @@
 * [100. 相同的树](#100-相同的树)
 * [101. 对称二叉树](#101-对称二叉树)
 * [104. 二叉树的最大深度](#104-二叉树的最大深度)
-* []()
+* [107. 二叉树的层次遍历II](#107-二叉树的层次遍历ii)
 * []()
 * []()
 * []()
@@ -1130,7 +1130,7 @@
 
 # 104. 二叉树的最大深度
 - ## 题目链接：
-  - [symmetric-tree](https://leetcode-cn.com/problems/symmetric-tree/)
+  - [maximum-depth-of-binary-tree](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
   
 - ## 题目标签：
   - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
@@ -1148,6 +1148,7 @@
     - 复杂度：时间O(n)，空间O(n)
     - 规律：树的高度 = 1 + max(左子树的高，右子树的高)
     - 算法：首先判空；其次返回调用本体的左右子树的高，取得max值，并且+1后返回
+    - 注：可以看作是深度优先搜索DFS
   - 迭代
     - 复杂度：时间O(n)，空间O(n)
     - 在栈的帮助下将上面的递归转换为迭代。
@@ -1164,16 +1165,32 @@
 
 
 
-# 
-- ## 题目描述
+# 107. 二叉树的层次遍历II
+- ## 题目链接：
+  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
 
+- ## 题目描述
+  - 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
+  - 例如：
+    - 给定二叉树 [3,9,20,null,null,15,7],（中-左-右层序遍历）
+    - 返回其自底向上的层次遍历为：[ [15,7], [9,20], [3] ]
 
 - ## 解题思路
-
-
+  - 参考102题：二叉树的层次遍历([medium.md](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md))
+  - 层序遍历，考虑广度优先
+  - 与102题的区别：
+    - 最后需要反转结果:`Collections.reverse(levels);`
+  - 知识点：
+    - Collections.copy()：对java list的复制
+    - Collections.reverse()：对集合倒序
+    - 集合反转使用：`Collections.reverse(res);`
+    
 - ## 代码链接：
-
-
+  - [二叉树的层次遍历II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0107-binary-tree-level-order-traversal-ii.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
