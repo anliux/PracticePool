@@ -12,6 +12,11 @@
 
 
 
+# 注意点总结
+- [Tips](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/tips.md)
+
+
+
 # 数据结构相关
 - [数组220](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
 - [字符串157](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
