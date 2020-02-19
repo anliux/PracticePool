@@ -2,7 +2,8 @@
 
 ## 防溢出越界
 - 取平均防止溢出：mid=(min+max)/2 --> mid=min+(max-min)/2
-- 定义最值并初始化为范围内最值：`int min = Integer.MAX_VALUE;` or `int max = Integer.MIN_VALUE;`
+- 定义最值并初始化为范围内最值，特别是求最小值时
+  - 代码体现：`int min = Integer.MAX_VALUE;` or `int max = Integer.MIN_VALUE;`
 
 ## 优化
 - 正向递归冗余时，考虑逆向递归则重复少
