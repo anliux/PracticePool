@@ -27,7 +27,7 @@
 * [107. 二叉树的层次遍历II](#107-二叉树的层次遍历ii)
 * [108. 将有序数组转换为二叉搜索树](#108-将有序数组转换为二叉搜索树)
 * [110. 平衡二叉树](#110-平衡二叉树)
-* []()
+* [111. 二叉树的最小深度](#111-二叉树的最小深度)
 * []()
 * []()
 * []()
@@ -1271,7 +1271,7 @@
   - 示例 2: 给定二叉树 [1,2,2,3,3,null,null,4,4]，返回 false 。
 
 - ## 解题思路
-  - 思路：自顶向下，自底向上
+  - 思路：dfs -- 自顶向下，自底向上
   - 平衡二叉树（Balanced Binary Tree）具有以下性质：
     - 它是一棵空树或它的左右两个子树的高度差的绝对值不超过1
     - 并且左右两个子树都是一棵平衡二叉树。
@@ -1289,6 +1289,7 @@
     - 算法：
       - 使用与方法一中定义的 height 方法。逻辑相反，首先判断子树是否平衡，然后比较子树高度判断父节点是否平衡。
       - 算法如下：检查子树是否平衡。如果平衡，则使用它们的高度判断父节点是否平衡，并计算父节点的高度。
+      - 当发现不是平衡树时，后面的高度计算都没有意义了，因此一路返回-1，避免后续多余计算。
     
 - ## 代码链接
   - [平衡二叉树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0110-balanced-binary-tree.java)
@@ -1299,24 +1300,36 @@
 
 
 
-
-
-#
+# 111. 二叉树的最小深度
 - ## 题目链接：
-  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  - [minimum-depth-of-binary-tree](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
   
 - ## 题目标签：
   - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
   - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
 
 - ## 题目描述
-
+  - 给定一个二叉树，找出其最小深度。
+  - 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
+  - 说明: 叶子节点是指没有子节点的节点。
+  - 示例: 给定二叉树 [3,9,20,null,null,15,7],返回最小深度2
 
 - ## 解题思路
+  - 思路：dfs（递归，迭代）；bfs
+  - 相似题目：104题 - 二叉树的最大深度
+  - 易错：最小深度是从根节点到最近叶子节点的最短路径上的节点数。当左右子树都为空，最小深度才为1。[1,2]最小深度是2。
+  - dfs递归：
+    - 复杂度：时间O(n)，空间O(n)
+    - 规律：树的最小深度 = 1 + min(左子树的深度，右子树的深度)
+    - 算法：首先判空；其次返回调用本体的左右子树的高，取得min值，并且+1后返回
+      - 判空：根结点为null时返回0，根结点的左右子结点全为null时返回1（仅一子树为空时，返回>1，需要再判断）
+    - 注意：初始化变量min时，应初始化为一个较大的数，否则会出错。此时，最好设为范围内最值`Integer.MAX_VALUE`
+  - 其余两种方法复杂度相同，代码略 
 
-
-
-
+- ## 代码链接
+  - [二叉树的最小深度](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0111-minimum-depth-of-binary-tree.java)
+  
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
