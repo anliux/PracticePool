@@ -35,4 +35,28 @@ class Solution {
 
 
 
-//自底向上：
+//自底向上：1ms，击败99.92%的用户
+//当发现不是平衡树时，后面的高度计算都没有意义了，因此一路返回-1，避免后续多余计算。
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        //为-1，说明不是平衡树；当不为-1时，说明是平衡树
+        return depth(root) != -1;
+    }
+
+    private int depth(TreeNode root){
+        //判空：结点为null时，返回0
+        if(root==null) return 0;
+
+        //定义左右子树的高度并调用depth函数求值
+        int left = depth(root.left);
+        if(left==-1) 
+            return -1;
+        
+        int right = depth(root.right);
+        if(right==-1)
+            return -1;
+        
+        //当左右子树都符合平衡树时，返回计算结果
+        return Math.abs(left-right)<2 ? 1+Math.max(left, right) : -1;
+    }
+}
