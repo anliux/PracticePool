@@ -25,7 +25,7 @@
 * [101. 对称二叉树](#101-对称二叉树)
 * [104. 二叉树的最大深度](#104-二叉树的最大深度)
 * [107. 二叉树的层次遍历II](#107-二叉树的层次遍历ii)
-* []()
+* [108. 将有序数组转换为二叉搜索树](#108-将有序数组转换为二叉搜索树)
 * []()
 * []()
 <!-- GFM-TOC -->
@@ -1195,6 +1195,209 @@
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
+
+
+
+# 108. 将有序数组转换为二叉搜索树
+- ## 题目链接：
+  - [convert-sorted-array-to-binary-search-tree](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
+
+- ## 题目描述
+  - 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
+  - 二叉查找树（Binary Search Tree），（又：二叉搜索树，二叉排序树）它或者是一棵空树，或者是具有下列性质的二叉树： 若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。
+  - 本题中，一个高度平衡二叉树是指一个二叉树每个节点的左右两个子树的高度差的绝对值不超过 1。
+  - 示例: 给定有序数组: [-10,-3,0,5,9], 一个可能的答案是：[0,-3,9,-10,null,5]
+
+- ## 解题思路
+  - ### 基础知识补充：
+    - 遍历树的方法。DFS：先序遍历，中序遍历，后序遍历；BFS。
+    - 二叉搜索树的中序遍历是一个升序序列。将有序数组作为输入，可以把该问题看做根据中序遍历序列创建二叉搜索树。
+    - 中序遍历不能唯一确定一棵二叉搜索树。
+    - 先序和后序遍历不能唯一确定一棵二叉搜索树。
+    - 先序/后序遍历和中序遍历的关系：`inorder = sorted(postorder) = sorted(preorder)`
+    - 中序+后序、中序+先序可以唯一确定一棵二叉树。
+    - 高度平衡意味着每次必须选择中间数字作为根节点。
+      - 这对于奇数个数的数组是有用的，但对偶数个数的数组没有预定义的选择方案。
+      - 对于偶数个数的数组，要么选择中间位置左边的元素作为根节点，要么选择中间位置右边的元素作为根节点，不同的选择方案会创建不同的平衡二叉搜索树。方法一始终选择中间位置左边的元素作为根节点，方法二始终选择中间位置右边的元素作为根节点。方法一和二会生成不同的二叉搜索树，这两种答案都是正确的。
+  - ### 中序遍历：始终选择中间位置左边元素作为根节点
+    - 复杂度：时间O(n)，空间O(n)
+    - 中间左：向下取整，整除2即可取小。具体地，被除数为奇数时向下取整，被除数为偶数时可以整除直接返回得数
+    - 方法 helper(left, right) 使用数组 nums 中索引从 left 到 right 的元素创建 BST：
+      - 如果 left > right，子树中不存在元素，返回空。
+      - 找出中间元素：p = (left + right) // 2。
+      - 创建根节点：root = TreeNode(nums[p])。
+      - 递归创建左子树 root.left = helper(left, p - 1) 和右子树 root.right = helper(p + 1, right)。
+    - 返回 helper(0, len(nums) - 1)。
+  - ### 中序遍历：始终选择中间位置右边元素作为根节点
+    - 复杂度：时间O(n)，空间O(n)
+    - 中间右：在中间左的取平均基础上，加一个判断，如果被除数是奇数，整除会向下取整，因此手动mid++
+    - 注意：因为数组索引值从0开始，因此偶数个时，
+  - ### 中序遍历：选择任意一个中间位置元素作为根节点
+    - 复杂度：时间O(n)，空间O(n)
+    - 左右随机：在中间左的取平均基础上，加一个判断，如果被除数是奇数，整除会向下取整，因此手动mid随机取+0或+1
+    - 取随机数代码：
+      - `Random rand = new Random();`
+      - `if ((left + right) % 2 == 1) mid += rand.nextInt(2);`
+
+- ## 代码链接
+  - [将有序数组转换为二叉搜索树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0108-convert-sorted-array-to-binary-search-tree.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+# 110. 平衡二叉树
+- ## 题目链接：
+  - [balanced-binary-tree](https://leetcode-cn.com/problems/balanced-binary-tree/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+
+- ## 题目描述
+  - 给定一个二叉树，判断它是否是高度平衡的二叉树。
+  - 本题中，一棵高度平衡二叉树定义为：一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过1。
+  - 示例 1: 给定二叉树 [3,9,20,null,null,15,7]，返回 true 。
+  - 示例 2: 给定二叉树 [1,2,2,3,3,null,null,4,4]，返回 false 。
+
+- ## 解题思路
+  - 思路：自顶向下，自底向上
+
+- ## 代码链接
+  - []()
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+
+
+#
+- ## 题目链接：
+  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+
+- ## 题目描述
+
+
+- ## 解题思路
+
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+
+
+#
+- ## 题目链接：
+  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+
+- ## 题目描述
+
+
+- ## 解题思路
+
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+
+
+
+#
+- ## 题目链接：
+  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+
+- ## 题目描述
+
+
+- ## 解题思路
+
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+
+
+#
+- ## 题目链接：
+  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+
+- ## 题目描述
+
+
+- ## 解题思路
+
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+
+#
+- ## 题目链接：
+  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+
+- ## 题目描述
+
+
+- ## 解题思路
+
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
 
 
 
