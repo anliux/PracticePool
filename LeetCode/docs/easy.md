@@ -26,6 +26,10 @@
 * [104. 二叉树的最大深度](#104-二叉树的最大深度)
 * [107. 二叉树的层次遍历II](#107-二叉树的层次遍历ii)
 * [108. 将有序数组转换为二叉搜索树](#108-将有序数组转换为二叉搜索树)
+* [110. 平衡二叉树](#110-平衡二叉树)
+* []()
+* []()
+* []()
 * []()
 * []()
 <!-- GFM-TOC -->
@@ -1258,7 +1262,7 @@
   
 - ## 题目标签：
   - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
-  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Depth-first%20Search.md)
 
 - ## 题目描述
   - 给定一个二叉树，判断它是否是高度平衡的二叉树。
@@ -1268,9 +1272,26 @@
 
 - ## 解题思路
   - 思路：自顶向下，自底向上
-
+  - 平衡二叉树（Balanced Binary Tree）具有以下性质：
+    - 它是一棵空树或它的左右两个子树的高度差的绝对值不超过1
+    - 并且左右两个子树都是一棵平衡二叉树。
+    - 注：子树也是平衡树在题目中没有说，但是具有此性质，判断时需要判断左右子树也平衡才行
+  - 自顶向下：
+    - 复杂度：时间O(nlogn)，空间O(n)
+    - 算法：判空返回真；调用height函数判断子树高度差<2,以及调用本体函数判断左右子树是否平衡
+    - height函数：判空返回-1，否则返回1+max(root.left的高度,root.right的高度)
+      - 注：-1与高度值区分，最大子树高度+1是指加上子树到根结点这层
+    - 注意：
+      - 减法：要取绝对值，否则可能是负数 `Math.abs()`
+  - 自底向上：
+    - 复杂度：时间O(n)，空间O(n)
+    - 方法一计算 height 存在大量冗余。每次调用 height 时，要同时计算其子树高度。但是自底向上计算，每个子树的高度只会计算一次。可以递归先计算当前节点的子节点高度，然后再通过子节点高度判断当前节点是否平衡，从而消除冗余。
+    - 算法：
+      - 使用与方法一中定义的 height 方法。逻辑相反，首先判断子树是否平衡，然后比较子树高度判断父节点是否平衡。
+      - 算法如下：检查子树是否平衡。如果平衡，则使用它们的高度判断父节点是否平衡，并计算父节点的高度。
+    
 - ## 代码链接
-  - []()
+  - [平衡二叉树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0110-balanced-binary-tree.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
