@@ -287,7 +287,7 @@
       - 算法：定义两个最值并初始化；遍历：先小后大 - 当[i]值更小时，更新min，否则，比较[i]-min与max的大小并更新max；返回max。
 
 - ## 代码链接
-  - [路径总和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0121-best-time-to-buy-and-sell-stock.java)
+  - [买卖股票的最佳时机](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0121-best-time-to-buy-and-sell-stock.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
