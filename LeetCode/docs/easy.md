@@ -28,9 +28,9 @@
 * [108. 将有序数组转换为二叉搜索树](#108-将有序数组转换为二叉搜索树)
 * [110. 平衡二叉树](#110-平衡二叉树)
 * [111. 二叉树的最小深度](#111-二叉树的最小深度)
-* []()
-* []()
-* []()
+* [112. 路径总和](#112-路径总和)
+* [118. 杨辉三角](#118-杨辉三角)
+* [119. 杨辉三角II](#119-杨辉三角ii)
 * []()
 <!-- GFM-TOC -->
 
@@ -1338,21 +1338,111 @@
 
 
 
-#
+# 112. 路径总和
 - ## 题目链接：
-  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
+  - [path-sum](https://leetcode-cn.com/problems/path-sum/)
   
 - ## 题目标签：
   - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
-  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
+  - [深度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
 
 - ## 题目描述
-
+  - 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
+  - 说明: 叶子节点是指没有子节点的节点。
+  - 示例: 
+    - 给定如下二叉树[5,4,8,11,null,13,4,7,2,null,null,null,1]，以及目标和 sum = 22
+    - 返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5->4->11->2。
 
 - ## 解题思路
+  - 思路：递归；迭代
+  - 注意：题目返回值类型是布尔型，即找到是否存在此类路径即可，不需要求出对应路径
+  - 递归：
+    - 复杂度：时间O(n)，空间O(n)
+    - 思路：sum值作为一个指标，遍历的同时，sum减去当前结点值；如果最后结果是0，说明对应路径即为所求。
+    - 遍历整棵树：
+      - 如果当前节点不是叶子，对它的所有孩子节点，递归调用 hasPathSum 函数，其中 sum 值减去当前节点的权值；
+      - 如果当前节点是叶子，检查 sum 值是否为 0，也就是是否找到了给定的目标和。
+    - 算法：判空；更新sum值；当子树为空且sum==0时为真；否则继续调用本体函数判断子树的情况。
+    - 注：子树判断为“双或”，即只要存在任一子树符合即可为真
+  - 迭代
+    - 复杂度：时间O(n)，空间O(n)
+    - 具体：略
+
+- ## 代码链接
+  - [路径总和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0112-path-sum.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
 
 
 
+# 118. 杨辉三角
+- ## 题目链接：
+  - [pascals-triangle](https://leetcode-cn.com/problems/pascals-triangle/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+
+- ## 题目描述
+  - 给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。
+  - 在杨辉三角中，每个数是它左上方和右上方的数的和。每行生成方式为：首尾补1，其余位置为上一行两数相加。
+
+- ## 解题思路
+  - 思路：动态规划
+  - “左上方和右上方的数的和”放在数组中即为正上方和斜前方，即上一行i-1和i的位置
+  - 复杂度：时间O(n)，空间O(n)
+  - 首先，生成整个 triangle 列表，三角形的每一行都以子列表的形式存储。
+  - 然后，检查行数为 0 的特殊情况（直接返回triangle），否则返回 [1] （[1]只有一个元素，赋值为1）。
+  - 循环遍历：
+    - 外循环：控制行数，本行遍历结束后记得把本行结果添加到triangle
+    - 内循环：控制每行的元素
+  - 最后返回所得triangle
+  - List知识点  
+    - 新建：`List<List<Integer>> triangle = new ArrayList<List<Integer>>();`
+    - 添加一位数组：新建并添加：
+      - 外层List添加元素：直接add添加内层元素，参数新建内层List -- `triangle.add(new ArrayList<>());`
+      - 内层List添加元素：先get(index)定位对应外层元素的索引值，然后跟着add(val)添加内层元素 -- `triangle.get(0).add(1);`
+    - 取值用get(index)
+
+- ## 代码链接
+  - [杨辉三角](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0118-pascals-triangle.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+# 119. 杨辉三角II
+- ## 题目链接：
+  - [pascals-triangle-ii](https://leetcode-cn.com/problems/pascals-triangle-ii/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  
+- ## 题目描述
+  - 给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。
+  - 示例: 输入: 3，输出: [1,3,3,1]
+  - 进阶：你可以优化你的算法到 O(k) 空间复杂度吗？
+
+- ## 解题思路
+  - 思路：动态规划；公式法(略)
+  - 本题与118题的区别：118是生成所有，本体是生成最大行
+  - 优化1:仅保留前一行即可，即二维List改为一维List
+  - 优化2:倒着遍历可以节约空间，只定义一个List即可。否则需要定义一个pre的List，和一个cur的List
+  - 非负索引k：不需要考虑0，直接从1开始算起
+  - 算法：新建一维List；添加第0行元素1；循环：外层行数，内层倒着遍历并set()重置原有元素；返回一维List。
+  - 注意：根据示例，3对应[1,3,3,1]，即从第0行开始算起；不同于118题，根据示例，是从第1行开始算起的。
+  - 知识点：set()
+    - set(int index, E element)
+    - 用指定元素替换列表中指定位置的元素（可选操作）。
+    - 参数：index - 要替换的元素的索引; element - 要在指定位置存储的元素
+    - 返回：以前在指定位置的元素
+    - 注意：获取List已有元素用get() -- `cur.set(j, cur.get(j - 1) + cur.get(j));`
+    
+- ## 代码链接
+  - [杨辉三角II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0119-pascals-triangle-ii.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
@@ -1361,8 +1451,6 @@
 
 
 
-
-
 #
 - ## 题目链接：
   - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
@@ -1376,53 +1464,8 @@
 
 - ## 解题思路
 
-
-
-
-<!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
-<!-- GFM-TOC -->
-
-
-
-
-
-#
-- ## 题目链接：
-  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
-  
-- ## 题目标签：
-  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
-  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
-
-- ## 题目描述
-
-
-- ## 解题思路
-
-
-
-
-<!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
-<!-- GFM-TOC -->
-
-
-
-
-#
-- ## 题目链接：
-  - [binary-tree-level-order-traversal-ii](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)
-  
-- ## 题目标签：
-  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
-  - [广度优先搜索](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
-
-- ## 题目描述
-
-
-- ## 解题思路
-
+- ## 代码链接
+  - [路径总和]()
 
 
 
