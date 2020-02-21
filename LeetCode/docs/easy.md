@@ -33,6 +33,12 @@
 * [119. 杨辉三角II](#119-杨辉三角ii)
 * [121. 买卖股票的最佳时机](#121-买卖股票的最佳时机)
 * [122. 买卖股票的最佳时机II](#122-买卖股票的最佳时机ii)
+* [125. 验证回文串](#125-验证回文串)
+* []()
+* []()
+* []()
+* []()
+* []()
 <!-- GFM-TOC -->
 
 
@@ -1247,7 +1253,7 @@
       - `Random rand = new Random();`
       - `if ((left + right) % 2 == 1) mid += rand.nextInt(2);`
 
-- ## 代码链接
+- ## 代码链接:
   - [将有序数组转换为二叉搜索树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0108-convert-sorted-array-to-binary-search-tree.java)
 
 <!-- GFM-TOC -->
@@ -1291,7 +1297,7 @@
       - 算法如下：检查子树是否平衡。如果平衡，则使用它们的高度判断父节点是否平衡，并计算父节点的高度。
       - 当发现不是平衡树时，后面的高度计算都没有意义了，因此一路返回-1，避免后续多余计算。
     
-- ## 代码链接
+- ## 代码链接:
   - [平衡二叉树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0110-balanced-binary-tree.java)
 
 <!-- GFM-TOC -->
@@ -1327,7 +1333,7 @@
     - 注意：初始化变量min时，应初始化为一个较大的数，否则会出错。此时，最好设为范围内最值`Integer.MAX_VALUE`
   - 其余两种方法复杂度相同，代码略 
 
-- ## 代码链接
+- ## 代码链接:
   - [二叉树的最小深度](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0111-minimum-depth-of-binary-tree.java)
   
 <!-- GFM-TOC -->
@@ -1368,7 +1374,7 @@
     - 复杂度：时间O(n)，空间O(n)
     - 具体：略
 
-- ## 代码链接
+- ## 代码链接:
   - [路径总和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0112-path-sum.java)
 
 <!-- GFM-TOC -->
@@ -1405,7 +1411,7 @@
       - 内层List添加元素：先get(index)定位对应外层元素的索引值，然后跟着add(val)添加内层元素 -- `triangle.get(0).add(1);`
     - 取值用get(index)
 
-- ## 代码链接
+- ## 代码链接:
   - [杨辉三角](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0118-pascals-triangle.java)
 
 <!-- GFM-TOC -->
@@ -1441,7 +1447,7 @@
     - 返回：以前在指定位置的元素
     - 注意：获取List已有元素用get() -- `cur.set(j, cur.get(j - 1) + cur.get(j));`
     
-- ## 代码链接
+- ## 代码链接:
   - [杨辉三角II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0119-pascals-triangle-ii.java)
 
 <!-- GFM-TOC -->
@@ -1482,7 +1488,7 @@
     - 维持两个变量 - minprice 和 maxprofit，它们分别对应迄今为止所得到的最小的谷值和最大的利润（卖出价格与最低价格之间的最大差值）。
     - 算法：定义两个最值并初始化；遍历：先小后大 - 当[i]值更小时，更新min，否则，比较[i]-min与max的大小并更新max；返回max。
     
-- ## 代码链接
+- ## 代码链接:
   - [买卖股票的最佳时机](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0121-best-time-to-buy-and-sell-stock.java)
 
 <!-- GFM-TOC -->
@@ -1532,13 +1538,71 @@
       - 遍历完成后，返回总利润 profit。
     - 这篇写得很清晰，比云里雾里的官方题解好多了。  
 
-- ## 代码链接
+- ## 代码链接:
   - [买卖股票的最佳时机II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0122-best-time-to-buy-and-sell-stock-ii.java)
   
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
  
+
+
+# 125. 验证回文串
+- ## 题目链接：
+  - [valid-palindrome](https://leetcode-cn.com/problems/valid-palindrome/)
+  
+- ## 题目标签：
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+
+- ## 题目描述
+  - 给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
+  - 说明：本题中，我们将空字符串定义为有效的回文串。
+  - 示例 1: 输入: "A man, a plan, a canal: Panama"，输出: true
+  - 示例 2: 输入: "race a car"，输出: false
+
+- ## 解题思路
+  - 思路：双指针
+  - 复杂度：时间O(n)，空间O(1)
+  - 分析：
+    - 不区分大小写：先转为小写 `s = s.toLowerCase();`
+    - 按顺序处理字符串的每个字符：字符串转为字符数组 `char[] chs = s.toCharArray();`
+    - 不计除了字母和数字之外的字符：判断字符是否在字母或者数字的范围内，不在时直接略个这个字符
+    - 最后如果没有出现不相等的情况，则返回true
+  - 算法：转为小写；转为字符数组；双指针遍历：当遇到非数字和非字母的字符时指针指向下一个位置，之后判断两指针对应的字符是否相等；返回结果。
+  - 字符串知识点：
+    - 转为小写 `s = s.toLowerCase();`
+    - 字符串转为字符数组 `char[] chs = s.toCharArray();`
+    
+- ## 代码链接:
+  - [验证回文串](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0125-valid-palindrome.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+
+
+
+
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
 
 
 ### END
