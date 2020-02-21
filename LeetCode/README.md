@@ -23,7 +23,7 @@
 - [树152](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
 - [哈希表122](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
 - [栈54](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Stack.md)
-- [位运算42]()
+- [位运算56](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Bit%20Manipulation.md)
 - [图39]()
 - [链表37](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
 - [堆34]()
