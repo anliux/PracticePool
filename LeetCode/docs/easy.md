@@ -1647,20 +1647,48 @@
   - [linked-list-cycle](https://leetcode-cn.com/problems/linked-list-cycle/)
   
 - ## 题目标签：
-  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
-  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Bit%20Manipulation.md)
+  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
 
 - ## 题目描述
+  - 给定一个链表，判断链表中是否有环。
+  - 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+  - 对于题目中所给的“pos”却没有用到的迷惑行为： 
+    - pos是给官方代码生成环形链表的
+    - 生成后的链表即代码模版中的head
+    - 你只需要判断这个链表是否环形
+    - 注意理解题意
 
-
-
+- ## 解题思路
+  - 思路：哈希表；双指针
+  - 哈希表：
+    - 复杂度：时间O(n)，空间O(n)
+    - 思路：可以通过检查一个结点此前是否被访问过来判断链表是否为环形链表。常用的方法是使用哈希表。
+    - 分析：遍历所有结点并在哈希表中存储每个结点的引用（或内存地址）。如果当前结点为空结点 null（即已检测到链表尾部的下一个结点），那么我们已经遍历完整个链表，并且该链表不是环形链表。如果当前结点的引用已经存在于哈希表中，那么返回 true（即该链表为环形链表）。
+    - 算法：新建hashset；遍历链表直到next为null(即达到尾结点)：验证，已存在则返回true，否则更新到下一结点；遍历结束后仍没有返回时，返回false。
+    - hashset()相关知识点：
+      - 新建： `Set<ListNode> nodesSeen = new HashSet<>();`
+      - `add(E e)` ：如果此 set 中尚未包含指定元素，则添加指定元素。
+      - `contains(Object o)` ：如果此 set 包含指定元素，则返回 true。注意contains有s
+  - 双指针：
+    - 
 
 - ## 代码链接:
-
+  - [环形链表]()
+  
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
 
 
+
+# 
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+  
 
 ### END
