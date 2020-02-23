@@ -36,7 +36,7 @@
 * [125. 验证回文串](#125-验证回文串)
 * [136. 只出现一次的数字](#136-只出现一次的数字)
 * [141. 环形链表](#141-环形链表)
-* []()
+* [155. 最小栈](#155-最小栈)
 * []()
 * []()
 <!-- GFM-TOC -->
@@ -1664,17 +1664,26 @@
   - 哈希表：
     - 复杂度：时间O(n)，空间O(n)
     - 思路：可以通过检查一个结点此前是否被访问过来判断链表是否为环形链表。常用的方法是使用哈希表。
-    - 分析：遍历所有结点并在哈希表中存储每个结点的引用（或内存地址）。如果当前结点为空结点 null（即已检测到链表尾部的下一个结点），那么我们已经遍历完整个链表，并且该链表不是环形链表。如果当前结点的引用已经存在于哈希表中，那么返回 true（即该链表为环形链表）。
+    - 分析：遍历所有结点并在哈希表中存储每个结点的引用（或内存地址）。
+      - 如果当前结点为空结点 null（即已检测到链表尾部的下一个结点），那么我们已经遍历完整个链表，并且该链表不是环形链表。
+      - 如果当前结点的引用已经存在于哈希表中，那么返回 true（即该链表为环形链表）。
+    - 注：哈希表有hashmap和hashset两种，hashmap存储键值对，而hashset存储对象。本题仅需要存储各个结点，因此选择hashset
     - 算法：新建hashset；遍历链表直到next为null(即达到尾结点)：验证，已存在则返回true，否则更新到下一结点；遍历结束后仍没有返回时，返回false。
     - hashset()相关知识点：
       - 新建： `Set<ListNode> nodesSeen = new HashSet<>();`
       - `add(E e)` ：如果此 set 中尚未包含指定元素，则添加指定元素。
       - `contains(Object o)` ：如果此 set 包含指定元素，则返回 true。注意contains有s
   - 双指针：
-    - 
-
+    - 复杂度：时间O(n)，空间O(1)
+    - 思路：通过使用具有 ‘不同速度’ 的快、慢两个指针遍历链表，空间复杂度可以被降低至 O(1)。慢指针每次移动一步，而快指针每次移动两步。
+      - 如果列表中不存在环，最终快指针将会最先到达尾部，此时我们可以返回 false。
+      - 否则，快慢指针最终会相遇
+    - 算法：判空；新建快慢指针；循环直到两指针相等：循环中若出现任一指针为null，则返回false；循环结束后返回true
+      - 注：循环条件为相等，而不是判空；反过来也可以，只是看起来代码不够优雅了。
+      - 注：判空时判断当前结点和next是为了避免下面操作的空指针异常，不单单是为了判断循环结束。注意循环中的判空条件是fast和fast.next，因为快指针在前，如果快指针没问题，那么慢指针也没问题。
+      
 - ## 代码链接:
-  - [环形链表]()
+  - [环形链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0141-linked-list-cycle.java)
   
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
@@ -1682,9 +1691,37 @@
 
 
 
-# 
+# 155. 最小栈
+- ## 题目链接：
+  - [linked-list-cycle](https://leetcode-cn.com/problems/linked-list-cycle/)
+  
+- ## 题目标签：
+  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
 
+- ## 题目描述
+  - 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+  - push(x) -- 将元素 x 推入栈中。
+  - pop() -- 删除栈顶的元素。
+  - top() -- 获取栈顶元素。
+  - getMin() -- 检索栈中的最小元素。
+  - 示例:
+```
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin();   --> 返回 -3.
+minStack.pop();
+minStack.top();      --> 返回 0.
+minStack.getMin();   --> 返回 -2.
+``` 
 
+- ## 解题思路
+  - 注：本题重点是getMin()，因此考虑借用现成栈实现
+
+- ## 代码链接:
+  - [最小栈]()
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
