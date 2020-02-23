@@ -2,7 +2,8 @@
 
 
 
-## 防溢出越界
+## 防溢出越界空指针
+- 凡事出现数组索引或者链表指针向后移动的语句，要先判空。
 - 取平均防止溢出：mid=(min+max)/2 --> mid=min+(max-min)/2
 - 定义最值并初始化为范围内最值，特别是求最小值时
   - 代码体现：`int min = Integer.MAX_VALUE;` or `int max = Integer.MIN_VALUE;`
