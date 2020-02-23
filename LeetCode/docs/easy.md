@@ -1647,8 +1647,8 @@
   - [linked-list-cycle](https://leetcode-cn.com/problems/linked-list-cycle/)
   
 - ## 题目标签：
-  - [栈](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Stack.md)
-  - [设计](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
 
 - ## 题目描述
   - 给定一个链表，判断链表中是否有环。
@@ -1693,11 +1693,11 @@
 
 # 155. 最小栈
 - ## 题目链接：
-  - [linked-list-cycle](https://leetcode-cn.com/problems/linked-list-cycle/)
+  - [min-stack](https://leetcode-cn.com/problems/min-stack/)
   
 - ## 题目标签：
-  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
-  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [栈](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Stack.md)
+  - [设计](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Design.md)
 
 - ## 题目描述
   - 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
