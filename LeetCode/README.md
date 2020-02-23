@@ -45,6 +45,7 @@
 - [广度优先搜索72](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
 - [双指针60](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
 - [回溯算法53]()
+- [设计57](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Design.md)
 - [排序41]()
 - [滑动窗口20]()
 - [分治算法19](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Divide%20and%20Conquer.md)
@@ -57,7 +58,6 @@
 
 # 数学相关
 - [数学167](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
-- [设计43]()
 - [极小极大化8]()
 - [Random6]()
 - [脑经急转弯5]()
