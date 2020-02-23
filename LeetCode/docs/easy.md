@@ -1647,8 +1647,8 @@
   - [linked-list-cycle](https://leetcode-cn.com/problems/linked-list-cycle/)
   
 - ## 题目标签：
-  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
-  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [栈](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Stack.md)
+  - [设计](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
 
 - ## 题目描述
   - 给定一个链表，判断链表中是否有环。
@@ -1718,10 +1718,30 @@ minStack.getMin();   --> 返回 -2.
 ``` 
 
 - ## 解题思路
-  - 注：本题重点是getMin()，因此考虑借用现成栈实现
-
+  - 注：本题重点是getMin()，因此可以考虑借用现成栈实现，相当于重写功能
+  - 思路：两个栈；一个栈；不借用栈
+  - 两个栈：
+    - 用两个栈，一个栈去保存正常的入栈出栈的值，另一个栈去存最小值，也就是用栈顶保存当前所有元素的最小值。
+    - 存最小值的栈的具体操作流程如下：
+      - 将第一个元素入栈。
+      - 新加入的元素如果大于栈顶元素，那么新加入的元素就不处理。
+      - 新加入的元素如果小于等于栈顶元素，那么就将新元素入栈。
+      - 出栈元素不等于栈顶元素，不操作。
+      - 出栈元素等于栈顶元素，那么就将栈顶元素出栈。
+  - 一个栈：
+    - 只用一个变量去保存最小值，这时的关键是：如何保留最小值的记录（如果最小值弹出了，就会用到历史的最小值）
+    - 解决：当有更小的值来的时候，只需要把之前的最小值入栈，当前更小的值再入栈即可。当这个最小值要出栈的时候，下一个值便是之前的最小值了。
+    - 注意：push()中的if判断需要包含等于：因为如果此时的x弹出，最小值仍是原来的那个。如果等于就不压栈，那么一旦弹出，原相等的最小值就没了。
+      - 等于不会死循环，这里的push是库函数不是上面的push
+  - 栈相关知识点
+    - empty()：测试堆栈是否为空。
+    - peek()： 查看堆栈顶部的对象，但不从堆栈中移除它。
+    - pop()：  移除堆栈顶部的对象，并作为此函数的值返回该对象。
+    - push(E item)： 把项压入堆栈顶部。
+    - search(Object o)：返回对象在堆栈中的位置，以 1 为基数（指栈顶元素的位置为1）。
+    
 - ## 代码链接:
-  - [最小栈]()
+  - [最小栈](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0155-min-stack.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
