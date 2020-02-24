@@ -38,7 +38,7 @@
 * [141. 环形链表](#141-环形链表)
 * [155. 最小栈](#155-最小栈)
 * [160. 相交链表](#160-相交链表)
-* []()
+* [167. 两数之和II-输入有序数组](#167. 两数之和ii-输入有序数组)
 <!-- GFM-TOC -->
 
 
@@ -1788,7 +1788,7 @@ minStack.getMin();   --> 返回 -2.
   
 
 
-# 167. 两数之和 II - 输入有序数组
+# 167. 两数之和II-输入有序数组
 - ## 题目链接：
   - [two-sum-ii-input-array-is-sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
   
@@ -1813,17 +1813,16 @@ minStack.getMin();   --> 返回 -2.
     - 注：1题的解题思路包括暴力法；哈希表（两次哈希表；一次哈希表）
   - 思路：双指针与二分查找的结合
   - 使用双指针，一个指针指向值较小的元素，一个指针指向值较大的元素。指向较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。
-  - 如果两个指针指向元素的和 sum==target，那么得到要求的结果；
-  - 如果 sum>target，移动较大的元素，使 sum 变小一些；
-  - 如果 sum<target，移动较小的元素，使 sum 变大一些。
-  - 复杂而外度数组中的元素最多遍历一次，时间复杂度为 O(N)。只使用了两个额外变量，空间复杂度为 O(1)。
-
-  
-  
-  
+    - 如果两个指针指向元素的和 sum==target，那么得到要求的结果；
+    - 如果 sum>target，移动较大的元素，使 sum 变小一些；
+    - 如果 sum<target，移动较小的元素，使 sum 变大一些。
+  - 复杂度：时间O(N)，空间O(1)。
+  - 算法：判空；定义两变量作为左右指针并初始化；循环直到(a<b)不再成立：比较sum与target并移动指针；最后返回null。
+    - 循环条件(a<b)：题目要求index1必须小于index2
+    - 找到时返回数组的索引值要+1：题目要求返回的下标值（index1 和 index2）不是从零开始的，是从1开始的。
   
 - ## 代码链接:
-  - [相交链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0160-intersection-of-two-linked-lists.java)
+  - [相交链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0167-two-sum-ii-input-array-is-sorted.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
