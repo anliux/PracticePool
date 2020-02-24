@@ -6,9 +6,14 @@
 
 
 # 难度分类
-- [1-easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
-- [2-medium](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
-- [3-hard](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
+- ## easy: 
+  - [easy: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+
+- ## medium: 
+  - [medium: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+
+- ## hard: 
+  - [hard: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
 
 
 
