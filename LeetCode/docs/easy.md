@@ -38,7 +38,13 @@
 * [141. 环形链表](#141-环形链表)
 * [155. 最小栈](#155-最小栈)
 * [160. 相交链表](#160-相交链表)
-* [167. 两数之和II-输入有序数组](#167. 两数之和ii-输入有序数组)
+* [167. 两数之和II-输入有序数组](#167-两数之和ii-输入有序数组)
+* [168. Excel表列名称](#168-excel表列名称)
+* []()
+* []()
+* []()
+* []()
+* []()
 <!-- GFM-TOC -->
 
 
@@ -1828,6 +1834,40 @@ minStack.getMin();   --> 返回 -2.
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
   
+
+
+# 168. Excel表列名称
+- ## 题目链接：
+  - [two-sum-ii-input-array-is-sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [二分查找](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
+
+- ## 题目描述
+  - 给定一个正整数，返回它在 Excel 表中相对应的列名称。
+  - 例如：1 -> A，2 -> B，3 -> C，... 26 -> Z， 27 -> AA，28 -> AB ，  ...
+示例 1:
+
+输入: 1
+输出: "A"
+示例 2:
+
+输入: 28
+输出: "AB"
+示例 3:
+
+输入: 701
+输出: "ZY"
+
+- ## 代码链接:
+  - [Excel表列名称]()
+  
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
 
 
 ### END
