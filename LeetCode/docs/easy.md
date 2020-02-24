@@ -1774,15 +1774,61 @@ minStack.getMin();   --> 返回 -2.
     - 复杂度分析：时间复杂度 : O(m+n)。空间复杂度 : O(m) 或 O(n)。
   - 方法三：双指针法 
     - 复杂度：时间O(m+n)，空间O(1)。
-    
+    - 思路：链表A：a+c, 链表B : b+c. a+c+b+c = b+c+a+c 。则会在第二个c起点相遇。若不相交，a+b = b+a 。因此相遇处是NULL（尾）
+    - 算法：判空；新建结点；循环：两结点移动，直到相等。
+    - 注：没有公共时，最后都指向null，此时相等，退出循环。因此不会死循环。
+    - 代码使用了三目运算符，很巧妙。
+
 - ## 代码链接:
-  - [相交链表]()
+  - [相交链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0160-intersection-of-two-linked-lists.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
   
 
+
+# 167. 两数之和 II - 输入有序数组
+- ## 题目链接：
+  - [two-sum-ii-input-array-is-sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [二分查找](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
+
+- ## 题目描述
+  - 给定一个 已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
+  - 函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。
+  - 说明:
+    - 返回的下标值（index1 和 index2）不是从零开始的。
+    - 你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
+  - 示例:
+    - 输入: numbers = [2, 7, 11, 15], target = 9
+    - 输出: [1,2]
+    - 解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
+
+- ## 解题思路
+  - 分析：与1题的区别：数组是有序的。
+    - 注：1题的解题思路包括暴力法；哈希表（两次哈希表；一次哈希表）
+  - 思路：双指针与二分查找的结合
+  - 使用双指针，一个指针指向值较小的元素，一个指针指向值较大的元素。指向较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。
+  - 如果两个指针指向元素的和 sum==target，那么得到要求的结果；
+  - 如果 sum>target，移动较大的元素，使 sum 变小一些；
+  - 如果 sum<target，移动较小的元素，使 sum 变大一些。
+  - 复杂而外度数组中的元素最多遍历一次，时间复杂度为 O(N)。只使用了两个额外变量，空间复杂度为 O(1)。
+
+  
+  
+  
+  
+- ## 代码链接:
+  - [相交链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0160-intersection-of-two-linked-lists.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+  
 
 
 ### END
