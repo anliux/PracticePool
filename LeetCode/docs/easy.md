@@ -40,7 +40,7 @@
 * [160. 相交链表](#160-相交链表)
 * [167. 两数之和II-输入有序数组](#167-两数之和ii-输入有序数组)
 * [168. Excel表列名称](#168-excel表列名称)
-* []()
+* [169. 多数元素](#169-多数元素)
 * [171. Excel表列序号](#171-excel表列序号)
 * []()
 * []()
@@ -1896,6 +1896,25 @@ minStack.getMin();   --> 返回 -2.
 
 
 
+# 169. 多数元素
+- ## 题目链接：
+  - [majority-element](https://leetcode-cn.com/problems/majority-element/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
+  - [位运算](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
+  - [分治算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
+
+- ## 题目描述
+
+
+
+- ## 代码链接:
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
 
 
 ### END
