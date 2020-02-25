@@ -9,7 +9,7 @@
 * [67. 二进制求和](#67-二进制求和)
 * [69. x的平方根](#69-x的平方根)
 * [168. Excel表列名称](#168-excel表列名称)
-* []()
+* [171. Excel表列序号](#171-excel表列序号)
 * []()
 * []()
 * []()
@@ -155,6 +155,27 @@
 - ## 代码链接:
   - [Excel表列名称](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0168-excel-sheet-column-title.java)
   
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
+# 171. Excel表列序号
+- ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
+  - ### 题目描述
+    - 给定一个Excel表格中的列名称，返回其相应的列序号。
+    - 例如，A -> 1, B -> 2, C -> 3, ...,  Z -> 26, AA -> 27, AB -> 28, ...
+  - ### 解题思路
+    - 进制转换问题：其他进制转十进制。参考二进制转十进制的不断乘和加的方法。
+    - 初始化结果ans = 0，遍历时将每个字母与A做减法，因为A表示1，所以减法后需要每个数加1，计算其代表的数值num = 字母 - ‘A’ + 1
+    - 因为有26个字母，所以相当于26进制，每26个数则向前进一位，所以每遍历一位则ans = ans * 26 + num
+    - 以ZY为例，Z的值为26，Y的值为25，则结果为26 * 26 + 25=701
+    - 算法：初始化；遍历字符串：从高位到低位；返回结果。
+
+- ## 代码链接:
+  - [Excel表列序号](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0171-excel-sheet-column-number.java)
+
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
