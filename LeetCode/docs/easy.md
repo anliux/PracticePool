@@ -1838,12 +1838,10 @@ minStack.getMin();   --> 返回 -2.
 
 # 168. Excel表列名称
 - ## 题目链接：
-  - [two-sum-ii-input-array-is-sorted](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+  - [excel-sheet-column-title](https://leetcode-cn.com/problems/excel-sheet-column-title/)
   
 - ## 题目标签：
-  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
-  - [二分查找](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
+  - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
 
 - ## 题目描述
   - 给定一个正整数，返回它在 Excel 表中相对应的列名称。
@@ -1854,17 +1852,26 @@ minStack.getMin();   --> 返回 -2.
 
 - ## 解题思路
   - 这道题看做是进制转换问题的变形，思考时参照十进制转二进制的除法与取余数运算。
+    - eg. 十进制转二进制时，原数整除2，先取余数得到第一个结果，后对上一步所得商（即上一步整除结果）再次整除2并取余得到第二个结果..
   - 区别就在于题目规定的数字中没有 0 ，换句话讲，正常的 26 进制本应该满 26 进 1，然后低位补 0，但是这里满 26 的话就用 26 表示。满 27 的时候才会向前进 1，然后低位补 1。所以 Z(26) 的下一个数字就是 A(1)A(1)，即 27 对应 AA。
   - 关键：n--，将本题的1-26的范围修正为
   - 算法：判空：非正返回空字符串；定义可变字符串；循环：；最后反转，转为String类型并返回。
 
 - ## 代码链接:
-  - [Excel表列名称]()
+  - [Excel表列名称](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0168-excel-sheet-column-title.java)
   
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
 <!-- GFM-TOC -->
 
 
+
+# 171. Excel表列序号
+
+
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
 
 ### END
