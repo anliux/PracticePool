@@ -1952,7 +1952,7 @@ minStack.getMin();   --> 返回 -2.
 
 # 172. 阶乘后的零
 - ## 题目链接：
-  - [excel-sheet-column-number](https://leetcode-cn.com/problems/excel-sheet-column-number/)
+  - [factorial-trailing-zeroes](https://leetcode-cn.com/problems/factorial-trailing-zeroes/)
   
 - ## 题目标签：
   - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
