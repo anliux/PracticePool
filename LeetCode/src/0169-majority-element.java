@@ -1,5 +1,5 @@
 //0169-多数元素
-//思路：暴力法；哈希表法；
+//思路：暴力法；哈希表法；排序；摩尔投票法。
 
 
 
@@ -36,7 +36,7 @@ class Solution {
 
 
 
-//哈希表法：
+//哈希表法：15ms，击败39%的用户
 /*
 算法：
   - 新建哈希表；
@@ -73,5 +73,52 @@ class Solution {
 
         //遍历结束后，返回最终的最大值
         return max;
+    }
+}
+
+
+
+//排序：2ms，击败86%的用户
+//- 算法：对数组排序；返回排序后的n/2索引对应的元素
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
+}
+
+
+
+//摩尔投票法：2ms，击败86%的用户
+/*
+  - 算法：
+      - 定义比较基准flag=nums[0]和计数器count=1；
+      - 遍历数组：与基准相同+1，不同-1，且变为0时，更新基准为下一个索引对应的元素；
+      - 返回最后计数器不为0的基准。
+*/
+class Solution {
+    public int majorityElement(int[] nums) {
+        //新建基准flag和计数器count（初始化这两个变量为数组第一个元素对应的值）
+        int flag = nums[0];
+        int count = 1;
+
+        //遍历数组：从数组第二个元素，即索引值1开始，遍历整个数组
+        for(int i=1; i<nums.length; i++){
+            //如果以上遍历后计数器为0，则从当前遍历到的i开始为基准重新统计
+            if(count == 0){
+                count = 1;
+                flag = nums[i];
+            }
+            //否则，与基准flag比较，并更新count：相同+1，不同-1
+            else{
+                count = (nums[i]==flag) ? (count+1) : (count-1);
+            }
+        }
+
+        //结束后返回基准
+        if(count == 0) 
+            return -1;
+        
+        return flag;
     }
 }
