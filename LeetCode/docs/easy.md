@@ -1866,6 +1866,44 @@ minStack.getMin();   --> 返回 -2.
 
 
 
+# 169. 多数元素
+- ## 题目链接：
+  - [majority-element](https://leetcode-cn.com/problems/majority-element/)
+  
+- ## 题目标签：
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [位运算](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Bit%20Manipulation.md)
+  - [分治算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Divide%20and%20Conquer.md)
+
+- ## 题目描述
+  - 给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。
+  - 你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+  - 示例 1: 输入: [3,2,3], 输出: 3
+  - 示例 2: 输入: [2,2,1,1,1,2,2], 输出: 2
+
+- ## 解题思路
+  - 思路：暴力法；哈希表法；排序；分治；投票..
+  - 暴力法：
+    - 复杂度：时间O(n^2)，空间O(1)
+    - 暴力算法遍历整个数组，然后用另一重循环统计每个数字出现的次数。将出现次数比其他数字加起来出现次数还多的元素返回。
+    - 算法：初始化n/2；双层循环：外层控制比较基准，内层统计与基准相同的个数，并在内层结束后与n/2比较；最后return任一int型，比如-1.
+    - 不足：时间复杂度过高
+  - 哈希表：
+    - 复杂度：时间O(n)，空间O(n)
+    - 使用哈希表来存储每个元素，然后用一个循环在线性时间内遍历 nums ，然后我们只需要返回有最大值的键。
+    - 算法：新建哈希表；新建max值和次数的变量；遍历数组：第一次出现时count赋值为1，否则在哈希表中对应count基础上+1，每次判断count范围并更新max两个变量；返回max值。
+    - HashMap知识点：
+      - `getOrDefault(Object key, V defaultValue)` : 如果存在key返回对应的value，否则返回defaultValue
+    
+- ## 代码链接:
+  - [多数元素](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0169-majority-element.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
 # 171. Excel表列序号
 - ## 题目链接：
   - [excel-sheet-column-number](https://leetcode-cn.com/problems/excel-sheet-column-number/)
@@ -1896,25 +1934,7 @@ minStack.getMin();   --> 返回 -2.
 
 
 
-# 169. 多数元素
-- ## 题目链接：
-  - [majority-element](https://leetcode-cn.com/problems/majority-element/)
-  
-- ## 题目标签：
-  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
-  - [位运算](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
-  - [分治算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
 
-- ## 题目描述
-
-
-
-- ## 代码链接:
-
-
-<!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
-<!-- GFM-TOC -->
 
 
 ### END
