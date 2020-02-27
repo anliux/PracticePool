@@ -44,7 +44,9 @@
 * [171. Excel表列序号](#171-excel表列序号)
 * [172. 阶乘后的零](#172-阶乘后的零)
 * [189. 旋转数组](#189-旋转数组)
-* [190. 颠倒二进制位](#190. 颠倒二进制位)
+* [190. 颠倒二进制位](#190-颠倒二进制位)
+* [191. 位1的个数](#191-位1的个数)
+* []()
 <!-- GFM-TOC -->
 
 
@@ -2081,6 +2083,27 @@ minStack.getMin();   --> 返回 -2.
 
 - ## 代码链接:
   - [颠倒二进制位](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0190-reverse-bits.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
+
+
+
+# 191. 位1的个数
+- ## 题目链接：
+  - [number-of-1-bits](https://leetcode-cn.com/problems/number-of-1-bits/)
+  
+- ## 题目标签：
+  - [位运算](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Bit%20Manipulation.md)
+
+- ## 题目描述
+
+
+
+
+- ## 代码链接:
+  - [位1的个数]()
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#easy题目)
