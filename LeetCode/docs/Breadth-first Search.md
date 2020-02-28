@@ -49,7 +49,7 @@
 
 
 # 102. 二叉树的层次遍历
-- ## 简述：（[medium](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)）
+- ## 简述：（[medium2](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium2.md)）
   - ### 题目描述
     - 给定一个二叉树，返回其按层次遍历的节点值。 （即逐层地，从左到右访问所有节点）。
   - ### 解题思路
