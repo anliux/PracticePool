@@ -46,7 +46,7 @@
 * [189. 旋转数组](#189-旋转数组)
 * [190. 颠倒二进制位](#190-颠倒二进制位)
 * [191. 位1的个数](#191-位1的个数)
-* []()
+* [198. 打家劫舍](#198-打家劫舍)
 <!-- GFM-TOC -->
 
 
@@ -2124,7 +2124,9 @@ minStack.getMin();   --> 返回 -2.
     - 算法：定义计数器count和辅助变量flag；循环32次：n&flag的结果不为0时，计数器+1，然后flag左移一位；最后返回count。
   - 位运算小技巧：
     - 复杂度：时间O(1)，空间O(1)
-    - 
+    - 对于任意数字 n ，将 n 和 n−1 做与运算，会把最后一个 1 的位变成 0
+    - 在二进制表示中，数字 n 中最低位的 1 总是对应 n−1 中的 0 。因此，将 n 和 n−1 与运算总是能把 n 中最低位的 1 变成 0 ，并保持其他位不变。
+    - 算法：定义计数器；循环直到n为0：不为0则计数器+1，然后n和n-1做与运算消去最低位的1；返回计数器。
 
 - ## 代码链接:
   - [位1的个数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0191-number-of-1-bits.java)
@@ -2135,6 +2137,26 @@ minStack.getMin();   --> 返回 -2.
 
 
 
+# 198. 打家劫舍
+- ## 题目链接：
+  - [number-of-1-bits](https://leetcode-cn.com/problems/number-of-1-bits/)
+  
+- ## 题目标签：
+  - [位运算](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Bit%20Manipulation.md)
 
+- ## 题目描述
+
+
+
+
+- ## 解题思路
+
+
+
+- ## 代码链接:
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#easy题目)
+<!-- GFM-TOC -->
 
 ### END
