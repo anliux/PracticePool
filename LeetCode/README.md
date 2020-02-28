@@ -10,11 +10,11 @@
 (不用改了，就这样，后面按序编号即可）
 - ## easy: 
   - [easy1: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
-  - [easy1: 2-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
-  - [easy1: 3-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
-  - [easy1: 4-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
-  - [easy1: 5-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
-  - [easy1: 6-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy2: 2-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy3: 3-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy4: 4-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy5: 5-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy6: 6-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
 
 - ## medium: 
   - [medium1: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
