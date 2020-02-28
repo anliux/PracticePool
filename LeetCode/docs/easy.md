@@ -1,5 +1,8 @@
-# easy题目
+# easy1
+- 本文题号范围：1-100
 
+
+# 目录
 <!-- GFM-TOC -->
 * [1. 两数之和](#1-两数之和)
 * [7. 整数反转](#7-整数反转)
@@ -95,7 +98,7 @@
   - [两数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0001-two-sum.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
   
@@ -149,7 +152,7 @@
   - [整数反转](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0007-reverse-integer.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -190,7 +193,7 @@
   - [回文数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0009-palindrome-number.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -262,7 +265,7 @@
   - [罗马数字转整数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0013-roman-to-integer.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -312,7 +315,7 @@
   - [最长公共前缀](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0014-longest-common-prefix.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -401,7 +404,7 @@
   - [有效的括号](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0020-valid-parentheses.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -456,7 +459,7 @@
   - [合并两个有序链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0021-merge-two-sorted-lists.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -505,7 +508,7 @@
   - [删除排序数组中的重复项](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0026-remove-duplicates-from-sorted-array.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -558,7 +561,7 @@
   - [移除元素](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0027-remove-element.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -601,7 +604,7 @@
   - [实现strStr()](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0028-implement-strstr.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -670,7 +673,7 @@
   - [搜索插入位置](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0035-search-insert-position.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -729,7 +732,7 @@
   - [外观数列](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0038-count-and-say.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -783,9 +786,8 @@
 - ## 代码链接：
   - [最大子序和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0053-maximum-subarray.java)
 
-
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -816,7 +818,7 @@
   - [最后一个单词的长度](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0058-length-of-last-word.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -851,7 +853,7 @@
   - [加一](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0066-plus-one.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -891,9 +893,8 @@
 - ## 代码链接：
   - [二进制求和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0067-add-binary.java)
 
-
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -945,7 +946,7 @@
   - [x的平方根](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0069-sqrtx.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -989,7 +990,7 @@
   - [爬楼梯](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0070-climbing-stairs.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1016,7 +1017,7 @@
   - [删除排序链表中的重复元素](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0083-remove-duplicates-from-sorted-list.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1065,7 +1066,7 @@
   - [合并两个有序数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0088-merge-sorted-array.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1100,7 +1101,7 @@
   - [相同的树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0100-same-tree.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1141,7 +1142,7 @@
   - [对称二叉树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0101-symmetric-tree.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1178,7 +1179,7 @@
   - [二叉树的最大深度](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0104-maximum-depth-of-binary-tree.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1211,7 +1212,7 @@
   - [二叉树的层次遍历II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0107-binary-tree-level-order-traversal-ii.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1265,7 +1266,7 @@
   - [将有序数组转换为二叉搜索树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0108-convert-sorted-array-to-binary-search-tree.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1309,7 +1310,7 @@
   - [平衡二叉树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0110-balanced-binary-tree.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1345,10 +1346,8 @@
   - [二叉树的最小深度](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0111-minimum-depth-of-binary-tree.java)
   
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
-
-
 
 
 
@@ -1386,7 +1385,7 @@
   - [路径总和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0112-path-sum.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1423,7 +1422,7 @@
   - [杨辉三角](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0118-pascals-triangle.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1459,7 +1458,7 @@
   - [杨辉三角II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0119-pascals-triangle-ii.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1500,7 +1499,7 @@
   - [买卖股票的最佳时机](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0121-best-time-to-buy-and-sell-stock.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1550,7 +1549,7 @@
   - [买卖股票的最佳时机II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0122-best-time-to-buy-and-sell-stock-ii.java)
   
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
  
 
@@ -1586,7 +1585,7 @@
   - [验证回文串](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0125-valid-palindrome.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1645,7 +1644,7 @@
   - [只出现一次的数字](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0136-single-number.java)
   
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1694,7 +1693,7 @@
   - [环形链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0141-linked-list-cycle.java)
   
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1752,7 +1751,7 @@ minStack.getMin();   --> 返回 -2.
   - [最小栈](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0155-min-stack.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
   
 
@@ -1791,7 +1790,7 @@ minStack.getMin();   --> 返回 -2.
   - [相交链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0160-intersection-of-two-linked-lists.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
   
 
@@ -1833,7 +1832,7 @@ minStack.getMin();   --> 返回 -2.
   - [相交链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0167-two-sum-ii-input-array-is-sorted.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
   
 
@@ -1863,7 +1862,7 @@ minStack.getMin();   --> 返回 -2.
   - [Excel表列名称](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0168-excel-sheet-column-title.java)
   
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1917,7 +1916,7 @@ minStack.getMin();   --> 返回 -2.
   - [多数元素](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0169-majority-element.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1947,7 +1946,7 @@ minStack.getMin();   --> 返回 -2.
   - [Excel表列序号](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0171-excel-sheet-column-number.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -1982,7 +1981,7 @@ minStack.getMin();   --> 返回 -2.
   - [阶乘后的零](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0172-factorial-trailing-zeroes.java)
   
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -2042,7 +2041,7 @@ minStack.getMin();   --> 返回 -2.
   - [旋转数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0189-rotate-array.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -2085,7 +2084,7 @@ minStack.getMin();   --> 返回 -2.
   - [颠倒二进制位](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0190-reverse-bits.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -2132,7 +2131,7 @@ minStack.getMin();   --> 返回 -2.
   - [位1的个数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0191-number-of-1-bits.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
@@ -2171,7 +2170,7 @@ minStack.getMin();   --> 返回 -2.
   - [打家劫舍](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0198-house-robber.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#easy题目)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
