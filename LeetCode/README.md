@@ -18,7 +18,7 @@
 
 - ## medium: 
   - [medium1: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
-  - [medium2: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+  - [medium2: 101-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium2.md)
   - [medium3: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
   - [medium4: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
   - [medium5: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
