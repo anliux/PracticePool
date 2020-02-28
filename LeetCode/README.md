@@ -1,6 +1,6 @@
 # 前言
 - src文件夹：展示代码
-- 按照难度分类文档：按照序号详述题解与思路
+- 按照难度分类文档：按照题号详述题解与思路
 - 按照标签分类文档：提供内含题目索引与简述
 - 前面包括算法部分，其他模块在文末单独列出
 
@@ -10,12 +10,26 @@
 (不用改了，就这样，后面按序编号即可）
 - ## easy: 
   - [easy1: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy1: 2-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy1: 3-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy1: 4-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy1: 5-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
+  - [easy1: 6-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
 
 - ## medium: 
-  - [medium1: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+  - [medium1: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+  - [medium2: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+  - [medium3: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+  - [medium4: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
+  - [medium5: 1-100](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)
 
 - ## hard: 
   - [hard1: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
+  - [hard2: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
+  - [hard3: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
+  - [hard4: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
+  - [hard5: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
+  - [hard6: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
 
 
 
