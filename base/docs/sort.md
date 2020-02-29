@@ -115,7 +115,7 @@
   - 内层循环：j<arr.length
   
 - ## 代码链接
-  - [选择排序](https://github.com/anliux/PracticePool/blob/master/sort/src/SelectSort.java)
+  - [选择排序](https://github.com/anliux/PracticePool/blob/master/base/src/SelectSort.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
@@ -150,7 +150,7 @@
   - 内层循环：j<arr.length
   
 - ## 代码链接
-  - [插入排序](https://github.com/anliux/PracticePool/blob/master/sort/src/InsertSort.java)
+  - [插入排序](https://github.com/anliux/PracticePool/blob/master/base/src/InsertSort.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
@@ -188,7 +188,7 @@
 - ## 注意
 
 - ## 代码链接
-  - []()
+  - [希尔排序](https://github.com/anliux/PracticePool/blob/master/base/src/ShellSort.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
