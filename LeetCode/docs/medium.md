@@ -57,18 +57,30 @@
 
 
 
-# 
+# 3. 无重复字符的最长子串
 - ## 题目链接：
-  - []()
+  - [longest-substring-without-repeating-characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 
 - ## 题目标签：
-  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
   - [哈希表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
+  - [双指针](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [滑动窗口](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Sliding%20Window.md)
   
 - ## 题目描述
- 
+  - 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+  - 示例 1: 输入: "abcabcbb"，输出: 3。解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+  - 示例 2: 输入: "bbbbb"，输出: 1。解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+  - 示例 3: 输入: "pwwkew"，输出: 3。解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+  - 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 
 - ## 解题思路
+  - 思路：暴力法；滑动窗口。
+  - 暴力法：
+    - 复杂度：O(n^3)，O(min(m,n))
+    - 分析：
+      - 假设我们有一个函数 boolean allUnique(String substring) ，如果子字符串中的字符都是唯一的，它会返回 true，否则会返回 false。
+      - 遍历给定字符串 s 的所有可能的子字符串并调用函数 allUnique。 如果事实证明返回值为 true，那么我们将会更新无重复字符子串的最大长度的答案。
 
 
 - ## 代码链接：
