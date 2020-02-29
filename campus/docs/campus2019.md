@@ -204,11 +204,13 @@
   - 注意：边界值比如6，对应的是3，while判断没有等号，只要不大于就停止增加，要不然边界值不对。
 
 - ## 代码链接
-  -[数字序列第n位的值](https://github.com/anliux/PracticePool/blob/master/campus/src/008_数字序列第n位的值.java)
+  - [数字序列第n位的值](https://github.com/anliux/PracticePool/blob/master/campus/src/008_数字序列第n位的值.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
+
+
 
 
 
