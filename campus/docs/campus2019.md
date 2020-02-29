@@ -1,8 +1,11 @@
-# 2019校招真题刷题目录
+# 2019校招真题刷题目
+
 
 - 来源牛客： [2019校招题编程题汇总](https://www.nowcoder.com/ta/2019test)
 - 排序：通过率降序
 
+
+## 目录
 <!-- GFM-TOC -->
 * [1. 二进制中有多少个1](#1-二进制中有多少个1)
 * [2. 游戏海报](#2-游戏海报)
@@ -18,6 +21,8 @@
 * []()
 <!-- GFM-TOC -->
 
+
+
 # 1. 二进制中有多少个1
 - ## 题目描述
   - 把一个32-bit整型转成二进制，其中包含多少个1，比如5的二进制表达是101，其中包含2个1
@@ -32,7 +37,13 @@
   - 注意：只是求1的个数，不需要求转成二进制的更多繁琐的东西。
   
 - ## 代码链接
-  - [二进制中有多少个1](https://github.com/anliux/PracticePool/blob/master/campus19/src/001-%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA1.java)
+  - [二进制中有多少个1](https://github.com/anliux/PracticePool/blob/master/campus/src/001_二进制中有多少个1.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
 
 # 2. 游戏海报
 - ## 题目描述
@@ -55,8 +66,12 @@
     - `length()`要带小括号否则会报错：求数组长度作为属性可不加小括号，求字符串长度时要加小括号
 
 - ## 代码链接
-  - [游戏海报](https://github.com/anliux/PracticePool/blob/master/campus19/src/002_%E6%B8%B8%E6%88%8F%E6%B5%B7%E6%8A%A5.java)
+  - [游戏海报](https://github.com/anliux/PracticePool/blob/master/campus/src/002_游戏海报.java)
   
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
 
 
 # 3. 找零
@@ -71,9 +86,13 @@
   - 纯数学的解法仅仅考虑借助计算机进行运算，没有别的。这题可以，别的同类型题就未必可以了
 
 - ## 代码链接
-  - [找零](https://github.com/anliux/PracticePool/blob/master/campus19/src/003_%E6%89%BE%E9%9B%B6.java)
+  - [找零](https://github.com/anliux/PracticePool/blob/master/campus/src/003_找零.java)
   
-  
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
   
 # 4. 表达式求值
 - ## 题目描述
@@ -92,7 +111,11 @@
   - 若最小值大于1，三数相乘最大
   
 - ## 代码链接
-  - [表达式求值](https://github.com/anliux/PracticePool/blob/master/campus19/src/004_%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.java)
+  - [表达式求值](https://github.com/anliux/PracticePool/blob/master/campus/src/004_表达式求值.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -110,7 +133,11 @@
   - 注意考虑边界值如N=1，N=2是否符合公式。是符合的，不用另外讨论。
   
 - ## 代码链接
-  - [员工考勤记录](https://github.com/anliux/PracticePool/blob/master/campus19/src/005_%E5%91%98%E5%B7%A5%E8%80%83%E5%8B%A4%E8%AE%B0%E5%BD%95.java)
+  - [员工考勤记录](https://github.com/anliux/PracticePool/blob/master/campus/src/005_员工考勤记录.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -129,7 +156,11 @@
   - 注意：x的取值(1 <= x <= 1000000)，使用long。不过看讨论区好像用int也可以ac？？
   
 - ## 代码链接
-  - [访友](https://github.com/anliux/PracticePool/blob/master/campus19/src/006_%E8%AE%BF%E5%8F%8B.java)
+  - [访友](https://github.com/anliux/PracticePool/blob/master/campus/src/006_访友.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -151,8 +182,12 @@
     - Integer.parseInt(str); -- 将字符串参数作为有符号的十进制整数进行解析，若参数有数字，数字表示按10,2,8,16等进制解析
 
 - ## 代码链接
-  - [非递减序列](https://github.com/anliux/PracticePool/blob/master/campus19/src/007_%E9%9D%9E%E9%80%92%E5%87%8F%E5%BA%8F%E5%88%97.java)
+  - [非递减序列](https://github.com/anliux/PracticePool/blob/master/campus/src/007_非递减序列.java)
   - **注：此程序通过了牛客的ac，但是通不过自测的456123-0的测试用例，不知道咋回事**
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -169,27 +204,15 @@
   - 注意：边界值比如6，对应的是3，while判断没有等号，只要不大于就停止增加，要不然边界值不对。
 
 - ## 代码链接
-  -[数字序列第n位的值](https://github.com/anliux/PracticePool/blob/master/campus19/src/008_%E6%95%B0%E5%AD%97%E5%BA%8F%E5%88%97%E7%AC%ACn%E4%BD%8D%E7%9A%84%E5%80%BC.java)
+  -[数字序列第n位的值](https://github.com/anliux/PracticePool/blob/master/campus/src/008_数字序列第n位的值.java)
 
-
-
-
-#
-
-
-
-
-
-#
-
-
-
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
 #
-
-
 
 
 
@@ -202,5 +225,20 @@
 
 
 
+#
+
+
+
+
+
+
 
 #
+
+
+
+
+
+
+
+### END
