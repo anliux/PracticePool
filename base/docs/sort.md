@@ -3,7 +3,7 @@
 
 
 ## 对比表格
-![text](https://raw.githubusercontent.com/anliux/PracticePool/master/sort/images/comparisonTable.jpg)
+![Image text](https://raw.githubusercontent.com/anliux/PracticePool/master/base/images/comparisonTable.jpg)
 
 
 ## 内部排序和外部排序
@@ -79,7 +79,11 @@
   - 因此若无交换发生，说明后面的都排序好了，这时，flag为false，直接跳出外循环。
 
 - ## 代码链接
-  - [冒泡排序](https://github.com/anliux/PracticePool/blob/master/sort/src/BubbleSort.java)
+  - [冒泡排序](https://github.com/anliux/PracticePool/blob/master/base/src/BubbleSort.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -113,6 +117,10 @@
 - ## 代码链接
   - [选择排序](https://github.com/anliux/PracticePool/blob/master/sort/src/SelectSort.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
 
 
 # 插入排序
@@ -143,6 +151,10 @@
   
 - ## 代码链接
   - [插入排序](https://github.com/anliux/PracticePool/blob/master/sort/src/InsertSort.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -178,13 +190,18 @@
 - ## 代码链接
   - []()
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
 # 归并排序
 
 
-
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 # 快速排序
 - ## 步骤
@@ -196,12 +213,25 @@
 - ## 代码链接
   - []()
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
 
 # 堆排序
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
 # 计数排序
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
@@ -209,8 +239,18 @@
 
 
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
 # 基数排序
 
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 
