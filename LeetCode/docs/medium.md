@@ -6,7 +6,7 @@
 <!-- GFM-TOC -->
 * [2. 两数相加](#2-两数相加)
 * [3. 无重复字符的最长子串](#3-无重复字符的最长子串)
-* []()
+* [5. 最长回文子串](#5-最长回文子串)
 * []()
 * []()
 * []()
@@ -117,23 +117,33 @@
 
 
 
-
-# 
+# 5. 最长回文子串
 - ## 题目链接：
-  - []()
+  - [longest-palindromic-substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 
 - ## 题目标签：
-  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-  - [哈希表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
+  - [动态规划](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Dynamic%20Programming.md)
   
 - ## 题目描述
- 
+  - 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+  - 示例 1：输入: "babad"，输出: "bab"，注意: "aba" 也是一个有效答案。
+  - 示例 2：输入: "cbbd"，输出: "bb"
 
 - ## 解题思路
-
-
+  - ### 思路：暴力匹配；动态规划；中心扩散；Manacher 算法。
+    - “暴力匹配”是基础，“动态规划”必须掌握，“中心扩散” 要会写，“Manacher 算法”不用看
+  - ### 暴力匹配：
+    - 复杂度：O(n^3)，O(1)
+    - 分析：
+      - 根据回文子串的定义，枚举所有长度大于等于 2 的子串，依次判断它们是否是回文；
+      - 在具体实现时，可以只针对大于“当前得到的最长回文子串长度”的子串进行“回文验证”；
+      - 在记录最长回文子串的时候，可以只记录“当前子串的起始位置”和“子串长度”，不必做截取。
+      - 暴力解法时间复杂度高，但是思路清晰、编写简单，可以作为基础来优化实现其他方法。
+    - 算法：
+    
 - ## 代码链接：
-  - []()
+  - [最长回文子串]()
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
