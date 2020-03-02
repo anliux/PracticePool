@@ -179,7 +179,7 @@
 
 
 - ## 代码链接：
-  - [最长回文子串]()
+  - [最长回文子串](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0005-longest-palindromic-substring.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
