@@ -213,29 +213,34 @@
   
 - ## 题目描述
   - 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
+  - 比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，按照Z字排列
+  - 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
+  - 请你实现这个将字符串进行指定行数变换的函数：string convert(string s, int numRows);
+  - 示例 1: 输入: s = "LEETCODEISHIRING", numRows = 3，输出: "LCIRETOESIIGEDHN"
+  - 示例 2: 输入: s = "LEETCODEISHIRING", numRows = 4，输出: "LDREOEIIECIHNTSG"
 
-比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：
-
-L   C   I   R
-E T O E S I I G
-E   D   H   N
-之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
-
-请你实现这个将字符串进行指定行数变换的函数：
-
-string convert(string s, int numRows);
-示例 1:
-
-输入: s = "LEETCODEISHIRING", numRows = 3
-输出: "LCIRETOESIIGEDHN"
-示例 2:
-
-输入: s = "LEETCODEISHIRING", numRows = 4
-输出: "LDREOEIIECIHNTSG"
-
-
+- ## 解题思路
+  - 思路：按行排序
+  - 本题关键：最后只需要按行输出，并不需要考虑中间的空格，即忽略空格，只要按Z字形将s铺在每一行即可
+    - 注：如果找规律，然后使用二维数组把每个字符放到正确的位置，再输出，就走了弯路，没有看清本题的本质。
+  - 复杂度：O(n)，O(n)
+  - 分析：
+    - 整体的思路是遍历字符串，遍历过程中将每行都看成新的字符串构成字符串数组，最后再将该数组拼接起来即可
+    - 边界值：如果 numRows=1 则说明当前字符串即为结果，直接返回 s
+    - 遍历整个字符串：向下向右，向下向右，反复循环
+    - 设定 down 变量表示是否向下，loc 变量表示当前字符串数组的下标（down表示方向，loc表示所在行）
+      - 如果 down 为 true，则 loc+=1，字符串数组下标向后移动，将当前字符加入当前字符串中
+      - 如果 down 为 false，则表示向右，则 loc−=1，字符串数组下标向前移动，将当前字符加入当前字符串中
+  - 算法：边界值-初始化-循环-拼接并返回。
+    - 边界值处理：当numRows=1时，返回s；
+    - 定义变量len为行数n和s长度的最小值：考虑如果s长度更小，只需要开辟更小的空间即可；
+    - 定义长度为len的字符串数组，并初始化为空串 `""`；
+    - 定义所在行的位置变量loc，定义布尔型变量down；
+    - 循环：遍历字符串s，将每个字符放在正确的位置，根据down的真假更新loc的值，并截取s的子串添加到字符串数组的正确行；
+    - 新建字符串res，并将上述字符串数组拼接起来，最后返回。
+  
 - ## 代码链接：
-  - []()
+  - [Z字形变换](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0006-zigzag-conversion.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
