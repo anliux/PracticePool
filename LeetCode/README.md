@@ -8,7 +8,6 @@
 
 
 # 难度分类
-(不用改了，就这样，后面按序编号即可）
 - ## easy: 
   - [easy1: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)
   - [easy2: 201-400](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy2.md)
