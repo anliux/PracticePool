@@ -8,7 +8,7 @@
 * [3. 无重复字符的最长子串](#3-无重复字符的最长子串)
 * [5. 最长回文子串](#5-最长回文子串)
 * [6. Z字形变换](#6-z字形变换)
-* [8. 字符串转换整数(atoi)](#8-字符串转换整数(atoi))
+* [8. 字符串转换整数atoi](#8-字符串转换整数atoi)
 * []()
 <!-- GFM-TOC -->
 
@@ -248,10 +248,24 @@
 
 
 
-# 8. 字符串转换整数(atoi)
+# 8. 字符串转换整数atoi
+- ## 题目链接：
+  - [string-to-integer-atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 
+- ## 题目标签：
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
+  - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
 
+- ## 题目描述
+  - 
+  
+  
+- ## 代码链接：
+  - [字符串转换整数atoi](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0006-zigzag-conversion.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
 
 
 ### END
