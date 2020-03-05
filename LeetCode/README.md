@@ -80,7 +80,7 @@
 - [贪心算法73](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Greedy.md)
 - [广度优先搜索72](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Breadth-first%20Search.md)
 - [双指针60](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
-- [回溯算法53]()
+- [回溯算法60](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Backtracking.md)
 - [设计57](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Design.md)
 - [排序41]()
 - [滑动窗口20]()
