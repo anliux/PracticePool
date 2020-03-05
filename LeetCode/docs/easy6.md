@@ -41,11 +41,19 @@
 - ## 解题思路
   - 思路：暴力法；数学
   - 暴力法：
-    - 复杂度：时间O()
+    - 复杂度：时间O(sqrt(m),n)，空间O(1) -- m为糖果数，n为人数
+    - 暴力法：一遍又一遍地遍历人数
     - 不断地遍历数组，如果还有糖就一直分，直到没有糖为止。
-
+    - 优雅暴力：规划好循环；善用取余调转起始；Math.min()控制糖果数不足的情况。
+  - 数学：
+    - 复杂度：时间O(n)，空间O(1)
+    - 数学法：遍历一次人数
+    - 找到每个人可获得的糖果数的公式，直接遍历一遍人数并求得值存入结果数组
+    - 具体过程: [本题官方题解](https://leetcode-cn.com/problems/distribute-candies-to-people/solution/fen-tang-guo-ii-by-leetcode-solution/)
+    - 注：数学方法时间复杂度低，但是推导过程过于复杂，看了一半没有再继续了。以后吧...
+    
 - ## 代码链接：
-  - []()
+  - [分糖果II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/1103-distribute-candies-to-people.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
@@ -68,7 +76,7 @@
 
 
 - ## 代码链接：
-  - []()
+  - [分糖果II]()
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
