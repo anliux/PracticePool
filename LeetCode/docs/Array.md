@@ -127,6 +127,34 @@
 
 
 
+# 16. 最接近的三数之和
+- ## 简述：（[medium](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium.md)）
+  - ### 题目描述
+    - 给定一个包括 n 个整数的数组 nums 和 一个目标值 target。
+    - 找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+    - 例如，给定数组 nums = [-1，2，1，-4], 和 target = 1.
+    - 与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).
+  - ### 解题思路
+    - 思路：双指针
+    - 注：本题同上一题15题非常相似，用形似的步骤求解即可
+    - 算法：边界值；排序；两层循环遍历；返回结果。没要求，因此不用去重。
+      - 边界值：假设必存在答案的话，此步可省略（否则也不知道该return什么）；
+      - 数组排序：调用`Arrays.sort(nums)`; 用nlogn的时间复杂度；
+      - 定义结果res，并初始化为数组中的前三个元素之和，否则容易出现定义过大或过小的问题；
+      - 两层循环：外层控制基准，内层控制双指针遍历数组
+        - 定义左右指针
+        - 内循环：求基准+左右指针对应元素的和；更新res；根据sum与target比较情况移动指针；
+      - 返回结果res。
+
+- ## 代码链接：
+  - [最接近的三数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0016-3sum-closest.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
 # 26. 删除排序数组中的重复项
 - ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
   - ### 题目描述
