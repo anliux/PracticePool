@@ -13,6 +13,9 @@
 * [12. 整数转罗马数字](#12-整数转罗马数字)
 * [15. 三数之和](#15-三数之和)
 * [16. 最接近的三数之和](#16-最接近的三数之和)
+* [17. 电话号码的字母组合](#17-电话号码的字母组合)
+* []()
+* []()
 <!-- GFM-TOC -->
 
 
@@ -498,6 +501,47 @@
       - 定义左右指针
       - 内循环：求基准+左右指针对应元素的和；更新res；根据sum与target比较情况移动指针；
     - 返回结果res。
+
+- ## 代码链接：
+  - [最接近的三数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0016-3sum-closest.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
+# 17. 电话号码的字母组合
+- ## 题目链接：
+  - [letter-combinations-of-a-phone-number](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+
+- ## 题目标签：
+  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
+  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+
+- ## 题目描述
+  - 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
+  - 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+  - 示例:
+    - 输入："23"
+    - 输出：["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+    - 说明: 尽管上面的答案是按字典序排列的，但是你可以任意选择答案输出的顺序。
+
+- ## 解题思路
+  - 思路：回溯
+  - 复杂度：时间`O(3^m * 4^n)`,空间`O(3^m * 4^n)` -- m是输入数字对应3个字母的数目，n是对应4个的数目，m+n=数字总数
+  - 分析：
+    - 回溯是一种通过穷举所有可能情况来找到所有解的算法。
+    - 如果一个候选解最后被发现并不是可行解，回溯算法会舍弃它，并在前面的一些步骤做出一些修改，并重新尝试找到可行解。
+    - 给出如下回溯函数 backtrack(combination, next_digits) ，它将一个目前已经产生的组合 combination 和接下来准备要输入的数字 next_digits 作为参数。
+    - 如果没有更多的数字需要被输入，那意味着当前的组合已经产生好了。
+    - 如果还有数字需要被输入：
+      - 遍历下一个数字所对应的所有映射的字母。
+      - 将当前的字母添加到组合最后，也就是 combination = combination + letter 。
+      - 重复这个过程，输入剩下的数字： backtrack(combination + letter, next_digits[1:]) 。
+  - 算法：
+    - 新建哈希表：将数字和数字对应的字符存入哈希表；
+    - 新建
 
 - ## 代码链接：
   - [最接近的三数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0016-3sum-closest.java)
