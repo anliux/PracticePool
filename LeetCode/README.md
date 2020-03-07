@@ -35,11 +35,12 @@
 
 - ## hard: 
   - [hard1: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
-  - [hard2: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
-  - [hard3: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
-  - [hard4: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
-  - [hard5: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
-  - [hard6: 1-200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard.md)
+  - [hard2: 201-400](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard2.md)
+  - [hard3: 401-600](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard3.md)
+  - [hard4: 601-800](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard4.md)
+  - [hard5: 8011-1000](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard5.md)
+  - [hard6: 1001-1200](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard6.md)
+  - [hard7: 1201-1400](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard7.md)
 
 
 
