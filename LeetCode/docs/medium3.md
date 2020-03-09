@@ -82,7 +82,7 @@
    - [搜索二维矩阵II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0240-search-a-2d-matrix-ii.java)
 
 <!-- GFM-TOC -->
-* ## [返回顶部目录](#剑指offer题解目录)
+* ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
 
 
