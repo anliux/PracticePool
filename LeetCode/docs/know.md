@@ -2,6 +2,7 @@
 
 
 
+# I. 数据结构
 ## 数组
 - ### 复制数组：
   - `arraycopy(Object src,int srcPos,Object dest, int destPos,int length)`
@@ -9,6 +10,16 @@
   - Pos：位置；srcPos：源数组的起始位置；destPos：目标数组的起始位置
   - length：复制的长度
   - 参考题目：easy-88题
+
+
+
+
+## 哈希表
+- ### HashSet：
+  - `public boolean add(E e)`，add是布尔型
+    - 如果此 set 中尚未包含指定元素，则添加指定元素。
+    - 更确切地讲，如果此 set 没有包含满足 (e==null ? e2==null : e.equals(e2)) 的元素 e2，则向此 set 添加指定的元素 e。
+    - 如果此 set 已包含该元素，则该调用不更改 set 并返回 false。
 
 
 
@@ -34,7 +45,7 @@
 
 
 
-
+# II. 算法思想
 ## 动态规划
 - 动态规划三要素：重叠子问题、最优子结构、状态转移方程
 - 思维框架：明确「状态」 -> 定义 dp 数组/函数的含义 -> 明确「选择」-> 明确 base case。
@@ -44,4 +55,9 @@
 
 ## 递归
 - 但凡遇到需要递归的问题，最好都画出递归树，这对你分析算法的复杂度，寻找算法低效的原因都有巨大帮助。
+
+
+
+
+
 ### END
