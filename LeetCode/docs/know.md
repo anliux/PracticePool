@@ -19,9 +19,10 @@
   - `ListNode list=new ListNode();` ：初始化一个空节点，无值,不提倡此种写法。
   - `ListNode list=new ListNode(0);`：初始化一个节点值为0的空节点，最常用最正规写法
   - `ListNode list=null;`：为空，什么都没有，一般不这么写；
+  - 注：链表结点定义没有尖括号。
 
 - ### 链表结点取值
-  - `value = list.val();` -- 将结点List的值赋值给变量value
+  - `value = list.val;` -- 将结点List的值赋值给变量value，没有圆括号。
   
   
   
