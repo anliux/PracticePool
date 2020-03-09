@@ -105,11 +105,11 @@
 
 
 # 240. 搜索二维矩阵II
-- ## 简述：（[easy](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/easy.md)）
+- ## 简述：（[medium3](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium3.md)）
   - ### 题目描述
- - 编写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：
-  - 每行的元素从左到右升序排列。每列的元素从上到下升序排列。
-  - 示例: 现有矩阵 matrix 如下：给定 target = 5，返回 true; 给定 target = 20，返回 false。
+    - 编写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：
+    - 每行的元素从左到右升序排列。每列的元素从上到下升序排列。
+    - 示例: 现有矩阵 matrix 如下：给定 target = 5，返回 true; 给定 target = 20，返回 false。
 
 ```html
 [
@@ -141,7 +141,7 @@
       - 算法：判空(如果定义了范围，可省略)；定义右上角行列索引值；遍历数组：范围内，大则左移，小则下移，否则返回true；最后返回false。
   
 - ## 代码链接：
-   - [二维数组中的查找](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0240-search-a-2d-matrix-ii.java)
+   - [搜索二维矩阵II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0240-search-a-2d-matrix-ii.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
