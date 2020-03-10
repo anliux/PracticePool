@@ -4,9 +4,9 @@
 这里仅测试剑指的两种思路。
 */
 
-/*
-思路1 - 栈：后进先出的结果与栈结构完美契合。
-*/
+
+//思路1 - 栈：后进先出的结果与栈结构完美契合。
+//使用ArrayList<>
 import java.util.ArrayList;
 import java.util.Stack;
 public class Solution {
@@ -24,9 +24,42 @@ public class Solution {
     }
 }
 
-/*
-思路2 - 递归：先调用后输出，直到结点指向为空
-*/
+//使用int[]
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public int[] reversePrint(ListNode head) {
+        //先存入栈，符合先进后出的性质
+        Stack<Integer> stack = new Stack<>();
+
+        //遍历链表：依次入栈，直到链表末尾
+        while(head != null){
+            stack.add(head.val);
+            head = head.next;
+        }
+        
+        //新建结果数组，并依次从栈中将元素弹出
+        int[] res = new int[stack.size()];
+
+        for(int i = 0; !stack.isEmpty(); i++){
+            res[i] = stack.pop();
+        }
+
+        //返回结果数组
+        return res;
+    }
+}
+
+
+
+//思路2 - 递归：先调用后输出，直到结点指向为空
+
 import java.util.ArrayList;
 public class Solution {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
