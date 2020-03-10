@@ -129,6 +129,10 @@
 - ## 代码链接：
   - [二叉树的最大深度](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0104-maximum-depth-of-binary-tree.java)
 
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
 
 
 # 107. 二叉树的层次遍历II
