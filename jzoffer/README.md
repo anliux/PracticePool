@@ -774,7 +774,7 @@ Output:
       - 注：参数为结点值
 
 - ## 代码链接：
-  - [合并两个排序的链表](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/25_合并两个排序的链表)
+  - [合并两个排序的链表](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/25_合并两个排序的链表.java)
   
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
