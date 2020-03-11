@@ -3,6 +3,8 @@
 //思路2：暴力搜索是否符合非降序
 //思路3：排序
 //思路4：二分+暴力搜索
+//思路5：二分
+//注：暴力法是耗时最少的。
 
 
 //思路1：暴力搜索最小值
@@ -94,5 +96,29 @@ public class Solution {
                 min=array[i+1];
         }
         return min;
+    }
+}
+
+
+//思路5：二分
+class Solution {
+    public int minArray(int[] numbers) {
+        //定义双指针
+        int left = 0, right = numbers.length - 1;
+
+        //循环：直到左右指针相遇
+        while(left<right){
+            //二分
+            int mid = (left + right) / 2;
+            if(numbers[mid] > numbers[right])//mid位于大数组
+                left = mid + 1;
+            else if(numbers[mid] < numbers[right])//mid位于小数组
+                right = mid;
+            else if(numbers[mid] == numbers[right])//有重复时
+                right--;
+        }
+
+        //返回结果
+        return numbers[left];
     }
 }
