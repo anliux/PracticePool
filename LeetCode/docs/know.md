@@ -14,6 +14,12 @@
 
 
 
+## 字符串
+- ### 常用方法：
+  - boolean equals(Object anObject)：将此字符串与指定的对象比较。参数不为空且相等时返回true。
+
+
+
 ## 链表
 - ### 新建链表
   - `ListNode list=new ListNode();` ：初始化一个空节点，无值,不提倡此种写法。
