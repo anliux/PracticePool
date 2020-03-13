@@ -16,8 +16,10 @@
 
 ## 字符串
 - ### 常用方法：
-  - boolean equals(Object anObject)：将此字符串与指定的对象比较。参数不为空且相等时返回true。
-
+  - `boolean equals(Object anObject)`：
+    - 将此字符串与指定的对象比较。参数不为空且相等时返回true。
+  - `replace(CharSequence target, CharSequence replacement)`：
+    - 使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。
 
 
 ## 链表
