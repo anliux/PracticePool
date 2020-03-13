@@ -25,6 +25,7 @@ class Solution {
             }
 
             //每次内层循环结束后判断count是否大于n/2
+            //注：把判断放入内循环可以优化时间复杂度
             if(count > l)
                 return nums[i];
         }
