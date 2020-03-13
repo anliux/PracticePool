@@ -47,12 +47,13 @@
 
 ## 哈希表
 - ### HashSet：
-  - `public boolean add(E e)`，add是布尔型
+  - `public boolean add(E e)`: 返回值是布尔型
     - 如果此 set 中尚未包含指定元素，则添加指定元素。
     - 更确切地讲，如果此 set 没有包含满足 (e==null ? e2==null : e.equals(e2)) 的元素 e2，则向此 set 添加指定的元素 e。
     - 如果此 set 已包含该元素，则该调用不更改 set 并返回 false。
 
-
+- ### HashMap:
+  - `getOrDefault(Object key, V defaultValue)` : 如果存在key返回对应的value，否则返回defaultValue
 
 
 
