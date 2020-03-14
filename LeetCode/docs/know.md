@@ -4,22 +4,28 @@
 
 # I. 数据结构
 ## 数组
-- ### 复制数组：
-  - `arraycopy(Object src,int srcPos,Object dest, int destPos,int length)`
-  - src：源数组；dest：目标数组
-  - Pos：位置；srcPos：源数组的起始位置；destPos：目标数组的起始位置
-  - length：复制的长度
-  - 参考题目：easy-88题
+- ### Arrays常用方法：
+  - `Arrays.fill(arrName, arrValue)`: 将值arrValue赋值给arrName数组的每个位置。
 
+- ### 其他类的数组相关方法：
+  - `System.arraycopy(Object src,int srcPos,Object dest, int destPos,int length)`: 制数组复
+    - src：源数组；dest：目标数组
+    - Pos：位置；srcPos：源数组的起始位置；destPos：目标数组的起始位置
+    - length：复制的长度
+    - 参考题目：easy-88题
 
 
 
 ## 字符串
-- ### 常用方法：
+- ### String常用方法：
   - `boolean equals(Object anObject)`：
     - 将此字符串与指定的对象比较。参数不为空且相等时返回true。
   - `replace(CharSequence target, CharSequence replacement)`：
     - 使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。
+
+- ### StringBuilder / StringBuffer 常用方法：
+  - 
+  - 
 
 
 ## 链表
