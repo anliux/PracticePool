@@ -7,7 +7,7 @@
 * []()
 * [240. 搜索二维矩阵II](#240-搜索二维矩阵ii)
 * []()
-* []()
+* [300. 最长上升子序列](#300-最长上升子序列)
 <!-- GFM-TOC -->
 
 
@@ -89,26 +89,44 @@
 
 
 
-# 
+# 300. 最长上升子序列
 - ## 题目链接：
-  - []()
+  - [longest-increasing-subsequence](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 
 - ## 题目标签：
-  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-  - [哈希表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
+  - [二分查找](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Binary%20Search.md)
+  - [动态规划](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Dynamic%20Programming.md)
   
 - ## 题目描述
- 
+  - 给定一个无序的整数数组，找到其中最长上升子序列的长度。
+  - 示例: 输入: [10,9,2,5,3,7,101,18]，输出: 4 
+    - 解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4。
+  - 说明: 可能会有多种最长上升子序列的组合，你只需要输出对应的长度即可。
+  - 你算法的时间复杂度应该为 O(n^2)。进阶: 你能将算法的时间复杂度降低到 O(nlogn) 吗?
 
 - ## 解题思路
+  - 思路：动态规划；二分+动态规划。
+  - 动态规划：
+    - 复杂度：时间O(n^2), 空间O(n)
+    - 状态定义：dp[i] 的值代表 nums 前 i 个数字的最长子序列长度。
+    - 转移方程： 设 `j∈[0,i)`，考虑每轮计算新 dp[i] 时，遍历 `[0,i)` 列表区间，做以下判断：
+      - 1. 当 nums[i]>nums[j] 时： nums[i] 可以接在 nums[j] 之后（此题要求严格递增），此情况下最长上升子序列长度为 dp[j]+1 ；
+      - 2. 当 nums[i]<=nums[j] 时： nums[i] 无法接在 nums[j] 之后，此情况上升子序列不成立，跳过。
+      - 上述所有 1. 情况 下计算出的 dp[j]+1 的最大值，为直到 i 的最长上升子序列长度（即 dp[i] ）。实现方式为遍历 j 时，每轮执行 dp[i]=max(dp[i],dp[j]+1)。
+      - 转移方程： dp[i] = max(dp[i], dp[j] + 1) for j in [0, i)。
+    - 初始状态：dp[i] 所有元素置 1，含义是每个元素都至少可以单独成为子序列，此时长度都为 1。
+    - 返回值：返回 dp 列表最大值，即可得到全局最长上升子序列长度。
 
+  - 二分+动态规划
+    - 复杂度：时间O(nlogn), 空间O(n)
 
 - ## 代码链接：
-  - []()
+  - [最长上升子序列]()
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
+
 
 
 ### END
