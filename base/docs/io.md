@@ -109,4 +109,171 @@
      
          
 
+# 代码示例
+## a+b(1) 
+- ### 题目描述
+  - 计算a+b
+  - 输入描述: 输入包括两个正整数a,b(1 <= a, b <= 10^9),输入数据包括多组。
+  - 输出描述: 输出a+b的结果
+  - 示例1：
+    - 输入：1 5 / 10 20
+    - 输出：6 / 30
+
+- ### 代码
+     ```java
+     import java.util.Scanner;
+     public class Main{
+         public static void main(String args[]){
+             Scanner sc = new Scanner(System.in);
+             while(sc.hasNext()){
+                 int a = sc.nextInt();
+                 int b = sc.nextInt();
+                 System.out.println(a+b);
+             }
+
+         }
+     }
+
+     ```
+
+
+
+## a+b(2)
+- ### 题目描述
+  - 计算a+b
+  - 输入描述: 输入第一行包括一个数据组数t(1 <= t <= 100)，接下来每行包括两个正整数a,b(1 <= a, b <= 10^9)
+  - 输出描述: 输出a+b的结果
+  - 示例1：
+    - 输入：2 / 1 5 / 10 20
+    - 输出：6 / 30
+
+- ### 代码
+     ```java
+     import java.util.Scanner;
+     public class Main{
+         public static void main(String args[]){
+             Scanner sc = new Scanner(System.in);
+             int line = sc.nextInt();
+             for(int i = 0; i < line; i++){
+                 int a = sc.nextInt();
+                 int b = sc.nextInt();
+                 System.out.println(a+b);
+             }
+         }
+     }
+     ```
+
+
+
+
+## a+b(3)
+- ### 题目描述
+  - 计算a+b
+  - 输入描述: 输入包括两个正整数a,b(1 <= a, b <= 10^9),输入数据有多组, 如果输入为0 0则结束输入
+  - 输出描述: 输出a+b的结果
+  - 示例1：
+    - 输入: 1 5 / 10 20 / 0 0
+    - 输出: 6 / 30
+
+- ### 代码
+     ```java
+     import java.util.Scanner;
+
+     public class Main{
+         public static void main(String args[]){
+             Scanner sc = new Scanner(System.in);
+             while(true){
+                 int res = sc.nextInt()+sc.nextInt();
+                 if(res == 0)
+                     return;
+                 System.out.println(res);
+             }
+         }
+     }
+     ```
+
+
+
+## a+b(4)
+- ### 题目描述
+  - 计算计算一系列数的和
+  - 输入描述: 输入数据包括多组。
+    - 每组数据一行,每行的第一个整数为整数的个数n(1 <= n <= 100), n为0的时候结束输入。
+    - 接下来n个正整数,即需要求和的每个正整数。
+  - 输出描述: 每组数据输出求和的结果
+  - 示例1：
+    - 输入: 4 1 2 3 4 / 5 1 2 3 4 5 / 0
+    - 输出: 10 / 15
+  
+- ### 代码
+     ```java
+     import java.util.Scanner;
+
+     public class Main{
+         public static void main(String args[]){
+             Scanner sc = new Scanner(System.in);
+             while(true){
+                 int lens = sc.nextInt();
+                 if(lens == 0)
+                     return;
+                 int sum = 0;
+                 for(int i = 0; i < lens; i++){
+                     sum += sc.nextInt();
+                 }
+                 System.out.println(sum);
+             }
+         }
+     }
+     ```
+  
+
+
+## a+b(5)
+- ### 题目描述
+  - 计算a+b
+  
+
+- ### 代码
+     ```java
+     import java.util.Scanner;
+
+     public class Main{
+         public static void main(String args[]){
+             Scanner sc = new Scanner(System.in);
+             int t = sc.nextInt();
+
+             while(t != 0){
+                 int n = sc.nextInt();
+                 int sum = 0;
+                 for(int i = 0; i < n; i++){
+                     sum += sc.nextInt(); 
+                 }
+                 System.out.println(sum);
+                 t--;
+             }
+         }
+     }
+     ```
+
+
+
+## a+b(6)
+- ### 题目描述
+  - 计算a+b
+
+
+
+
+
+
+## a+b(7)
+- ### 题目描述
+  - 计算a+b
+  
+
+
+
+
+
+
 ### END
