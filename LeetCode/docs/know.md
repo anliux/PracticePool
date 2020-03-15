@@ -22,7 +22,10 @@
     - 将此字符串与指定的对象比较。参数不为空且相等时返回true。
   - `replace(CharSequence target, CharSequence replacement)`：
     - 使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。
-
+  - `String.join(“-“, arrStr)`：
+    - 将字符串数组arrStr中的元素通过连字符连接起来，可用于特定格式输出等。
+    
+    
 - ### StringBuilder / StringBuffer 常用方法：
   - 
   - 
