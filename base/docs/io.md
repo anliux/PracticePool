@@ -446,21 +446,21 @@
     - 输出: 2
 
 - ### 代码
-```java
-import java.util.Scanner;
+     ```java
+     import java.util.Scanner;
 
-public class Main{
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        long a = sc.nextLong();
-        long b = sc.nextLong();
-        System.out.println(a+b);
-    }
-}
+     public class Main{
+         public static void main(String args[]){
+             Scanner sc = new Scanner(System.in);
+             long a = sc.nextLong();
+             long b = sc.nextLong();
+             System.out.println(a+b);
+         }
+     }
 
-//注：别想太复杂，本题考查long：没有规定数据在int范围内时，要用long存储。
-//不过这个ac代码有点扯啊，想太复杂了
-```
+     //注：别想太复杂，本题考查long：没有规定数据在int范围内时，要用long存储。
+     //不过这个ac代码有点扯啊，想太复杂了
+     ```
 
 
 
