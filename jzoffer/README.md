@@ -818,7 +818,7 @@
       - 最后返回cur：cur是尾结点。
     
 - ## 代码链接：
-  - [反转链表](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/24-反转链表.java)
+  - [反转链表](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/24_反转链表.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
@@ -1035,7 +1035,7 @@
   - 注：后三种的时间复杂度都是近似n，但是哈希表法明显比最后两种慢很多。 
    
 - ## 代码链接:
-  - [数组中出现次数超过一半的数字](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/39-数组中出现次数超过一半的数字.java)
+  - [数组中出现次数超过一半的数字](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/39_数组中出现次数超过一半的数字.java)
   
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
@@ -1266,13 +1266,36 @@
 
 
 # 52. 两个链表的第一个公共结点
+- ## 题目描述
+  - 编写一个程序，找到两个单链表相交的起始节点。
+  - 注意：
+    - 如果两个链表没有交点，返回 null.
+    - 在返回结果后，两个链表仍须保持原有的结构。
+    - 可假定整个链表结构中没有循环。
+    - 程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。
 
+- ## 解题思路
+  - 思路：暴力法；哈希表法；双指针法
+  - 注：本题同LeetCode160题-easy。
+  - 方法一: 暴力法
+    - 对链表A中的每一个结点 ai ，遍历整个链表 B 并检查链表 B 中是否存在结点和 ai 相同。
+    - 复杂度分析：时间O(mn)，空间O(1)。
+  - 方法二: 哈希表法 
+    - 遍历链表 A 并将每个结点的地址/引用存储在哈希表中。然后检查链表 B 中的每一个结点 bi 是否在哈希表中。若在，则 bi 为相交结点。
+    - 复杂度分析：时间O(m+n), 空间 O(m) 或 O(n)。
+  - 方法三：双指针法 
+    - 复杂度：时间O(m+n)，空间O(1)。
+    - 思路：链表A：a+c, 链表B : b+c. a+c+b+c = b+c+a+c 。则会在第二个c起点相遇。若不相交，a+b = b+a 。因此相遇处是NULL（尾）
+    - 算法：判空；新建结点；循环：两结点移动，直到相等。
+    - 注：没有公共时，最后都指向null，此时相等，退出循环。因此不会死循环。
+    - 代码使用了三目运算符，很巧妙。
+
+- ## 代码链接:
+  - [两个链表的第一个公共结点](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/52_两个链表的第一个公共结点.java)
+  
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
 <!-- GFM-TOC -->
-
-
-
 
 
 
