@@ -1289,6 +1289,7 @@
     - 算法：判空；新建结点；循环：两结点移动，直到相等。
     - 注：没有公共时，最后都指向null，此时相等，退出循环。因此不会死循环。
     - 代码使用了三目运算符，很巧妙。
+      - 注意：三目运算符，如果pa或pb为null，则指向headA或headB，不是pb或pa！！！
 
 - ## 代码链接:
   - [两个链表的第一个公共结点](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/52_两个链表的第一个公共结点.java)
