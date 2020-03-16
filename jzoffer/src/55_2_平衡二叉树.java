@@ -12,7 +12,7 @@
  *     TreeNode right;
  *     TreeNode(int x) { val = x; }
  * }
- */
+ */a
 class Solution {
     public boolean isBalanced(TreeNode root) {
         //判空：为空符合平衡
