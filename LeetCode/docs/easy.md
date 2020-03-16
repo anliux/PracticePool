@@ -1727,16 +1727,16 @@
   - top() -- 获取栈顶元素。
   - getMin() -- 检索栈中的最小元素。
   - 示例:
-```
-MinStack minStack = new MinStack();
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-minStack.getMin();   --> 返回 -3.
-minStack.pop();
-minStack.top();      --> 返回 0.
-minStack.getMin();   --> 返回 -2.
-``` 
+    ```
+    MinStack minStack = new MinStack();
+    minStack.push(-2);
+    minStack.push(0);
+    minStack.push(-3);
+    minStack.getMin();   --> 返回 -3.
+    minStack.pop();
+    minStack.top();      --> 返回 0.
+    minStack.getMin();   --> 返回 -2.
+    ``` 
 
 - ## 解题思路
   - 注：本题重点是getMin()，因此可以考虑借用现成栈实现，相当于重写功能
@@ -1800,6 +1800,7 @@ minStack.getMin();   --> 返回 -2.
     - 注：没有公共时，最后都指向null，此时相等，退出循环。因此不会死循环。
     - 代码使用了三目运算符，很巧妙。
       - 注意：三目运算符，如果pa或pb为null，则指向headA或headB，不是pb或pa！！！
+  - 注：剑指原书提供了一种栈从尾到头比较，最后一个相同结点即为所求的方法。
 
 - ## 代码链接:
   - [相交链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0160-intersection-of-two-linked-lists.java)
