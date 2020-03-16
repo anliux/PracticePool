@@ -1290,6 +1290,7 @@
     - 注：没有公共时，最后都指向null，此时相等，退出循环。因此不会死循环。
     - 代码使用了三目运算符，很巧妙。
       - 注意：三目运算符，如果pa或pb为null，则指向headA或headB，不是pb或pa！！！
+  - 注：剑指原书提供了一种栈从尾到头比较，最后一个相同结点即为所求的方法。
 
 - ## 代码链接:
   - [两个链表的第一个公共结点](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/52_两个链表的第一个公共结点.java)
