@@ -1,29 +1,62 @@
 //55.2 - 平衡二叉树
-//从下到上进行遍历和递归。
-//注：由求二叉树深度得到启发。若从上到下遍历，存在一个结点被多次遍历。
-//    故后序遍历，从下到上。并且在遍历过程中进行判断，一旦不符合，即停止。
+//思路：自顶向下；自底向上
 
-public class Solution {
-    public boolean IsBalanced_Solution(TreeNode root) {
-        return getDepth(root)!=-1;//作为一个flag，-1表示不符合的情况出现。
+
+
+//自顶向下：2ms，击败17.5%的用户
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        //判空：为空符合平衡
+        if(root==null) return true;
+
+        //平衡：子树高度差<2，并且子树也是平衡树
+        return Math.abs( height(root.left) - height(root.right) ) < 2
+                && isBalanced(root.left)
+                && isBalanced(root.right);
     }
-    private int getDepth(TreeNode root){
-		//首先判断根节点是否为空。为空则符合平衡二叉树。返回非-1的数。
-        if(root==null)
-            return 0;
+
+    private int height(TreeNode root){
+        //判空：空时返回-1
+        if(root==null) return -1;
+
+        //递归计算高度
+        return 1 + Math.max(height(root.left), height(root.right));
+    }
+}
+
+
+
+//自底向上：1ms，击败99.92%的用户
+//当发现不是平衡树时，后面的高度计算都没有意义了，因此一路返回-1，避免后续多余计算。
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        //为-1，说明不是平衡树；当不为-1时，说明是平衡树
+        return depth(root) != -1;
+    }
+
+    private int depth(TreeNode root){
+        //判空：结点为null时，返回0
+        if(root==null) return 0;
+
+        //定义左右子树的高度并调用depth函数求值
+        int left = depth(root.left);
+        if(left==-1) 
+            return -1;
         
-		//定义左子树的返回值（是的，直接定义返回值，把左子树传入递归函数即可）
-        int left = getDepth(root.left);
-        if(left==-1)
-            return -1;//如果出现-1，表示不符，则返回-1
-        
-		//同理，定义右子树的返回值
-        int right = getDepth(root.right);
+        int right = depth(root.right);
         if(right==-1)
-            return -1;//如果出现-1，表示不符，则返回-1
+            return -1;
         
-		//如果上述if都没出现，即左右子树都是平衡二叉树时，则判断左右子树的深度差，用三元运算符化简。
-		//注意：计算深度，记得max+1
-        return((Math.abs(left-right)>1) ? -1 : 1+Math.max(left,right));
+        //当左右子树都符合平衡树时，返回计算结果
+        return Math.abs(left-right)<2 ? 1+Math.max(left, right) : -1;
     }
 }
