@@ -3,9 +3,11 @@
 
 
 # I. 数据结构
+
 ## 数组
 - ### Arrays常用方法：
   - `Arrays.fill(arrName, arrValue)`: 将值arrValue赋值给arrName数组的每个位置。
+  - `Arrays.copyOfRange(arrName, start, end)`: 返回左闭右开索引值范围内的数组片段。
 
 - ### 其他类的数组相关方法：
   - `System.arraycopy(Object src,int srcPos,Object dest, int destPos,int length)`: 制数组复
