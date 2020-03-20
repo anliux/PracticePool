@@ -1049,7 +1049,14 @@
 
 # 40. 最小的 K 个数
 
+- 镜像问题：<leetcode-215-数组中的第K个最大元素-medium>
 
+
+
+- 相关知识点：
+      - `Arrays.copyOfRange(arrName, start, end)`: 返回左闭右开索引值范围内的数组片段。
+      
+      
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
 <!-- GFM-TOC -->
