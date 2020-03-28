@@ -45,4 +45,34 @@ class Solution {
 
 
 
-//时间复杂度1：原题给了需要删除节点的指针，所以才能实现时间复杂度O（1）
+//时间复杂度1: 原题给定需要删除节点的指针，可以实现时间复杂度O（1）
+/*
+ - 算法：
+      - 判空：头结点和删除结点，任一为null，则返回null；
+      - 判断非尾结点：定义next结点，将next的值赋值给删除结点，然后将删除结点的next更新为next的next；
+      - 如果删除结点的next为null，分类讨论：
+        - 整个链表只有一个结点的情况：头结点等于删除结点，则将头结点指向null，即删除链表中的唯一结点；
+        - 如果删除结点是尾结点，则定义指针cur，并遍历链表，直到cur的next为删除结点，然后将cur的next更新为null。
+      - 删除完成后，返回头结点head。
+*/
+public ListNode deleteNode(ListNode head, ListNode tobeDelete) {
+    if (head == null || tobeDelete == null)
+        return null;
+    if (tobeDelete.next != null) {
+        // 要删除的节点不是尾节点
+        ListNode next = tobeDelete.next;
+        tobeDelete.val = next.val;
+        tobeDelete.next = next.next;
+    } else {
+        if (head == tobeDelete)
+             // 只有一个节点
+            head = null;
+        else {
+            ListNode cur = head;
+            while (cur.next != tobeDelete)
+                cur = cur.next;
+            cur.next = null;
+        }
+    }
+    return head;
+}
