@@ -557,7 +557,7 @@
 
 - ## 题目标签：
   - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Backtracking.md)
 
 - ## 题目描述
   - 给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
