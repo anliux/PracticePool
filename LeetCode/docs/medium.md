@@ -516,7 +516,7 @@
 
 - ## 题目标签：
   - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
-  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Backtracking.md)
 
 - ## 题目描述
   - 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
