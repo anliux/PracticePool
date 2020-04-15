@@ -20,7 +20,6 @@
 
 
 
-
 # 2. 两数相加
 - ## 题目链接：
   - [add-two-numbers](https://leetcode-cn.com/problems/add-two-numbers/)
@@ -557,7 +556,7 @@
   - [combination-sum](https://leetcode-cn.com/problems/combination-sum/)
 
 - ## 题目标签：
-  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
   - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
 
 - ## 题目描述
