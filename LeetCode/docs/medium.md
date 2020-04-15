@@ -574,7 +574,7 @@
    - 所求解集为: [ [2,2,2,2],  [2,3,3],  [3,5]  ]
 
 - ## 解题思路
-  - 思路：回溯法；
+  - 思路：回溯法+深度优先遍历
   - 分析：
     - 根据示例 1：输入: candidates = [2,3,6,7]，target = 7。
       - 候选数组里有 2 ，如果找到了 7 - 2 = 5 的所有组合，再在之前加上 2 ，就是 7 的所有组合；
@@ -592,9 +592,25 @@
       - 排序是为了提高搜索速度，非必要；
       - 搜索问题一般复杂度较高，能剪枝就尽量需要剪枝。
       - 把候选数组排个序，遇到一个较大的数，如果以这个数为起点都搜索不到结果，后面的数就更搜索不到结果了。
-
+  - 算法：
+    - 主体函数+调用函数
+    - 主体函数：新建二维结果数组res；对给定数组排序；调用dfs函数；返回结果数组res。
+    - 调用函数：
+      - 参数列表：给定数组candidates，除存入path元素之外的剩余目标值rest，开始位置索引值begin，本路径path，最终结果res
+      - 首先：判断rest是否等于0，等于是即为找到一组，将结果存入res，并返回；
+      - 循环遍历给定数组：首先判断rest是否小于数组元素，小于则break；然后将数组元素添加到path的后面之后调用dfs深度遍历；之后回溯，将path的last元素去掉重新遍历。
+  - 知识点：
+    - ArrayDeque：双向队列接口
+      - addFirst(E e)：将指定元素插入此双端队列的开头。
+      - addLast(E e)：将指定元素插入此双端队列的末尾。
+      - removeLast()：获取并移除此双端队列的最后一个元素。
+    - ArrayList：数组
+      - 构造函数：ArrayList(Collection<? extends E> c)：
+        - 构造一个包含指定 collection 的元素的列表，这些元素是按照该 collection 的迭代器返回它们的顺序排列的。
+      - add(E e)：将指定的元素添加到此列表的尾部。
+      
 - ## 代码链接：
-  - [组合总和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0016-3sum-closest.java)
+  - [组合总和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0039-combination-sum.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
