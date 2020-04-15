@@ -15,7 +15,7 @@
 * [16. 最接近的三数之和](#16-最接近的三数之和)
 * [17. 电话号码的字母组合](#17-电话号码的字母组合)
 * [39. 组合总和](#39-组合总和)
-* []()
+* [40. 组合总和II](#40-组合总和ii)
 <!-- GFM-TOC -->
 
 
@@ -617,29 +617,55 @@
 
 
 
-# 
+# 40. 组合总和II
 - ## 题目链接：
-  - [letter-combinations-of-a-phone-number](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+  - [combination-sum-ii](https://leetcode-cn.com/problems/combination-sum-ii/)
 
 - ## 题目标签：
-  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
-  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Backtracking.md)
 
 - ## 题目描述
-
+  - 给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
+  - candidates 中的每个数字在每个组合中只能使用一次。
+  - 说明：
+    - 所有数字（包括目标数）都是正整数。
+    - 解集不能包含重复的组合。 
+  - 示例 1:
+    - 输入: candidates = [10,1,2,7,6,1,5], target = 8,
+    - 所求解集为:[  [1, 7],  [1, 2, 5],  [2, 6],  [1, 1, 6]  ]
+  - 示例 2:
+    - 输入: candidates = [2,5,2,1,2], target = 5,
+    - 所求解集为:[  [1,2,2],  [5]  ]
 
 - ## 解题思路
-
+  - 思路：回溯+dfs
+  - 分析：
+    - 对比：
+      - 第 39 题：candidates 中的数字可以无限制重复被选取。
+      - 第 40 题：candidates 中的每个数字在每个组合中只能使用一次。
+    - 编码的不同在于下一层递归的起始索引不一样。
+      - 第 39 题：还从候选数组的当前索引值开始。
+      - 第 40 题：从候选数组的当前索引值的下一位开始。
+    - 相同之处：解集不能包含重复的组合。
+      - 为了使得解集不包含重复的组合，除了使用哈希表以外，还可以先对数组升序排序，重复的元素一定不是排好序以后的第 1 个元素和相同元素的第 1 个元素。根据这个思想，我们先对数组升序排序是有必要的。候选数组有序，对于在递归树中发现重复分支，进而“剪枝”也是有效的。
+    - 关键思路：以 target 为根结点，依次减去数组中的数字，直到小于 0 或者等于 0，把等于 0 的结果记录到结果集中。
+      - 当然你也可以以 0 为根结点，依次加上数组中的数字，直到大于 target 或者等于 target，把等于 target 的结果记录到结果集中。
+    - “解集不能包含重复的组合”，就提示我们得对数组先排个序（“升序”或者“降序”均可，下面示例中均使用“升序”）。
+    - “candidates 中的每个数字在每个组合中只能使用一次”，那就按照顺序依次减去数组中的元素，递归求解即可：遇到 0 就结算且回溯，遇到负数也回溯。
+    - candidates 中的数字可以重复，可以借助「力扣」第 47 题：“全排列 II” 的思想，在搜索的过程中，找到可能发生重复结果的分支，把它剪去。
+  - 图解
+    - ![]()    
+  - 算法
+    - 
+    - 
+    
 - ## 代码链接：
   - [最接近的三数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0016-3sum-closest.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
-
-
-
-
 
 
 
