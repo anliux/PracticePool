@@ -15,9 +15,18 @@
 
 //递归：0ms，击败100%的用户
 //同100题的递归思路：
-
+/*
+    - 算法：
+      - 主体函数：判空；调用镜像函数。
+      - 镜像函数：参数(root,root)
+        - 判空：全为空时，返回true；
+        - 判符合：当全不为空，且结点值相等时，返回子节点调用：注意左左对右右，左右对右左。
+        - 否则：返回false。
+*/
 class Solution {
     public boolean isSymmetric(TreeNode root) {
+        //注：第一步判空，如果root==null，则为true。本题规定了范围因此省略
+        if(root==null) return true;
         return isMirror(root, root);
     }
 
