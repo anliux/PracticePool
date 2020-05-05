@@ -16,6 +16,7 @@
 * [17. 电话号码的字母组合](#17-电话号码的字母组合)
 * [39. 组合总和](#39-组合总和)
 * [40. 组合总和II](#40-组合总和ii)
+* [54. 螺旋矩阵](#54-螺旋矩阵)
 <!-- GFM-TOC -->
 
 
@@ -670,21 +671,44 @@
 
 
 
-# 
+# 54. 螺旋矩阵
 - ## 题目链接：
-  - [letter-combinations-of-a-phone-number](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+  - [spiral-matrix](https://leetcode-cn.com/problems/spiral-matrix/)
 
 - ## 题目标签：
-  - [字符串](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/String.md)
-  - [回溯算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Two%20Pointers.md)
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
 
 - ## 题目描述
-
+  - 给定一个包含 m x n 个元素的矩阵（m 行, n 列），请按照顺时针螺旋顺序，返回矩阵中的所有元素。
+  - 示例 1:
+    - 输入: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ]
+    - 输出: [1,2,3,6,9,8,7,4,5]
+  - 示例 2:
+    - 输入: [  [1, 2, 3, 4],  [5, 6, 7, 8],  [9,10,11,12] ]
+    - 输出: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 - ## 解题思路
-
+  - 思路：模拟，设定边界
+  - 分析：
+    - 判空：当数组长度为0时，返回new int[0]; -- 注：本题规定了取值范围，因此判空可以省略。
+    - 顺时针打印矩阵的顺序是 “从左向右、从上向下、从右向左、从下向上” 循环。
+    - 因此，考虑设定矩阵的“左、上、右、下”四个边界，模拟以上矩阵遍历顺序。
+  - 算法：
+    - 复杂度：时间O(mn), 空间O(1) -- m、n为矩阵的行列数。
+    - 判空：当数组长度为0时，return new ArrayList<>()；
+    - 初始化四个边界，以及结果数组的索引值；
+    - 初始化结果数组list；
+    - 循环：死循环，跳出控制在循环体内。
+      - 按照“从左向右、从上向下、从右向左、从下向上” 的顺序遍历，同时更新各个指标的值。
+      - 用for循环完成一条边的遍历：注意循环起始位置是某一边界值；
+      - 每次遍历完一条边之后，都要进行判断，当边界交错时，break跳出循环。
+    - 返回结果数组list。
+  - 注意：
+    - 1. 与剑指offer29题的区别：本题返回值类型是List
+    - 2. 如果用List，不用index，则if判断中，同时进行边界值更新时++--在前。
+    
 - ## 代码链接：
-  - [最接近的三数之和](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0016-3sum-closest.java)
+  - [螺旋矩阵](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0054-spiral-matrix.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
