@@ -9,13 +9,13 @@ class MinStack {
 
     /** initialize your data structure here. */
     //定义全局栈
-    private Stack<Integer> stack;
-    private Stack<Integer> minStack;
+    Stack<Integer> stack = new Stack<>();
+    Stack<Integer> minStack = new Stack<>();
 
     public MinStack() {
-        //新建两个栈。如果上面直接new了，这里应该就可以省略。
-        stack = new Stack<>();
-        minStack = new Stack<>();
+        //上面直接new了，这里应该可以省略。
+        
+        
     }
     
     public void push(int x) {
