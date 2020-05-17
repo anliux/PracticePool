@@ -13,6 +13,19 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+/*
+  - 算法：
+    - 复杂度：时间O(n)，空间O(n)
+    - 判空：当根结点为空时，返回空列表[]（注：根据返回值类型设置）
+    - 初始化结果列表list为空列表，辅助队列queue，并将根结点存入辅助队列；
+    - 循环：当队列 queue 为空时跳出
+      - 出队：队首元素出队，记为 node；
+      - 打印：将 node.val 添加至列表 tmp 尾部；
+      - 添加子节点：若 node 的左（右）子节点不为空，则将左（右）子节点加入队列 queue ；
+    - 返回值：新建结果数组res，遍历list并存入res，然后返回。
+*/
+
 class Solution {
     public int[] levelOrder(TreeNode root) {
         //判空：根结点为空时，返回空数组
