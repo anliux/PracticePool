@@ -36,7 +36,9 @@ class Solution {
             pre = cur;
             cur = cur.next;
         }
-
+        
+        //注：如果给定删除的值不存在，这里需要加一个判断，否则空指针异常
+        //if(cur == null) return head;
         //跳过cur，直接将pre与cur.next连接
         pre.next = cur.next;
         return head;
