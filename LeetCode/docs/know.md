@@ -153,6 +153,11 @@
 
 
 ## 常规记忆知识点
+- 创建哑结点dumb，用于连接后续结点，最后返回dumb.next。例如“剑指25题：合并两个排序链表”
+  - ListNode dumb = new ListNode(-1);
+  - ListNode cur = dumb;
+  - .....
+  - return dump.next;
 - 奇偶数的二进制特性：
   - 二进制的奇数最低位是1，偶数最低位是0：可通过和数字1做与运算`n&1`得出数字n的奇偶性。
 
