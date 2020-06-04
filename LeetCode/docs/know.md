@@ -93,6 +93,17 @@
     - 注意：哈希表是键值对，尖括号中对应key-value的数据类型，别只写一个。
   - `getOrDefault(Object key, V defaultValue)` : 如果存在key返回对应的value，否则返回defaultValue
 
+- ### HashMap常用方法
+  - 新建：`Map<Integer, Integer> map = new HashMap<>();`
+  - 判断key是否在哈希表中：`boolean map.containsKey(i);`，存在时返回true
+  - 判断value是否在哈希表中（可能有多个value）：`boolean map.containsValue(i);`，存在时返回true
+  - 获取key键对应的值：`map.get(key)`
+    - 返回指定键所映射的值；如果对于该键来说，此映射不包含任何映射关系，则返回 null。
+  - 将键值对存入哈希表中：`map.put(key,value)`
+  - 移除哈希表中指定的键值对：`map.remove(key)`  --  从此映射中移除指定键的映射关系（如果存在）
+  - 移除哈希表中所有的键值对：`map.clear()` -- 移除map中的所有映射关系
+  - 哈希表判空：`map.isEmpty()` -- 如果此映射不包含键-值映射关系，则返回 true。
+  - 哈希表大小：`map.size()` --  返回此映射中的键-值映射关系数
 
 
 ## 双向队列ArrayDeque：
