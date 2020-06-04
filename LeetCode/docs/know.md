@@ -3,6 +3,20 @@
 
 
 # I. 数据结构
+## 数学
+- 最大值：`int a = Math.max(i,j);`
+  - 注：参数是两个值
+- 最小值：`int b = Math.min(i,j);`
+  - 注：参数是两个值
+- 绝对值：`int c = Math.abs(i);`
+- 次幂值：`int d = Math.pow(a,b);` -- a的b次幂
+- 向上取整：`int e = Math.ceil(i);`
+  - 返回最小的（最接近负无穷大）double 值，该值大于等于参数，并等于某个整数。
+- 向下取整：`int f = Math.floor(i);`
+  - 返回最大的（最接近正无穷大）double 值，该值小于等于参数，并等于某个整数。
+
+
+
 
 ## 数组
 - ### Arrays常用方法：
