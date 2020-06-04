@@ -36,7 +36,9 @@ class Solution {
             //大指针遍历
             while((low < high) && (nums[high] & 1) == 0) //为偶数时继续向后
                 high--;
-
+            
+            //注：==的优先级高于&&，因此需要加括号，不清楚优先级的一律加括号。
+          
             //两指针交换
             temp = nums[low];
             nums[low] = nums[high];
