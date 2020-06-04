@@ -77,6 +77,25 @@ class Solution {
     }
 }
 
+//简化的哈希表法：
+//不用定义count和max，计数时，直接赋值1和获取key对应的值即可；中间枝剪，符合时直接返回；最后返回0。
+class Solution {
+    public int majorityElement(int[] nums) {
+        //哈希表法
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int i = 0; i < nums.length; i++){
+            if(!map.containsKey(nums[i]))
+                map.put(nums[i],1);
+            else
+                map.put(nums[i], map.get(nums[i])+1);
+            if(map.get(nums[i]) > (nums.length/2))
+                return nums[i];
+        }
+        return 0;
+    }
+}
+
 
 
 //排序：2ms，击败86%的用户
