@@ -21,13 +21,13 @@ class MinStack {
 
     /** initialize your data structure here. */
     //定义全局栈
-    Stack<Integer> stack = new Stack<>();
-    Stack<Integer> minStack = new Stack<>();
+    Stack<Integer> stack;
+    Stack<Integer> minStack;
 
     public MinStack() {
         //上面直接new了，这里应该可以省略。
-        
-        
+        stack = new Stack<>();
+        minStack = new Stack<>();
     }
     
     public void push(int x) {
