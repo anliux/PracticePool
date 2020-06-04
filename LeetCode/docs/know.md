@@ -34,6 +34,10 @@
 
 ## 字符串
 - ### String常用方法：
+  - `toCharArray()` 
+    - 将此字符串转换为一个新的字符数组。
+  - `charAt(int index)` 
+    - 返回指定索引处的 char 值。
   - `boolean equals(Object anObject)`：
     - 将此字符串与指定的对象比较。参数不为空且相等时返回true。
   - `replace(CharSequence target, CharSequence replacement)`：
