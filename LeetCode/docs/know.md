@@ -89,6 +89,8 @@
     - 如果此 set 已包含该元素，则该调用不更改 set 并返回 false。
 
 - ### HashMap:
+  - 新建哈希表：`Map<Integer, Integer> map = new HashMap<>();`
+    - 注意：哈希表是键值对，尖括号中对应key-value的数据类型，别只写一个。
   - `getOrDefault(Object key, V defaultValue)` : 如果存在key返回对应的value，否则返回defaultValue
 
 
