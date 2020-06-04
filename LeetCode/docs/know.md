@@ -149,8 +149,18 @@
 - 二叉排序树/二叉搜索树
   - 左小右大；
   - 二叉排序树的中序遍历：递增序列。
+    - 左根右：递增；右根左：递减。
   
-  
+- 打印中序遍历
+    ```
+    // 打印中序遍历
+    void dfs(TreeNode root) {
+        if(root == null) return;
+        dfs(root.left); // 左
+        System.out.println(root.val); // 根
+        dfs(root.right); // 右
+    }
+    ```
 
 
 # II. 算法思想
