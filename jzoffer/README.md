@@ -2305,7 +2305,7 @@
 
 
 - ## 代码链接
-  - []()
+  - [扑克牌顺子](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/61_扑克牌中的顺子.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
