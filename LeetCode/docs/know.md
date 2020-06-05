@@ -19,9 +19,20 @@
 
 
 ## 数组
+
+- ### ArrayList
+  - 创建：`ArrayList<ArrayList<Integer>> result = new ArrayList<>();` 
+    - 注：参考要求的返回值类型
+  - 与数组int[]的相互转换：
+    - `List<int[]> answer = new ArrayList<>(); return (int[][])answer.toArray(new int[0][]); `
+
+
+
 - ### Arrays常用方法：
   - `Arrays.fill(arrName, arrValue)`: 将值arrValue赋值给arrName数组的每个位置。
   - `Arrays.copyOfRange(arrName, start, end)`: 返回左闭右开索引值范围内的数组片段。
+
+
 
 - ### 其他类的数组相关方法：
   - `System.arraycopy(Object src,int srcPos,Object dest, int destPos,int length)`: 制数组复
@@ -201,6 +212,11 @@
 
 ## 递归
 - 但凡遇到需要递归的问题，最好都画出递归树，这对你分析算法的复杂度，寻找算法低效的原因都有巨大帮助。
+
+
+
+## 滑动窗口
+- 滑动窗口中，两指针朝同一个方向滑动，比如全部朝右++的方向移动。
 
 
 
