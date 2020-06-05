@@ -1,5 +1,7 @@
 //57.1 - 和为S的两个数字
-//题目规定使用ArrayList。其中的思想还是一样，主要是开始时new和中途添加add
+//牛客题目规定使用ArrayList。其中的思想还是一样，主要是开始时new和中途添加add
+
+
 
 import java.util.ArrayList;
 public class Solution {
@@ -34,5 +36,25 @@ public class Solution {
         
 		//最后返回list
         return list;
+    }
+}
+
+
+
+//返回值类型为int[]的代码：
+//注：结果数组：即用即new；判空和找不到写到一起。
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while(left<=right){
+            int sum = nums[left] + nums[right];
+            if(sum == target)
+                return new int[]{nums[left], nums[right]};
+            else if(sum < target)
+                left++;
+            else 
+                right--;                
+        }
+        return new int[]{};
     }
 }
