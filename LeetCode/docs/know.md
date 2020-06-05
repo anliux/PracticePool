@@ -44,6 +44,13 @@
 
 
 ## 字符串
+- 转换：
+  - StringBuilder sb 转为 String类型：`String str = sb.toString();`
+  - char[] chs 转为 String类型：`String str = new String(chs);`
+    - 注：`Arrays.toString(chs);` -- 返回值："[f, g, a, b, c, d, e]"
+
+
+
 - ### String常用方法：
   - `char[] chars = str.toCharArray();` 
     - 将此字符串转换为一个新的字符数组。
