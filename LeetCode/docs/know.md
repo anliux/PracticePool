@@ -57,7 +57,11 @@
     - 将字符串数组arrStr中的元素通过连字符连接起来，可用于特定格式输出等。
   - `String[] s1=s.trim().split(" +");`  
     - 加上+以后，可以剪去字符串之间的多个空格，只保留非空格字符。  
-    
+  - `substring(int beginIndex, int endIndex)`
+    - 返回一个新字符串，它是此字符串的一个子字符串。该子字符串从指定的 beginIndex 处开始，直到索引 endIndex - 1 处的字符(左闭右开)
+    - 该子字符串的长度为 endIndex-beginIndex
+
+
 
 - ### StringBuilder / StringBuffer 常用方法：
   - 创建：`StringBuilder sb = new StringBuilder();`
