@@ -162,7 +162,21 @@
     }
     ```
 
-
+- 平衡二叉树
+  - 平衡：子树高度差<2，并且子树也是平衡树
+   ```
+        // 自顶向下
+        return Math.abs( height(root.left) - height(root.right) ) < 2
+                && isBalanced(root.left)
+                && isBalanced(root.right);
+        
+        // 自底向上
+        //先枝剪，排除不符合的情况：判空，左-1，右-1；当左右子树都符合平衡树时，返回计算结果
+        return Math.abs(left-right)<2 ? 1+Math.max(left, right) : -1;
+   ```
+  
+  
+  
 # II. 算法思想
 ## 排序
 - ### 时间复杂度：
@@ -226,4 +240,7 @@
           return b == 0? a: gcd(b, a % b);//余数为0时，返回除数的值。
       }
     ```
+    
+    
+    
 ### END
