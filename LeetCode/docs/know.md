@@ -274,6 +274,24 @@
 - 扑克牌顺子问题
   - 思路：排序；遍历判重；求差。
   - 关键：判断nums[4] - nums[joker] < 5; // 最大牌 - 最小牌 < 5 则可构成顺子
-    
-    
+ 
+- 圆圈中最后剩下的数字
+  - 规律：逆推，最终剩余一个数字，因此索引值为0，`(当前index + m) % (上一轮剩余数字的个数)`
+  - 代码：
+  ```
+    class Solution {
+      public int lastRemaining(int n, int m) {
+          int ans = 0;
+          // 最后一轮剩下2个人，所以从2开始反推
+          for (int i = 2; i <= n; i++) {
+              ans = (ans + m) % i;
+          }
+          return ans;
+      }
+  }
+  ```
+ 
+ 
+ 
+ 
 ### END
