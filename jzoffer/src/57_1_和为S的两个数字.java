@@ -12,7 +12,7 @@ public class Solution {
 		if(array==null || array.length==0)
             return list;
         
-		//定义收尾两个指针（或者索引值）
+		//定义首尾两个指针（或者索引值）
         int left = 0;
         int right = array.length-1;
         
