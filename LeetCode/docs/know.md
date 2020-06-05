@@ -60,7 +60,8 @@
   - `substring(int beginIndex, int endIndex)`
     - 返回一个新字符串，它是此字符串的一个子字符串。该子字符串从指定的 beginIndex 处开始，直到索引 endIndex - 1 处的字符(左闭右开)
     - 该子字符串的长度为 endIndex-beginIndex
-
+    - 左旋转字符串的库函数实现：`return s.substring(n, s.length()) + s.substring(0, n);`
+      - substring取子字符串，`+`直接连接两个子字符串。
 
 
 - ### StringBuilder / StringBuffer 常用方法：
