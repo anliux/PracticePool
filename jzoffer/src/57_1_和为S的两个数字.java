@@ -3,6 +3,7 @@
 
 
 
+//返回值类型为ArrayList的情况：
 import java.util.ArrayList;
 public class Solution {
     public ArrayList<Integer> FindNumbersWithSum(int [] array,int sum) {
@@ -41,7 +42,7 @@ public class Solution {
 
 
 
-//返回值类型为int[]的代码：
+//返回值类型为int[]的代码：2ms，击败98%的用户
 //注：结果数组：即用即new；判空和找不到写到一起。
 class Solution {
     public int[] twoSum(int[] nums, int target) {
