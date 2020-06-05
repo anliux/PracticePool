@@ -37,3 +37,48 @@ public class Solution {
         
     }
 }
+
+
+
+//返回值类型为int[][]的情况：5ms，击败44%的用户
+class Solution {
+    public int[][] findContinuousSequence(int target) {
+        //滑动窗口；等差数列求和公式；先存入List，最后转为数组
+
+        //首先，新建ArrayList存储结果
+        ArrayList<int[]> res = new ArrayList<>();
+        
+        
+        //初始化窗口指针
+        int left = 1;
+        int right = 2;
+
+        //循环：直到左指针追上右指针
+        while(left < right){
+            //用等差数列求和公式计算左右指针中间元素的和
+            int sum = (left + right) * (right - left + 1) / 2;
+
+            //根据sum与target的比较移动指针
+            if(sum == target){
+                //将元素添加到int[]数组，然后将该数组添加到List，并移动左指针继续寻找下一组
+                int [] arr = new int[right - left + 1];
+                for(int i = left; i <= right; i++){
+                    arr[i - left] = i;
+                }
+                res.add(arr);
+                left++;
+            }
+            else if(sum < target){
+                //偏小时：增大右指针来包含更多数
+                right++;
+            }
+            else if(sum > target){
+                //偏大时：增大左指针来缩小窗口
+                left++;
+            }
+        }
+
+        //转为数组，并返回
+        return res.toArray(new int[res.size()][]);
+    }
+}
