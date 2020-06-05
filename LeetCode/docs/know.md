@@ -45,7 +45,7 @@
 
 ## 字符串
 - ### String常用方法：
-  - `toCharArray()` 
+  - `char[] chars = str.toCharArray();` 
     - 将此字符串转换为一个新的字符数组。
   - `charAt(int index)` 
     - 返回指定索引处的 char 值。
@@ -53,15 +53,17 @@
     - 将此字符串与指定的对象比较。参数不为空且相等时返回true。
   - `replace(CharSequence target, CharSequence replacement)`：
     - 使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。
-  - `String.join(“-“, arrStr)`：
+  - `String str = String.join(" ", arrStr);`：
     - 将字符串数组arrStr中的元素通过连字符连接起来，可用于特定格式输出等。
   - `String[] s1=s.trim().split(" +");`  
     - 加上+以后，可以剪去字符串之间的多个空格，只保留非空格字符。  
     
 
 - ### StringBuilder / StringBuffer 常用方法：
-  - 
-  - 
+  - 创建：`StringBuilder sb = new StringBuilder();`
+  - 添加元素，可连续添加：`sb.append(words[i]).append(" ");`
+  - 转为字符串类型：`String str = sb.toString();`
+
 
 
 ## 链表
