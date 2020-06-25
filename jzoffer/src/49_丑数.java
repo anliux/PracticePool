@@ -1,5 +1,7 @@
 //49 - 丑数
-//关键思路：设置数组保存找到的丑数，以空间换时间
+//思路：三指针 -- 设置数组保存找到的丑数，以空间换时间
+
+
 
 public class Solution {
     public int GetUglyNumber_Solution(int index) {
@@ -22,6 +24,7 @@ public class Solution {
             dp[i]=Math.min(next2,Math.min(next3,next5));
             
             //取到符合的最近邻丑数以后，更新对应的索引flag
+            //注：这里不能用if-else-if，只能if-if，否则报错。不知道为什么。
             if(dp[i]==next2){
                 i2++;
             }
