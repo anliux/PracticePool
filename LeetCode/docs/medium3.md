@@ -103,7 +103,7 @@
 
 # 264. 丑数II
 - ## 题目链接：
-  - [longest-increasing-subsequence](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
+  - [ugly-number-ii](https://leetcode-cn.com/problems/ugly-number-ii/)
 
 - ## 题目标签：
   - [堆](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Heap.md)
