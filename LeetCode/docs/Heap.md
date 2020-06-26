@@ -72,7 +72,7 @@
 
 
 # 264. 丑数II
-- ## 简述：（[medium3](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/hard2.md)）
+- ## 简述：（[medium3](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium3.md)）
   - ### 题目描述
     - 编写一个程序，找出第 n 个丑数。
     - 丑数就是质因数只包含 2, 3, 5 的正整数。
