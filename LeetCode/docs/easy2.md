@@ -9,6 +9,7 @@
 * []()
 * [226. 翻转二叉树](#226-翻转二叉树)
 * []()
+* [263. 丑数](#263-丑数)
 <!-- GFM-TOC -->
 
 
@@ -140,27 +141,48 @@
 
 
 
-# 
+# 263. 丑数
 - ## 题目链接：
-  - []()
+  - [ugly-number](https://leetcode-cn.com/problems/ugly-number/)
 
 - ## 题目标签：
-  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-  - [哈希表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
+  - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
   
 - ## 题目描述
- 
+  - 编写一个程序判断给定的数是否为丑数。
+  - 丑数就是只包含质因数 2, 3, 5 的正整数。
+  - 示例 1:
+    - 输入: 6
+    - 输出: true
+    - 解释: 6 = 2 × 3
+  - 示例 2:
+    - 输入: 8
+    - 输出: true
+    - 解释: 8 = 2 × 2 × 2
+  - 示例 3:
+    - 输入: 14
+    - 输出: false 
+    - 解释: 14 不是丑数，因为它包含了另外一个质因数 7。
+  - 说明：
+    - 1 是丑数。
+    - 输入不会超过 32 位有符号整数的范围: [−231,  231 − 1]。
 
 - ## 解题思路
-
+  - 思路：数学法
+    - 对能被2,3,5整除的数不断除2,3,5，最后剩1就是，剩0就不是，除2可以用位运算替换
+    - 第一步先判空，最小的丑数是1，小于1则不符合。
+  - 算法：
+    - 判空：当num小于1时，返回false；
+    - while循环：依次整除2，3，5
+      - 首先整除取余，当可以整除时，进行整除；
+    - 最后进行判断：当最终剩余的数字是1时，证明是丑数；否则，返回false。
 
 - ## 代码链接：
-  - []()
+  - [丑数](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0263-ugly-number.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
-
 
 
 
