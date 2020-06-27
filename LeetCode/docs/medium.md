@@ -76,9 +76,15 @@
   
 - ## 题目描述
   - 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
-  - 示例 1: 输入: "abcabcbb"，输出: 3。解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
-  - 示例 2: 输入: "bbbbb"，输出: 1。解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
-  - 示例 3: 输入: "pwwkew"，输出: 3。解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+  - 示例 1: 
+    - 输入: "abcabcbb"，输出: 3。
+    - 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+  - 示例 2: 
+    - 输入: "bbbbb"，输出: 1。
+     - 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+  - 示例 3: 
+    - 输入: "pwwkew"，输出: 3。
+    - 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
   - 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 
 - ## 解题思路
@@ -110,10 +116,16 @@
       - 优化：使用哈希map，如果 s[j] 在 `[i,j)` 范围内有与 j' 重复的字符，我们不需要逐渐增加 i ，直接跳过 [i，j′] 范围内的所有元素，并将 i 变为 j′+1。
       - HashMap：记录char的位置+1，便于窗口start位置的滑动
     - 算法：
-      - 定义一个 map 存储 (k, v)，其中 key 值为字符，value 值为字符位置 +1，加 1 表示从字符位置后一个才开始不重复
-      - 定义不重复子串的开始位置为 start，结束位置为 end
-      - 随着 end 不断遍历向后，会遇到与 [start, end] 区间内字符相同的情况，此时将字符作为 key 值，获取其 value 值，并更新 start，此时 [start, end] 区间内不存在重复字符
-      - 无论是否更新 start，都会更新其 map 数据结构和结果 ans。
+      - 初始化结果变量res=0；
+      - 定义哈希表map：存储 (k, v)，其中 key 值为字符，value 值为字符位置 +1，加 1 表示从字符位置后一个才开始不重复
+      - for循环遍历：初始化 开始位置为 start=0，结束位置为 end=0
+        - 初始化字符：`char chs = s.charAt(end);` -- 以end对应的字符为基准进行遍历
+        - map.containsKey -- 判断chs是否已经存在窗口中
+          - 当存在时，更新start的值为start和map.get(key)中的max；
+        - 更新res为res和end-start+1中的最大值；
+        - map.put(key, value) -- 其中，key表示end对应字符，value为end+1，表示下一个无重复位置，方便get的时候更新start的值。
+        - 注：无论是否更新 start，都会更新其 map 数据结构和结果 ans。
+      - 返回结果变量res。
 
 - ## 代码链接：
   - [无重复字符的最长子串](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0003-longest-substring-without-repeating-characters.java)
