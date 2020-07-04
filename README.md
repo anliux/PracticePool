@@ -8,8 +8,8 @@
 
 # 目录
 
-| Title | Status |
-| :-------------: | ------------- |
+|   Title   |   Status   |
+|   :-------------:   |   -------------   |
 | __[基础手撕](https://github.com/anliux/PracticePool/tree/master/base)__ | 待整理 |
 | __[LeetCode](https://github.com/anliux/PracticePool/tree/master/LeetCode)__ | 更新中 |
 | __[剑指offer](https://github.com/anliux/PracticePool/tree/master/jzoffer)__ | 更新中 |
