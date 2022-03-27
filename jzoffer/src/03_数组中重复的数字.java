@@ -1,10 +1,39 @@
 //03-数组中重复的数字
 //思路：集合；数组交换
 //注意：异常判断；阈值设置；交换在while循环内。
-//注：牛客和力扣的本题参数和返回值类型不同，前一个是力扣，返回int，后一个是牛客，返回boolean
+//注：牛客和力扣的本题参数和返回值类型不同，2是力扣，返回int，13是牛客，返回boolean
 
 
-//集合：7ms，击败38%的用户
+
+//遍历：两层循环对比所有数组元素，可AC，但时间复杂度高 (牛客)
+//思路：第一层循环依次选取一个锚点数字，第二层循环遍历剩下的数字，当找到相同的两个数字，退出循环，返回正确的结果。
+//注：没有进行越界等其他判断，较粗糙
+import java.util.*;
+
+public class Solution {
+    /**
+     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     *
+     * 
+     * @param numbers int整型一维数组 
+     * @return int整型
+     */
+    public int duplicate (int[] numbers) {
+        // write code here
+        
+        for(int i=0;i<numbers.length-1;i++){
+            for(int j=i+1;j<numbers.length;j++){
+                if (numbers[i] == numbers[j])
+                   return numbers[i];
+            }
+        }
+        return -1;
+    }
+}
+
+
+
+//集合：7ms，击败38%的用户 (力扣)
 //算法：定义集合；遍历数组：将数组元素存入集合，当无法存入时，返回当前元素；返回-1。
 class Solution {
     public int findRepeatNumber(int[] nums) {
@@ -24,7 +53,7 @@ class Solution {
 
 
 
-//数组交换
+//数组交换 (牛客)
 //算法：判空；遍历数组：如果不等，判断重复，交换；返回false
 public class Solution {
     public boolean duplicate(int numbers[],int length,int [] duplication) {
