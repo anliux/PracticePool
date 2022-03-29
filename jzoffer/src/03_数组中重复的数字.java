@@ -84,3 +84,24 @@ public class Solution {
 		return false;
     }
 }
+
+
+
+//数组交换：更新了参数列表和返回值类型，与力扣统一了 (牛客)
+//算法：判空；以索引值为基准遍历数组：如果不等，先判断重复是否找到，否则交换直至按索引值放到正确位置；返回false
+import java.util.*;
+public class Solution {
+    public int duplicate (int[] numbers) {
+        // write code here
+        for(int i=0;i<numbers.length;i++){
+            while(numbers[i]!=i){
+                if(numbers[i]==numbers[numbers[i]])
+                    return numbers[i];
+                int temp = numbers[i];
+                numbers[i] = numbers[temp];
+                numbers[temp] = temp;
+            }
+        }
+        return -1;
+    }
+}
