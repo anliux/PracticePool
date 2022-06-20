@@ -5,11 +5,9 @@
 
 
 
-//遍历：两层循环对比所有数组元素，可AC，但时间复杂度高 (牛客)
-//思路：第一层循环依次选取一个锚点数字，第二层循环遍历剩下的数字，当找到相同的两个数字，退出循环，返回正确的结果。
+//遍历：2523 ms, 击败5.15%
+//算法：两层循环对比所有数组元素，可AC；第一层循环依次选取一个锚点数字，第二层循环遍历剩下的数字，当找到相同的两个数字，退出循环，返回正确的结果。
 //注：没有进行越界等其他判断，较粗糙
-import java.util.*;
-
 public class Solution {
     /**
      * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
@@ -33,7 +31,7 @@ public class Solution {
 
 
 
-//集合：7ms，击败38%的用户 (力扣)
+//集合：4ms，击败59.44%的用户
 //算法：定义集合；遍历数组：将数组元素存入集合，当无法存入时，返回当前元素；返回-1。
 class Solution {
     public int findRepeatNumber(int[] nums) {
@@ -53,7 +51,35 @@ class Solution {
 
 
 
-//数组交换 (牛客)
+//哈希表：
+//思路：类似set，遍历并判断是否已包含
+
+
+
+//索引排列：0ms，击败100%
+//思路：以索引值为基准遍历数组：如果当前元素与索引值不等，先判断重复是否找到，否则交换直至当前i索引的值放到正确位置
+//注意：内外都是循环，外for内while，内不要写成if
+class Solution {
+    public int findRepeatNumber(int[] nums) {
+        for(int i=0; i<nums.length; i++){
+            while(nums[i] != i){
+                int a = nums[i];
+                if(nums[a] == a){
+                    return a;
+                }  
+                else{
+                    int temp = a;
+                    nums[i] = nums[temp];
+                    nums[temp] = temp;
+                }    
+            }
+        }
+        return -1;
+    }
+}
+
+
+//数组交换 (牛客：返回值是boolean)
 //算法：判空；遍历数组：如果不等，判断重复，交换；返回false
 public class Solution {
     public boolean duplicate(int numbers[],int length,int [] duplication) {
