@@ -65,12 +65,12 @@ import java.util.ArrayList;
 public class Solution {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ArrayList<Integer> ret = new ArrayList<>();
-		if(listNode != null)
-		{
-			ret.addAll(printListFromTailToHead(listNode.next));
-			ret.add(listNode.val);
-		}
-		return ret;
+	if(listNode != null)
+	{
+		ret.addAll(printListFromTailToHead(listNode.next));
+		ret.add(listNode.val);
+	}
+	return ret;
     }
 }
 
