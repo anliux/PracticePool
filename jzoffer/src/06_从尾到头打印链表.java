@@ -87,20 +87,25 @@ public class Solution {
  */
 class Solution {
     public int[] reversePrint(ListNode head) {
-        int count = 0;
+        //定义计数器和当前的node结点
+	int count = 0;
         ListNode node = head; 
-        while(node != null){
+        
+	//第一次遍历链表：算出长度/链表元素个数    
+	while(node != null){
             count++;
             node = node.next;
         }
         
+	//定义结果数组，并将当前结点node复位到head，为再次遍历链表做准备
         int[] res = new int[count];
-
         node = head;
+	    
+	//第二次遍历：正序遍历链表，倒序遍历数组    
         for(int i = count-1; i >= 0; i--){
             res[i] = node.val;
             node = node.next;
         }
-        return res;
+        return res;//返回结果
     }
 }
