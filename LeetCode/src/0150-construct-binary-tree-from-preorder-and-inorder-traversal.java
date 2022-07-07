@@ -5,7 +5,7 @@
 注意：将由前序和中序重构二叉树的方法正确地转换为代码形式。
 */
 
-//递归：2ms，击败56.87%的用户
+//递归：1ms，击败99.91%的用户
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
