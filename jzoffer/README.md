@@ -606,6 +606,7 @@
     - 循环：当i<j时
       - 二分为mid
       - `nums[mid]>nums[j]`时：说明mid位于大数组，而最小值会在[mid+1，j]内，因此更新`i=mid+1;`
+        - 注意这里是mid+1，如果mid会报错 (当left=right时死循环了) 
       - `nums[mid]<nums[j]`时：说明mid位于小数组，而最小值会在[i,mid]内，因此更新`j=mid;`
       - `nums[mid]==nums[j]`时：`j--;`
     - 当i=j时，返回`numbers[i]`
