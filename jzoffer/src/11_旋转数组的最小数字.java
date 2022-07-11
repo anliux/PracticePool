@@ -7,43 +7,49 @@
 //注：暴力法是耗时最少的。
 
 
+
 //思路1：暴力搜索最小值
-import java.util.ArrayList;
-public class Solution {
-    public int minNumberInRotateArray(int [] array) {
-        int n = array.length;
-        int res = array[0];
-        for(int i=0; i<n-1; i++)
-        {
-            if(array[i+1]<array[i])
-                res = array[i+1];
+//0ms, 击败100%；41.6M，击败5.19%
+class Solution {
+    public int minArray(int[] numbers) {
+        //暴力法
+        int x = numbers[0];
+        for(int i = 1; i < numbers.length; i++){
+            if(numbers[i] < x)
+                x = numbers[i];
         }
-        return res;
+        return x;
     }
 }
 
 
-//思路2：暴力搜索是否符合非降序
-import java.util.ArrayList;
-public class Solution {
-    public int minNumberInRotateArray(int [] array) {
-        //前后两段数组都是非降序，当出现不符合这个规律的情况时，返回下一个
-        //此时把相等的情况也考虑进来了
-        int n = array.length;
-        if(n==0)
+
+/*  思路2：暴力搜索是否符合非降序
+    前后两段数组都是非降序，当出现不符合这个规律的情况时，返回下一个
+    此时把相等的情况也考虑进来了
+    若遍历结束仍符合前小后大规律，说明未旋转，返回第一个值
+*/
+//0ms, 击败100%；41.4M，击败18.72%
+class Solution {
+    public int minArray(int[] numbers) {
+        //暴力-非降序
+        int n = numbers.length;
+        if(n<=0)
             return 0;
-        for(int i=0; i<n; i++)
-        {
-            if(array[i]>array[i+1])
-                return array[i+1];
+        int x = numbers[0];
+        for(int i = 1; i < n; i++){
+            if(numbers[i-1]>numbers[i])
+                x = numbers[i];
         }
-        return array[0]; //若遍历结束仍符合前小后大规律，说明未旋转，返回第一个值
+        return x;
     }
 }
+
 
 
 //思路3：排序
-//注意：import 使用默认的话不能用sort的
+//注意：import 使用默认的话不能用sort的 (LeetCode可以)
+//1ms，击败7.86%；41.8M，击败5.19%
 import java.util.*;
 public class Solution {
     public int minNumberInRotateArray(int [] array) {
