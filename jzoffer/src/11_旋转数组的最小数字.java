@@ -29,19 +29,15 @@ class Solution {
     此时把相等的情况也考虑进来了
     若遍历结束仍符合前小后大规律，说明未旋转，返回第一个值
 */
-//0ms, 击败100%；41.4M，击败18.72%
+//0ms, 击败100%；41.1M，击败69.98% 
 class Solution {
-    public int minArray(int[] numbers) {
-        //暴力-非降序
-        int n = numbers.length;
-        if(n<=0)
-            return 0;
-        int x = numbers[0];
-        for(int i = 1; i < n; i++){
-            if(numbers[i-1]>numbers[i])
-                x = numbers[i];
+    public int findMin(int[] nums) {
+        //暴力非降序
+        for(int i = 0; i < nums.length - 1; i++){
+            if(nums[i] > nums[i+1])
+                return nums[i+1];
         }
-        return x;
+        return nums[0];
     }
 }
 
@@ -107,6 +103,7 @@ public class Solution {
 
 
 //思路5：二分
+//0ms，击败100%；41.2M，击败49.51%
 class Solution {
     public int minArray(int[] numbers) {
         //定义双指针
@@ -117,7 +114,7 @@ class Solution {
             //二分
             int mid = (left + right) / 2;
             if(numbers[mid] > numbers[right])//mid位于大数组
-                left = mid + 1;
+                left = mid + 1;//特别注意：这里是mid+1，不是mid，否则会死循环
             else if(numbers[mid] < numbers[right])//mid位于小数组
                 right = mid;
             else if(numbers[mid] == numbers[right])//有重复时
@@ -125,6 +122,6 @@ class Solution {
         }
 
         //返回结果
-        return numbers[left];
+        return numbers[left];//这里是left对应元素，不是mid，特别注意
     }
 }
