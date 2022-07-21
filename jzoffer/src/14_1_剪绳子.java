@@ -30,20 +30,26 @@ class Solution {
 
 
 
-//动态规划：不用过多分析，将问题无脑分解为更小的问题。
+//动态规划：1 ms/46.15%, 38.1 MB/60.40%
 //从小到大，依次计算所有可能解并保存在数组中，直到计算到target为止。
-public class Solution {
-    public int cutRope(int target) {
-        int[] dp = new int[target+1];
-        dp[1]=1;//定n>1,m>1，故dp[1]可0可1；为方便循环计算，可设为1
-       
-        for(int i=2; i<=target; i++){
-            for(int j=1; j<i; j++){ //可设置为i/2以优化，但是总有case不通过，故作罢。
-                dp[i]=Math.max(dp[i], Math.max(j*(i-j),dp[j]*(i-j)));
-				//这里要考虑全面问题。考虑分为两段，和分为更小的问题f(j)与另一段小绳乘积。
+class Solution {
+    public int cuttingRope(int n) {
+        //动态规划: max = max(dp[i], j*(i-j), j*dp[i-j])
+        
+        int[] dp = new int[n+1];//n+1:
+
+        //初始化：推演或已知得最初几个值对应的结果(n>1, m>1, n剪为m段)
+        dp[1] = 1;
+        dp[2] = 1;//2需要至少剪为两端，m>1
+
+        //遍历：求出n之前的所有结果，2结果已知，从3开始
+        for(int i = 3; i<=n; i++){
+            for(int j = 1; j < i; j++){//从j处剪
+                dp[i] = Math.max(dp[i], Math.max(j*(i-j), j*dp[i-j]));
+                //只剪j一刀：j*(i-j); 剪多刀：j*dp[i-j]
             }
         }
-        return dp[target];
+        return dp[n];
     }
 }
 
