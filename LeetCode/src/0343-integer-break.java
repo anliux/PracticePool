@@ -39,7 +39,7 @@ class Solution {
     public int cuttingRope(int n) {
         //动态规划: max = max(dp[i], j*(i-j), j*dp[i-j])
         
-        int[] dp = new int[n+1];//n+1:
+        int[] dp = new int[n+1];//n+1: 需要取到索引值为n的元素
 
         //初始化：推演或已知得最初几个值对应的结果(n>1, m>1, n剪为m段)
         dp[1] = 1;
