@@ -5,7 +5,7 @@
 public class Solution {
     public int NumberOf1(int n) {
         int count = 0;
-        while(n!=0){
+        while(n!=0){//直接写n会报错，显示int不能转为boolean型
             count++;
             n = (n-1)&n;
         }
