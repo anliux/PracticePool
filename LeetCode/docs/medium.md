@@ -743,7 +743,7 @@
   - [pow(x,n)](https://leetcode.cn/problems/powx-n/))
 
 - ## 题目标签：
-  - [递归](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [递归](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Recurrence.md)
   - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
 
 - ## 题目描述
