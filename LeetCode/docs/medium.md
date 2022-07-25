@@ -740,7 +740,7 @@
 
 # 50. pow函数
 - ## 题目链接：
-  - [pow(x,n)](https://leetcode.cn/problems/powx-n/))
+  - [pow(x,n)](https://leetcode.cn/problems/powx-n/)
 
 - ## 题目标签：
   - [递归](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Recurrence.md)
