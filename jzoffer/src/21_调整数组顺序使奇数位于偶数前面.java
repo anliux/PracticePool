@@ -2,7 +2,7 @@
 //思路：双指针
 
 
-//双指针：2ms，击败99.2%的用户
+//双指针：1ms/100%; 49.4 MB/24.95%
 class Solution {
     public int[] exchange(int[] nums) {
         //判空：数组为空或数组长度为0时返回原数组
