@@ -24,24 +24,26 @@
  */
 class Solution {
     public ListNode deleteNode(ListNode head, int val) {
-        //删除头结点：返回head.next
+        //头结点判断
         if(head.val == val)
             return head.next;
-        
+
         //定义双指针
         ListNode pre = head, cur = head.next;
 
-        //遍历链表，并在寻找到val对应结点之后终止循环
-        while(cur != null && cur.val != val){
+        //遍历: 判断+后移
+        while(cur!=null && cur.val!=val){
             pre = cur;
             cur = cur.next;
+        }   
+
+        //不是遍历到尾结点没找到的情况：删除找到的结点
+        if(cur!=null){
+            pre.next = cur.next;
         }
-        
-        //注：如果给定删除的值不存在，这里需要加一个判断，否则空指针异常
-        //if(cur == null) return head;
-        //跳过cur，直接将pre与cur.next连接
-        pre.next = cur.next;
-        return head;
+            
+        //遍历结束，返回头结点
+        return head; 
     }
 }
 
