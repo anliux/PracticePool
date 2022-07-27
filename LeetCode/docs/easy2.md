@@ -68,19 +68,17 @@
     - 注：本方法自带判空，也可以处理单个结点的链表。
   - 递归：
     - 复杂度：时间O(n)，空间O(n)
-    - 分析：
-      - 递归的两个条件：
-        - 终止条件是当前节点或者下一个节点==null
-        - 在函数内部，改变节点的指向，也就是 head 的下一个节点指向 head 递归函数那句：`head.next.next = head;`
-        - 不好理解，其实就是 head 的下一个节点指向head：相当于head与head.next和head形成了一个环。
-      - 递归函数中每次返回的 cur 其实只最后一个节点，在递归函数内部，改变的是当前节点的指向。
+    - 递归核心思想：
+      - 遍历链表，当越过尾节点后终止递归并返回新的头结点pre，并在回溯时修改各节点的 next 引用指向。
     - 算法：
-      - 判空：当head为空，或者仅有一个结点时，返回head本身；
-      - 递归：结点cur赋值为head.next的反转链表结果，这句会一直dfs到末尾，然后开始返回；
-        - 把head看做一个结点，把剩余结点并且已经调用过反转函数的返回值看做cur。
-      - 形成环：将head.next的下一个结点赋值为head，即将head.next连接到head；
-      - 切断head与head.next的连接；
-      - 最后返回cur：cur是尾结点。
+      - recur(cur, pre) 递归函数：
+        - 终止条件：当 cur 为空，则返回尾节点 pre （即反转链表的头节点）；
+        - 递归后继节点，记录返回值（即反转链表的头节点）为 res ；
+        - 修改当前节点 cur 引用指向前驱节点 pre ；
+        - 返回反转链表的头节点 res ；
+      - reverseList(head) 函数：
+        - 调用并返回 recur(head, null) 。
+        - 传入 null 是因为反转链表后， head 节点指向 null ；
     
 - ## 代码链接：
   - [反转链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0206-reverse-linked-list.java)
