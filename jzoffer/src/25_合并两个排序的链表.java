@@ -44,7 +44,7 @@ class Solution {
         //判断后：对链表结点和prev结点的位置均进行移动，其中prev的移动属于公共操作
         while(l1 != null && l2 != null){
             if(l1.val <= l2.val){
-                cur.next = l1;
+                cur.next = l1;//注意：这里是cur.next，形成链，后面cur指针从cur移动到next
                 l1 = l1.next;
             }else{
                 cur.next = l2;
