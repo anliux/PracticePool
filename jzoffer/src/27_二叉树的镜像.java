@@ -3,7 +3,7 @@
 
 
 
-//递归：0ms，击败100%的用户
+//递归：0ms/100%; 39.1 MB/20.52%
 /*
   - 递归：
     - 复杂度：时间O(n), 空间O(n)
@@ -28,7 +28,7 @@ class Solution {
     public TreeNode mirrorTree(TreeNode root) {
         //判空
         if(root == null)
-            return null;
+            return null;//或return root;
         
         //交换root的左右子树，同时递归
         TreeNode tmp = root.left;
@@ -42,7 +42,7 @@ class Solution {
 
 
 
-//循环实现：1ms，击败5%的用户
+//循环实现：0ms/100%; 38.8 MB/65.44%
 /*
   - 循环实现：
     - 复杂度：时间O(n), 空间O(n)
@@ -76,12 +76,12 @@ class Solution {
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
 
-        //循环：当栈不为空时循环
+        //循环：当栈不为空时循环 -- 注意不是以root不为null作为判断条件
         while(!stack.isEmpty()) {
             //弹出栈顶结点并赋值给变量node
             TreeNode node = stack.pop();
 
-            //将node结点对应的左右子树入栈
+            //将node结点对应的左右子树入栈: 即所有非空结点进栈，在下次循环中作为node结点
             if(node.left != null)
                 stack.push(node.left);
             if(node.right != null)
@@ -93,7 +93,7 @@ class Solution {
             node.right = tmp;
         }
 
-        //返回结果root
+        //上述循环重新构建了以root为根结点的树，并返回结果
         return root;
     }
 }
