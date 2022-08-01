@@ -1,9 +1,9 @@
 //28-对称的二叉树
-//思路：递归；迭代
+//思路：递归(镜像/非镜像)；迭代
 
 
 
-//递归：0ms，击败100%的用户
+//镜像递归：0ms/100%; 39.8 MB/26.56%
 /*
     - 算法：
       - 主体函数：判空；调用镜像函数。
@@ -43,5 +43,34 @@ class Solution {
         //否则，返回false
         else 
             return false;
+    }
+}
+
+
+
+//非镜像递归：0ms/100%; 39.7 MB/44.79%
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        //非镜像递归
+        if(root==null)
+            return true;
+        return recur(root.left,root.right);
+    }
+
+    public boolean recur(TreeNode left, TreeNode right){
+        if(left==null && right==null)
+            return true;
+        if(left==null || right==null || left.val!=right.val)//注：建立在上一个if判断的基础上，排除left和right都等于null的情况
+            return false;
+        return recur(left.left,right.right) && recur(left.right,right.left);
     }
 }
