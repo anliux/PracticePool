@@ -826,10 +826,11 @@
       - 按照“从左向右、从上向下、从右向左、从下向上” 的顺序遍历，同时更新各个指标的值。
       - 用for循环完成一条边的遍历：注意循环起始位置是某一边界值；
       - 每次遍历完一条边之后，都要进行判断，当边界交错时，break跳出循环。
-    - 返回结果数组list。
+    - 返回结果。
   - 注意：
     - 1. 与剑指offer29题的区别：本题返回值类型是List
     - 2. 如果用List，不用index，则if判断中，同时进行边界值更新时++--在前。
+    - 3. List 本身是个接口，实例化其子类ArrayList `List<Integer> res = new ArrayList<Integer>();`
     
 - ## 代码链接：
   - [螺旋矩阵](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0054-spiral-matrix.java)
