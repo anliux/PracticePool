@@ -2,68 +2,119 @@
 //思路：模拟，设定边界
 
 
-
-//耗时：1ms，击败97%的用户
-/*
-  - 算法：
-    - 复杂度：时间O(mn), 空间O(1) -- m、n为矩阵的行列数。
-    - 判空：当数组长度为0时，return new int[0];；
-    - 初始化四个边界，以及结果数组的索引值；
-    - 初始化结果数组res；
-    - 循环：死循环，跳出控制在循环体内。
-      - 按照“从左向右、从上向下、从右向左、从下向上” 的顺序遍历，同时更新各个指标的值。
-      - 用for循环完成一条边的遍历：注意循环起始位置是某一边界值；
-      - 每次遍历完一条边之后，都要进行判断，当边界交错时，break跳出循环。
-    - 返回结果数组res。
-*/
+//模拟路径：0ms/100%; 43.5 MB/20.76%
 class Solution {
     public int[] spiralOrder(int[][] matrix) {
         //判空
         if(matrix.length == 0)
             return new int[0];
 
-        //初始化边界值和结果数组索引值
-        int l = 0, r = matrix[0].length - 1, t = 0, b = matrix.length - 1, index = 0;
+        //初始化边界值 和 结果数组的当前指针
+        int left=0, right=matrix[0].length-1, top=0, bottom=matrix.length-1;
+        int cur = 0;
 
         //初始化结果数组
-        int [] res = new int[(r+1) * (b+1)];
+        int[] res = new int[(right+1) * (bottom+1)];
 
-        //循环：按照“从左向右、从上向下、从右向左、从下向上” 的顺序遍历，同时更新各个指标的值。
-        while(true){
-            //从左到右
-            for(int i = l; i <= r; i++){
-                res[index++] = matrix[t][i];
+        //死循环：走一条边；更新边界值；判断边界值交错则跳出；
+        while(true){//注意行top或bottom，列left或right
+            //从左到右: top行, left++列
+            for(int i = left; i<=right; i++){
+                res[cur] = matrix[top][i];
+                cur++;
             }
-            if(++t > b)
+
+            //更新边界值(top+1), 判断更新后的边界值是否交叉: 等于不算交叉
+            top++;
+            if(top>bottom)
                 break;
 
-            //从上到下
-            for(int i = t; i <= b; i++){
-                res[index++] = matrix[i][r];
+            //从上到下：top++行，right列
+            for(int i = top; i<=bottom; i++){
+                res[cur] = matrix[i][right];
+                cur++;
             }
 
-            if(l > --r)
+            //更新边界值(right-1)，并判断更新后的边界值是否交叉
+            right--;
+            if(right<left)
                 break;
 
-            //从右到左
-            for(int i = r; i >= l; i--){
-                res[index++] = matrix[b][i];
+            //从右到左: bottom行，right--列
+            for(int i = right; i>=left; i--){
+                res[cur] = matrix[bottom][i];
+                cur++;
             }
 
-            if(t > --b)
+            //更新边界值(bottom-1)，并判断更新后的边界值是否交叉
+            bottom--;
+            if(bottom<top)
                 break;
 
-            //从下到上
-            for(int i = b; i >= t; i--){
-                res[index++] = matrix[i][l];
+            //从下到上: bottom--行, left列
+            for(int i = bottom; i >= top ; i--){
+                res[cur] = matrix[i][left];
+                cur++;
             }
 
-            if(++l > r)
+            //更新边界值(left+1)，并判断更新后的边界值是否交叉
+            left++;
+            if(left>right)
                 break;
         }
 
         //返回结果数组
         return res;
+    }
+}
 
+
+//代码优化版
+class Solution {
+    public int[] spiralOrder(int[][] matrix) {
+        //判空
+        if(matrix.length == 0)
+            return new int[0];
+
+        //初始化边界值 和 结果数组的当前指针
+        int left=0, right=matrix[0].length-1, top=0, bottom=matrix.length-1;
+        int cur = 0;
+
+        //初始化结果数组
+        int[] res = new int[(right+1) * (bottom+1)];
+
+        //死循环：走一条边；更新边界值；判断边界值交错则跳出；
+        while(true){//注意行top或bottom，列left或right
+            //从左到右: top行, left++列
+            for(int i = left; i<=right; i++){
+                res[cur++] = matrix[top][i];
+            }
+            if(++top>bottom)
+                break;
+
+            //从上到下：top++行，right列
+            for(int i = top; i<=bottom; i++){
+                res[cur++] = matrix[i][right];
+            }
+            if(--right<left)
+                break;
+
+            //从右到左: bottom行，right--列
+            for(int i = right; i>=left; i--){
+                res[cur++] = matrix[bottom][i];
+            }
+            if(--bottom<top)
+                break;
+
+            //从下到上: bottom--行, left列
+            for(int i = bottom; i >= top ; i--){
+                res[cur++] = matrix[i][left];
+            }
+            if(++left>right)
+                break;
+        }
+
+        //返回结果数组
+        return res;
     }
 }
