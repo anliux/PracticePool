@@ -3,7 +3,7 @@
 
 
 
-//两个栈：19ms，击败89.85%的用户
+//两个栈：14 ms/22.91%; 43.6 MB/20.86%
 //算法：两个栈，一个正常操作，另一个存储最小值
 
 /*
@@ -20,42 +20,38 @@
 class MinStack {
 
     /** initialize your data structure here. */
-    //定义全局栈
     Stack<Integer> stack;
     Stack<Integer> minStack;
 
     public MinStack() {
-        //上面直接new了，这里应该可以省略。
         stack = new Stack<>();
         minStack = new Stack<>();
     }
     
     public void push(int x) {
-        //stack正常入栈，minStack判断
-        stack.push(x);
-
-        //minStack为空时，push；不为空时，与栈顶元素比较，小则存入
-        if(minStack.isEmpty())
-            minStack.push(x);
-        else if(x <= minStack.peek())
-            minStack.push(x);
+        //stack正常入栈，minStack判断是否是最小值后入栈
+        stack.add(x);
+        
+        //minStack为空时，push；不为空时，与栈顶元素比较，小于等于当前min则存入
+        if(minStack.isEmpty() || x<=minStack.peek())
+            minStack.add(x);
     }
     
     public void pop() {
         //stack正常出栈，minStack栈顶与stack出栈对比，相等时出栈
         int a = stack.pop();
-        int b = minStack.peek();
-        if(a==b)
+        //这里需要用equals()而不是==，Integer 缓存[-128,127]的值,当添加的值超过该范围时,会重新在堆中new 一个对象
+        if(a.equals(minStack.peek()))
             minStack.pop();
     }
     
     public int top() {
-        //用peek()
+        //peek()获取栈顶的值
         return stack.peek();
     }
     
-    public int getMin() {
-        //min存在minStack的顶部，因此返回minStack的peek即可
+    public int min() {
+        //min存放在minStack的顶部，返回minStack的peek即可
         return minStack.peek();
     }
 }
@@ -66,7 +62,7 @@ class MinStack {
  * obj.push(x);
  * obj.pop();
  * int param_3 = obj.top();
- * int param_4 = obj.getMin();
+ * int param_4 = obj.min();
  */
  
  
