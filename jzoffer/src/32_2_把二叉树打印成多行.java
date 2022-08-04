@@ -3,7 +3,7 @@
 
 
 
-//耗时：1ms，击败95%的用户
+//BFS：1ms/69.37%; 41.4 MB/67.02%
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -13,31 +13,13 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-/*
-  - 算法：
-    - 复杂度：时间O(n)，空间O(n)
-    - 判空：当根节点为空，则返回空列表 [] ；
-      - (注：根结点判空需要新建，因此可以转为先初始化，然后对根结点判非空)
-    - 初始化： 打印结果列表 res = [] ，包含根节点的队列 queue = [root] ；
-    - BFS 循环： 当队列 queue 为空时跳出；
-      - 新建一个临时列表 tmp ，用于存储当前层打印结果；
-      - 当前层打印循环： 循环次数为当前层节点数（即队列 queue 长度）；
-        - 出队： 队首元素出队，记为 node；
-        - 打印： 将 node.val 添加至 tmp 尾部；
-        - 添加子节点： 若 node 的左（右）子节点不为空，则将左（右）子节点加入队列 queue ；
-      - 将当前层结果 tmp 添加入 res 。
-    - 返回值： 返回打印结果列表 res 即可。
-    - 注意：内循环次数控制的for循环
-      - 使用i--，让size()只在循环开始使用一次，使循环次数不受队列长度变化影响，妙啊！
-      - 若i从0开始，使用i++，那么queue的size每一轮都在变，会导致错误。
-*/
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         //初始化：
         List<List<Integer>> list = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
 
-        //判空
+        //反向判空：配合循环条件，不为空时才添加root结点。
         if(root != null)
             queue.add(root);
 
