@@ -3,7 +3,7 @@
 
 
 
-//耗时：1ms，击败99%的用户
+//耗时：1 ms/97.62%; 41 MB/91.61%
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
