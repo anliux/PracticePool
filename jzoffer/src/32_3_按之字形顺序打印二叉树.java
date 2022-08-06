@@ -3,9 +3,8 @@
 
 
 
-//层序遍历+双端队列：1ms，击败99.8%的用户
+//层序遍历+双端队列：1ms1 ms/96.76%; 41.4 MB/67.71%
 /*
-
    - 算法流程：
       - 特例处理： 当树的根节点为空，则直接返回空列表 [] ；
       - 初始化： 打印结果空列表 res ，包含根节点的双端队列 deque ；
@@ -46,15 +45,16 @@ class Solution {
         //循环：当queue为空时终止循环
         while(!queue.isEmpty()){
             //建立临时列表存储每层元素
-            LinkedList<Integer> tmp = new LinkedList<>();//注：左边类型写为List会报错
+            LinkedList<Integer> tmp = new LinkedList<>();//注：左边类型写为List会报错(?）
 
             //内循环
             for(int i = queue.size(); i > 0; i--){
                 TreeNode node = queue.poll();
                 
-                if(list.size() % 2 == 1)
+               //根据开始两次辅助判断：当size()=0时，加入根结点，应顺序add；当size=1时，加第二行，应addFirst 
+               if(list.size() % 2 == 1)//添加偶数行：加在队首
                     tmp.addFirst(node.val);
-                else
+                else//添加奇数行：加在队尾
                     tmp.addLast(node.val);
                 
                 if(node.left != null)
