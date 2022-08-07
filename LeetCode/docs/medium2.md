@@ -8,6 +8,7 @@
 * []()
 * [102. 二叉树的层次遍历](#102-二叉树的层次遍历)
 * [105. 从前序与中序遍历序列构造二叉树](#105-从前序与中序遍历序列构造二叉树)
+* [113. 路径总和 II](#113-路径总和-ii)
 * [151. 翻转字符串里的单词](#151-翻转字符串里的单词)
 * [153. 寻找旋转排序数组中的最小值](#153-寻找旋转排序数组中的最小值)
 <!-- GFM-TOC -->
@@ -155,6 +156,66 @@
  - ## 代码链接
    - [从前序与中序遍历序列构造二叉树](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0150-construct-binary-tree-from-preorder-and-inorder-traversal.java)
   
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
+# 113. 路径总和 II
+- ## 题目链接：
+  - [path-sum-ii](https://leetcode.cn/problems/path-sum-ii/)
+  
+- ## 题目标签：
+  - [树](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Tree.md)
+  - [回溯]() ...
+  
+- ## 题目描述
+  - 给你二叉树的根节点 root 和一个整数目标和 targetSum ，找出所有 从根节点到叶子节点 路径总和等于给定目标和的路径。
+  - 叶子节点 是指没有子节点的节点。
+  - 示例 1：
+    - 输入：root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
+    - 输出：[[5,4,11,2],[5,8,4,5]]
+  - 示例 2：
+    - 输入：root = [1,2,3], targetSum = 5
+    - 输出：[]
+  - 示例 3：
+    - 输入：root = [1,2], targetSum = 0
+    - 输出：[]
+  - 提示：
+    - 树中节点总数在范围 [0, 5000] 内
+    - `-1000 <= Node.val <= 1000`
+    - `-1000 <= targetSum <= 1000`
+
+- ## 解题思路
+  - 分析：
+    - 本题是典型的二叉树方案搜索问题，使用回溯法解决，其包含 先序遍历 + 路径记录 两部分。
+    - 先序遍历： 
+      - 按照 “根、左、右” 的顺序，遍历树的所有节点。
+    - 路径记录： 在先序遍历中，记录从根节点到当前节点的路径。
+      - 当路径为 ① 根节点到叶节点形成的路径 且 ② 各节点值的和等于目标值 sum 时，将此路径加入结果列表。
+  - 算法流程：
+    - pathSum(root, sum) 函数：
+      - 初始化： 结果列表 res ，路径列表 path 。
+        - 初始化为全局变量更方便 
+      - 返回值： 返回 res 即可。
+    - void recur(root, tar) 函数：
+      - 递推参数： 当前节点 root ，当前目标值 tar 。
+      - 终止条件： 若节点 root 为空，则直接返回。
+      - 递推工作：
+        - 路径更新： 将当前节点值 root.val 加入路径 path ；
+        - 目标值更新： tar = tar - root.val（即目标值 tar 从 sum 减至 0 ）；
+        - 路径记录： 当 ① root 为叶节点 且 ② 路径和等于目标值 ，则将此路径 path 加入 res 。
+          - 注意：记录路径时若直接执行 res.append(path) ，则是将 path 对象加入了 res ；后续 path 改变时， res 中的 path 对象也会随之改变。
+          - 这里新建LinkedList并传入当前path 
+        - 先序遍历： 递归左 / 右子节点。
+        - 路径恢复： 向上回溯前，需要将当前节点从路径 path 中删除，即执行 path.pop() 。
+          - 这里：递归是可以保证遍历整棵树的
+          - 当达到叶子结点时，叶节点的左右结点都是null，会返回并执行这一步 
+
+- ## 代码链接
+  - [路径总和II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0113-path-sum-ii.java)
+
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
