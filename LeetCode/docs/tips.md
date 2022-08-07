@@ -42,6 +42,9 @@
   - 循环体用三目运算符：`pa = (pa == null) ? headB : pa.next;`
 
 
+## 多态报错
+- 第一种是多态的方式创建LinkedList，只可以调用LinkedList中实现的Lisit接口的方法，而不可以调用LinkedList自身扩展的一些方法。
+- <img width="680" alt="image" src="https://user-images.githubusercontent.com/32152091/183297847-f4d27914-864f-4a18-ad1a-0ee740a722ed.png">
 
 
 ### END
