@@ -88,6 +88,7 @@ class Solution {
         //遍历：构建各新节点的 random 指向
         while(cur!=null){
             if(cur.random != null)//要用到cur.random.next，加个判断
+                                  //不加会抛空指针异常的！ 
                 cur.next.random = cur.random.next;
             cur = cur.next.next;
         }
