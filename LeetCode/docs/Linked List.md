@@ -9,13 +9,13 @@
 * []()
 * [21. 合并两个有序链表](#21-合并两个有序链表)
 * [83. 删除排序链表中的重复元素](#83-删除排序链表中的重复元素)
+* [138. 复制带随机指针的链表](#138-复制带随机指针的链表)
 * [141. 环形链表](#141-环形链表)
 * [160. 相交链表](#160-相交链表)
 * []()
 * [206. 反转链表](#206-反转链表)
 * [876. 链表的中间结点](#876-链表的中间结点)
 <!-- GFM-TOC -->
-
 
 
 # 2. 两数相加
@@ -97,6 +97,15 @@
 
 - ## 代码链接：
   - [删除排序链表中的重复元素](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0083-remove-duplicates-from-sorted-list.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
+# 138. 复制带随机指针的链表
+- ## 简述：[medium2](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/medium2.md)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
