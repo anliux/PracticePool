@@ -9,6 +9,7 @@
 * [102. 二叉树的层次遍历](#102-二叉树的层次遍历)
 * [105. 从前序与中序遍历序列构造二叉树](#105-从前序与中序遍历序列构造二叉树)
 * [113. 路径总和 II](#113-路径总和-ii)
+* [138. 复制带随机指针的链表](#138-复制带随机指针的链表)
 * [151. 翻转字符串里的单词](#151-翻转字符串里的单词)
 * [153. 寻找旋转排序数组中的最小值](#153-寻找旋转排序数组中的最小值)
 <!-- GFM-TOC -->
@@ -215,6 +216,74 @@
 
 - ## 代码链接
   - [路径总和II](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0113-path-sum-ii.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
+# 138. 复制带随机指针的链表
+- ## 题目链接：
+  - [copy-list-with-random-pointer](https://leetcode.cn/problems/copy-list-with-random-pointer/)
+
+- ## 题目标签：
+  - [链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Linked%20List.md)
+  - [哈希表](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
+  
+- ## 题目描述
+  - 给你一个长度为 n 的链表，每个节点包含一个额外增加的随机指针 random ，该指针可以指向链表中的任何节点或空节点。
+  - 构造这个链表的 深拷贝。 深拷贝应该正好由 n 个 全新 节点组成，其中每个新节点的值都设为其对应的原节点的值。新节点的 next 指针和 random 指针也都应指向复制链表中的新节点，并使原链表和复制链表中的这些指针能够表示相同的链表状态。复制链表中的指针都不应指向原链表中的节点 。
+  - 例如，如果原链表中有 X 和 Y 两个节点，其中 X.random --> Y 。那么在复制链表中对应的两个节点 x 和 y ，同样有 x.random --> y 。
+  - 返回复制链表的头节点。
+  - 用一个由 n 个节点组成的链表来表示输入/输出中的链表。每个节点用一个 [val, random_index] 表示：
+  - val：一个表示 Node.val 的整数。
+  - random_index：随机指针指向的节点索引（范围从 0 到 n-1）；如果不指向任何节点，则为  null 。
+  - 你的代码 只 接受原链表的头节点 head 作为传入参数。
+
+- ## 解题思路
+  - 硬拷贝，两种思路：哈希表；拼接拆分。
+  - 分析：
+    - 本题链表的节点新增了 random 指针，指向链表中的 任意节点 或者 null 。
+    - 这个 random 指针意味着在复制过程中，除了构建前驱节点和当前节点的引用指向 pre.next，还要构建前驱节点和其随机节点的引用指向 pre.random 。 
+    - 注：本方法多次用到类似"random.next = next.random"的结构，
+  - 哈希表：
+    - 分析：
+      - 核心：哈希表保存一份新老结点的对应关系，之后将老结点的链子复制到新结点中
+      - map.get(老结点)获取对应的新结点，map.get(老结点.next)获取老结点的next结点对应的新结点。
+      - 利用哈希表的查询特点，考虑构建 原链表节点 和 新链表对应节点 的键值对映射关系，再遍历构建新链表各节点的 next 和 random 引用指向即可。
+    - 算法流程：
+      - 步骤：判空；初始化；遍历：复制结点并存表；cur置为head；遍历：构建新结点链接；返回。
+      - 复杂度：O(N),O(N)
+      - 若头节点 head 为空节点，直接返回 null；
+      - 初始化： 哈希表 dic ， 节点 cur 指向头节点；
+      - 复制链表：
+        - 建立新节点，并向 dic 添加键值对 (原 cur 节点, 新 cur 节点） ；
+        - cur 遍历至原链表下一节点；
+      - cur置为head
+      - 构建新链表的引用指向：
+        - 构建新节点的 next 和 random 引用指向；
+        - cur 遍历至原链表下一节点；
+      - 返回值： 新链表的头节点 dic[cur] ；
+  - 拼接拆分：
+    - 分析：
+      - 考虑构建 `原节点 1 -> 新节点 1 -> 原节点 2 -> 新节点 2 -> ……` 的拼接链表，如此便可在访问原节点的 random 指向节点的同时找到新对应新节点的 random 指向节点 
+      - 先拼接，后链接新结点与其random，之后按间隔拆分原结点与新结点。
+    - 算法流程：
+      - 步骤：判空；初始化当前结点cur；遍历：复制各结点并拼接；遍历：构建新结点的random；拆分；返回结果。
+      - 复杂度：O(N),O(1)
+      - 复制各节点，构建拼接链表:
+      - 构建新链表各节点的 random 指向：
+        - 当访问原节点 cur 的随机指向节点 cur.random 时，对应新节点 cur.next 的随机指向节点为 cur.random.next 。
+      - 拆分原 / 新链表：每次间隔
+        - 设置 pre / cur 分别指向原 / 新链表头节点，遍历执行 pre.next = pre.next.next 和 cur.next = cur.next.next 将两链表拆分开。
+      - 原链表不能修改，否则报错：拼接链表只有一个null，最后在拆分后的原列表的末尾手动加一个null
+        - pre.next = null; 
+        - 报错：Next pointer of node with label 1 from the original list was modified.
+      - 返回新链表的头节点 res 即可。
+
+- ## 代码链接：
+  - [复制带随机指针的链表](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0138-copy-list-with-random-pointer.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
