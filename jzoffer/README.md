@@ -1924,7 +1924,7 @@
       - 考虑构建 `原节点 1 -> 新节点 1 -> 原节点 2 -> 新节点 2 -> ……` 的拼接链表，如此便可在访问原节点的 random 指向节点的同时找到新对应新节点的 random 指向节点 
       - 先拼接，后链接新结点与其random，之后按间隔拆分原结点与新结点。
     - 算法流程：
-      - 步骤：判空；初始化当前结点cur；遍历：复制各结点并拼接；遍历：构建新结点的random；拆分；返回结果。
+      - 步骤：判空；初始化当前结点cur；遍历：复制各结点并拼接；遍历：构建新结点的random；遍历：拆分；返回结果。
       - 复杂度：O(N),O(1)
       - 复制各节点，构建拼接链表:
       - 构建新链表各节点的 random 指向：
@@ -1935,7 +1935,13 @@
         - pre.next = null; 
         - 报错：Next pointer of node with label 1 from the original list was modified.
       - 返回新链表的头节点 res 即可。
-      
+      - 注意：
+        - cur历经数次复位，pre和res是最后指定的。 
+        - 循环结束条件注意next.next的空指针异常：
+          - 第一次插入遍历：新加了结点，双next可以保证有指向；
+          - 第二次链接遍历：需要约束cur.random以保证其next不为空.
+          - 第三次拆分遍历：需要约束cur.next.
+
 - ## 代码链接
   - [复杂链表的复制](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/35_%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6.java)
 
