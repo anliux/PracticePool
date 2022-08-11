@@ -3,10 +3,10 @@
 
 
 
-//暴力法：2804ms，击败5%的用户
+//暴力法：1732 ms/6.69%; 44.6 MB/83.95%
 /*
     - 暴力算法遍历整个数组，然后用另一重循环统计每个数字出现的次数。将出现次数比其他数字加起来出现次数还多的元素返回。
-    - 算法：初始化n/2；双层循环：外层控制比较基准，内层统计与基准相同的个数，并在内层结束后与n/2比较；最后return任一int型，比如-1.
+    - 算法：初始化n/2；双层循环：外层控制比较基准，内层统计与基准相同的个数，并随时与n/2比较；最后return任一int型，比如-1.
 */
 class Solution {
     public int majorityElement(int[] nums) {
@@ -15,19 +15,17 @@ class Solution {
 
         //双层循环
         for(int i = 0; i < nums.length; i++){
-            //充值计数器count
+            //每次重置计数器count
             int count = 0;
 
             //内层循环：与外层循环对应的基准比较，并计数
             for(int j = 0; j < nums.length; j++){
                 if(nums[j] == nums[i])
                     count += 1;
+                //随时判断count是否大于n/2
+                if(count > l)
+                    return nums[i];
             }
-
-            //每次内层循环结束后判断count是否大于n/2
-            //注：把判断放入内循环可以优化时间复杂度
-            if(count > l)
-                return nums[i];
         }
 
         //为了程序逻辑的完整性，返回任一int型，比如-1
@@ -37,7 +35,7 @@ class Solution {
 
 
 
-//哈希表法：15ms，击败39%的用户
+//哈希表法：17 ms/6.69%; 46.7 MB/8.80%
 /*
 算法：
   - 新建哈希表；
@@ -98,7 +96,7 @@ class Solution {
 
 
 
-//排序：2ms，击败86%的用户
+//排序：2ms/56.24%; 44.6 MB/87.69%
 //- 算法：对数组排序；返回排序后的n/2索引对应的元素
 class Solution {
     public int majorityElement(int[] nums) {
@@ -109,7 +107,7 @@ class Solution {
 
 
 
-//摩尔投票法：2ms，击败86%的用户
+//摩尔投票法：1 ms/99.93%; 44.9 MB/55.63%
 /*
   - 算法：
       - 定义比较基准flag=nums[0]和计数器count=1；
@@ -135,7 +133,7 @@ class Solution {
             }
         }
 
-        //结束后返回基准
+        //结束后返回基准: 可加一条判断没找到结果的情况
         if(count == 0) 
             return -1;
         
