@@ -29,6 +29,7 @@
 
 
 - ### Arrays常用方法：
+  - `Arrays.sort(数组名)`: 对指定数组进行排序
   - `Arrays.fill(arrName, arrValue)`: 将值arrValue赋值给arrName数组的每个位置。
   - `Arrays.copyOfRange(arrName, start, end)`: 返回左闭右开索引值范围内的数组片段。
 
