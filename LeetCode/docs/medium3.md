@@ -14,11 +14,11 @@
 
 # 215. 数组中的第K个最大元素
 - ## 题目链接：
-  - [kth-largest-element-in-an-array(https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
+  - [kth-largest-element-in-an-array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
 
-- ## 题目标签：
-  - [堆](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
-  - [分治算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Hash%20Table.md)
+- ## 题目标签：《未整理》
+  - [数组](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Array.md)
+  - [分治算法](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/....md)
   
 - ## 题目描述
   - 在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
@@ -31,22 +31,64 @@
   - 说明: 你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
 
 - ## 解题思路
-  - 思路：排序；快排；堆。
-  - 排序：
-    - 复杂度：时间O(nlogn)，空间O(1)
-    - 算法：调用Arrays函数排序；获取数组的`(arr.length-k)`个元素并返回。
-    - 本方法属于直接用库函数的偷懒方法。
-  - 堆：
-    - 复杂度：时间O(nlogk)，空间O(1)，k是题目所述k值。
-    - 
+  - 参考：剑指40. 最小的k个数
+    - 区别：本题只需要取到第k个数，而不是最大的k个数 
+  - 思路：
+    - 库函数排序；基于快速排序的数组划分。
+  - 分析：
+    - 排序：最基本的思路，先排序后取第k大的数字。复杂度O(nlogn).
+    - 快速排序的数组划分：二分思想 + 快排基准数两侧不一定是排好序的
+  - 库函数排序：
+    - 对原数组从小到大排序后取出第k大的元素
+    - 排序函数：`Arrays.sort(数组名);`
+    - 取第k大元素的数组：
+      - 倒着取：举例法，如果k=1，取末尾第一个，即lens-1; k=2,倒数第二个，lens-2.
+      - 因此是取lens-k对应的元素
+  - 快速排序
+    - 快排的两个核心思想：哨兵划分和递归
+    - 哨兵划分操作： 
+      - 以数组某个元素（一般选取首元素）为 基准数 ，将所有小于基准数的元素移动至其左边，大于基准数的元素移动至其右边
+    - 递归：
+      - 对 左子数组 和 右子数组 递归执行 哨兵划分，直至子数组长度为 1 时终止递归，即可完成对整个数组的排序
+    - 步骤：
+      - 递归出口：子数组长度为 1 时终止递归;
+      - 初始化哨兵指针为left和right；
+      - 循环：当哨兵指针相遇时终止
+        - 循环：从右向左找第一个小于基准数的元素；
+        - 循环：从左向右找第一个大于基准数的元素；
+        - 交换两个哨兵元素；
+      - 交换基准元素和哨兵i (哨兵i j相遇，用哪个都行)
+        - 此时：基准元素两侧分别是`左小|基准|右大`的分布
+      - 两侧分别递归排序。 
+  - 基于快速排序的数组划分
+    - 分析：
+      - 题目只要求返回最小的 k 个数，对这 k 个数的顺序并没有要求。因此，只需要将数组划分为 最小的 k 个数 和 其他数字 两部分即可，而快速排序的哨兵划分可完成此目标。
+      - 根据快速排序原理，如果某次哨兵划分后 基准数正好是第 k+1 小的数字 ，那么此时基准数左边的所有数字便是题目所求的 最小的 k 个数 。
+      - 根据此思路，考虑在每次哨兵划分后，判断基准数在数组中的索引是否等于 k ，若 true 则直接返回此时数组的前 k 个数字即可。
+    - 算法流程：
+      - getLeastNumbers() 函数：
+        - 若 k 大于数组长度，则直接返回整个数组；
+        - 执行并返回 quick_sort() 即可；
+      - quick_sort() 函数：
+        - 注意，此时 quick_sort() 的功能不是排序整个数组，而是搜索并返回最小的 k 个数。
+        - 哨兵划分：
+          - 划分完毕后，基准数为 arr[i] ，左 / 右子数组区间分别为 [l, i - 1] , [i + 1, r] ；
+        - 递归或返回：
+          - 若 k < i，代表第 k + 1 小的数字在 左子数组 中，则递归左子数组；
+          - 若 k > i，代表第 k + 1 小的数字在 右子数组 中，则递归右子数组；
+          - 若 k = i，代表此时 arr[k] 即为第 k + 1 小的数字，则直接返回数组前 k 个数字即可；
+    - 复杂度分析：
+      - O(n), O(logn) 
+      - 本方法优化时间复杂度的本质是通过判断舍去了不必要的递归（哨兵划分）。
+  - 相关知识点：
+    - `Arrays.copyOfRange(arrName, start, end)`: 返回左闭右开索引值范围内的数组片段。
 
 - ## 代码链接：
-  - []()
+  - [数组中的第K个最大元素](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0215-kth-largest-element-in-an-array.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
 <!-- GFM-TOC -->
-
 
 
 
