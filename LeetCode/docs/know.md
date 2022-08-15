@@ -17,6 +17,12 @@
 
 
 
+## Long类
+- Long 类在对象中包装了基本类型 long 的值。每个 Long 类型的对象都包含一个 long 类型的字段。
+- 此外，该类提供了多个方法，可以将 long 转换为 String，将 String 转换为 long，除此之外，还提供了其他一些处理 long 时有用的常量和方法。 
+- `Long.toString(num)`:将long类型的num变量转为String类型
+
+
 
 ## 数组
 
