@@ -47,4 +47,12 @@
 - <img width="680" alt="image" src="https://user-images.githubusercontent.com/32152091/183297847-f4d27914-864f-4a18-ad1a-0ee740a722ed.png">
 
 
+
+## 大数问题
+- 常见场景：int型拼接可能会超出int型
+- 解决大数问题的常见方法：把数字转换成字符串。
+
+
+
+
 ### END
