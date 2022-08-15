@@ -64,7 +64,9 @@
   - `String str = String.join(" ", arrStr);`：
     - 将字符串数组arrStr中的元素通过连字符连接起来，可用于特定格式输出等。
   - `String[] s1=s.trim().split(" +");`  
-    - 加上+以后，可以剪去字符串之间的多个空格，只保留非空格字符。  
+    - 加上+以后，可以剪去字符串之间的多个空格，只保留非空格字符。 
+  - `int	compareTo(String anotherString)` 
+    - 按字典顺序比较两个字符串。 
   - `substring(int beginIndex, int endIndex)`
     - 返回一个新字符串，它是此字符串的一个子字符串。该子字符串从指定的 beginIndex 处开始，直到索引 endIndex - 1 处的字符(左闭右开)
     - 该子字符串的长度为 endIndex-beginIndex
