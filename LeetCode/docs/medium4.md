@@ -7,7 +7,7 @@
 * [322. 零钱兑换](#322-零钱兑换)
 * []()
 * [343. 整数拆分](#343-整数拆分)
-* []()
+* [400. 第 N 位数字](#400-第-N-位数字)
 <!-- GFM-TOC -->
 
 
@@ -112,6 +112,66 @@
 
 - ## 代码链接：
   - [整数拆分](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0343-integer-break.java)
+
+<!-- GFM-TOC -->
+* ## [返回顶部目录](#目录)
+<!-- GFM-TOC -->
+
+
+
+# 400. 第 N 位数字
+- ## 题目链接：
+  - [nth-digit](https://leetcode.cn/problems/nth-digit/)
+
+- ## 题目标签：
+  - [数学](https://github.com/anliux/PracticePool/blob/master/LeetCode/docs/Math.md)
+  
+- ## 题目描述
+  - 给你一个整数 n ，请你在无限的整数序列 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...] 中找出并返回第 n 位上的数字。
+  - 示例 1：   
+    - 输入：n = 3
+    - 输出：3
+  - 示例 2：
+    - 输入：n = 11
+    - 输出：0
+    - 解释：第 11 位数字在序列 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... 里是 0 ，它是 10 的一部分。
+  - 提示：1 <= n <= 231 - 1
+
+- ## 解题思路
+  - 分析：
+    - 硬算的话，可将求解分为三步：
+      - 确定 n 所在 数字 的 位数 ，记为 digit ；
+        - 一位数：1-9，共9个数，占9位；
+        - 两位数：10-99，共90个数，占180位；
+        - 三位数：100-999，共900个数，占2700位。。。 
+        - n位数：`count = 9 * start * digit`
+      - 确定 n 所在的 数字 ，记为 num ；
+        - 整除可得
+      - 确定 n 是 num 中的哪一数位，并返回结果
+        - 转为字符数字，并取余，得到所求的那个字符
+  - 图解：
+    - <img width="680" alt="image" src="https://user-images.githubusercontent.com/32152091/184626900-23d77ab9-9788-471a-a283-d23df8ae8293.png">
+    - <img width="680" alt="image" src="https://user-images.githubusercontent.com/32152091/184649096-c409ec71-4949-4fdf-aaa3-c5f7a12f7876.png">
+    - <img width="680" alt="image" src="https://user-images.githubusercontent.com/32152091/184649150-7196e232-feaf-4a0c-94e8-38744980b5ef.png">
+  - 算法：
+    - 初始化：位数digit，每位起始数字start，位数统计count
+      - 注意：n在2^31范围内，求第n位对应的数字，即n个数字排列而成的数字，start和位数统计可能超出范围，需要用long
+    - 找到所在位数digit ：循环
+      - n位数：`count = 9 * start * digit`
+    - 得到n所在的数字：整除
+      - 包含n位的数字，可能超过int范围，用long定义num 
+      - `num = start + (n-1)/digit`: 从0开始计数，并按照digit将每位划分到一个数字中 (参考图示)
+    - 得到n所在的那一位：转为字符数组，并取余
+      - long -- String -- char[] -- 获取某个字符
+      - 所求数位为数字 numnum 的第 `(n−1) % digit` 位（ 数字的首个数位为第 0 位）
+    - 返回结果。
+  - 知识点 Long类：
+    - Long 类在对象中包装了基本类型 long 的值。每个 Long 类型的对象都包含一个 long 类型的字段。
+    - 此外，该类提供了多个方法，可以将 long 转换为 String，将 String 转换为 long，除此之外，还提供了其他一些处理 long 时有用的常量和方法。 
+    - `Long.toString(num)`:将long类型的num变量转为String类型
+
+- ## 代码链接：
+  - [第 N 位数字](https://github.com/anliux/PracticePool/blob/master/LeetCode/src/0400-nth-digit.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#目录)
