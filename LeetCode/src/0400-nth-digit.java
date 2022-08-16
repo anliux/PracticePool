@@ -1,26 +1,34 @@
 //400. 第N位数字
 
 
-//数学题找规律：0ms/100%; 38.5 MB/19.30%
+//数学题找规律：0ms/100%; 38.5 MB/50.29%
 class Solution {
     public int findNthDigit(int n) {
-        //初始化：位数digit，位数开始数字start，所有位数统计count -- 注意范围
+        //初始化：位数digit，每个位数的起始数字start，位数统计count -- 注意范围long
         int digit = 1;
         long start = 1;
         long count = 9;
 
-        //找到所在位数digit：遍历
-        while(n>count){
+        /**
+                    digit   start   count
+        1-9:        1       1       9
+        10-99:      10      10      2 * 10 * 9
+        100-999:    100     100     3 * 100 * 9
+        start-end:  digit   start   digit * start * 9
+        */
+
+        //找出所在位数: 遍历，更新参数
+        while(n > count){
             n -= count;
             digit += 1;
             start *= 10;
-            count = 9 * start * digit;
+            count = digit * start * 9;
         }
 
-        //得到n所在的数字：整除
+        //找出所在数字num: 从本位数的start开始计数，从0开始，按digit数切割 (整除得)
         long num = start + (n-1)/digit;
 
-        //确定所求数位在 num 的哪一数位: long -- String -- char[] -- 获取某个字符
+        //找出所在数字的哪一位：long - String - char
         return Long.toString(num).charAt((n-1)%digit) - '0';
     }
 }
