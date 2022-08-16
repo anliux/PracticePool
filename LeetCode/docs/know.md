@@ -55,10 +55,14 @@
   - StringBuilder sb 转为 String类型：`String str = sb.toString();`
   - char[] chs 转为 String类型：`String str = new String(chs);`
     - 注：`Arrays.toString(chs);` -- 返回值："[f, g, a, b, c, d, e]"
-
+  - `Long.toString(num)`:
+    - 将long类型的num变量转为String类型 	
 
 
 - ### String常用方法：
+  - `str.length()`: 
+    - 返回此字符串的长度。
+    - 注意：加小括号，与数组的属性length(不加小括号)区别。
   - `char[] chars = str.toCharArray();` 
     - 将此字符串转换为一个新的字符数组。
   - `charAt(int index)` 
@@ -71,14 +75,15 @@
     - 将字符串数组arrStr中的元素通过连字符连接起来，可用于特定格式输出等。
   - `String[] s1=s.trim().split(" +");`  
     - 加上+以后，可以剪去字符串之间的多个空格，只保留非空格字符。 
-  - `int	compareTo(String anotherString)` 
+  - `int compareTo(String anotherString)` 
     - 按字典顺序比较两个字符串。 
   - `substring(int beginIndex, int endIndex)`
-    - 返回一个新字符串，它是此字符串的一个子字符串。该子字符串从指定的 beginIndex 处开始，直到索引 endIndex - 1 处的字符(左闭右开)
+    - 返回一个新字符串，它是此字符串的一个子字符串。
+    - 该子字符串从指定的 beginIndex 处开始，直到索引 endIndex - 1 处的字符(左闭右开)
     - 该子字符串的长度为 endIndex-beginIndex
     - 左旋转字符串的库函数实现：`return s.substring(n, s.length()) + s.substring(0, n);`
       - substring取子字符串，`+`直接连接两个子字符串。
-
+    - 注意：中间的stirng，s是小写的。
 
 - ### StringBuilder / StringBuffer 常用方法：
   - 创建：`StringBuilder sb = new StringBuilder();`
