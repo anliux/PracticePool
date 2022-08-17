@@ -2,7 +2,7 @@
 //思路：三指针 -- 设置数组保存找到的丑数，以空间换时间
 
 
-
+//三指针： 3 ms/23.95%; 40.8 MB/20.99%
 public class Solution {
     public int GetUglyNumber_Solution(int index) {
         //这里默认了index是正整数
