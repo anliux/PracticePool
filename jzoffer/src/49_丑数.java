@@ -24,7 +24,7 @@ public class Solution {
             dp[i]=Math.min(next2,Math.min(next3,next5));
             
             //取到符合的最近邻丑数以后，更新对应的索引flag
-            //注：这里不能用if-else-if，只能if-if，否则报错。不知道为什么。
+            //注：这里不能用if-else-if，只能if-if，否则报错。因为有可能出现两个if都符合的情况，并不互斥。
             if(dp[i]==next2){
                 i2++;
             }
