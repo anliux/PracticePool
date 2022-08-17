@@ -17,7 +17,7 @@ public class Solution {
         //设置索引flag：均从第一个丑数1开始，例如dp[i2]，指向乘以对应因子的最近基数
         int i2=0,i3=0,i5=0;
         
-        //遍历:这里i是第几个丑数
+        //遍历:这里i是第几个丑数，从1开始遍历
         for(int i=1;i<index;i++){
             //更新nextFlag的值，并取其中的最小值
             int next2=dp[i2]*2, next3=dp[i3]*3, next5=dp[i5]*5;
