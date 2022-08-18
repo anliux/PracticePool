@@ -2,19 +2,66 @@
 //思路：暴力法；哈希表法。
 //哈希表优化时间复杂度；用数组实现哈希表。
 
+//力扣说明：”s 只包含小写字母。“
 
 
 
-//哈希表法：7ms，击败83.42%的用户
-/*
-  - 算法：
-      - 定义数组；
-      - 第一次遍历字符串：将字母转为int型，并减去65，作为key值，即索引值；或者直接获取字符并减去A(A==65)；
-      - 第二次遍历字符串：如果对应值是1则返回对应的字符；（注意：是遍历字符串，不是遍历数组）
-      - 如果循环结束后没有符合条件的，则返回空串（注意空串：单引号中间需要打空格）。
-      - 注意返回值类型：char型，因此注意用单引号，特别是空串。
-      - 注：不用判空，空串的情况包含在循环判断中了，只是开辟数组空间有点浪费。
-*/
+//哈希表法：只包含小写 30 ms/14.71%; 41.7 MB/70.31%
+class Solution {
+    public char firstUniqChar(String s) {
+        //哈希表：字符-次数对，两次遍历
+
+        //初始化：哈希表
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        //第一次遍历：存入哈希表
+        for(int i = 0; i < s.length(); i++){
+            char chs = s.charAt(i);
+            if(map.containsKey(chs))
+                map.put(chs, map.get(chs)+1);
+            else
+                map.put(chs,1);
+        }
+
+        //第二次遍历：找第一个为1的字符
+        for(int i = 0; i < s.length(); i++){
+            if(map.get(s.charAt(i)) == 1)
+                return s.charAt(i);
+        }
+
+        //找不到时，返回false标志单空格' ', 注意不是空字符是单个空格
+        return ' ';
+    }
+}
+
+
+
+//数组替代哈希表法：5 ms/88.08%; 41.7 MB/74.38%
+class Solution {
+    public char firstUniqChar(String s) {
+        //用数组替代哈希表
+
+        //初始化数组：注意对应的是26个字母的坑位，不是字符串s的长度
+        char[] chs = new char[26];
+
+        //第一次遍历：存表
+        for(int i = 0; i < s.length(); i++){
+            chs[s.charAt(i) - 'a'] += 1;//注意：和字符'a'的差值，不是和数字
+        }
+
+        //第二次遍历：查找并返回结果
+        for(int i = 0; i < s.length(); i++){
+            if(chs[s.charAt(i) - 'a'] == 1)
+                return s.charAt(i);
+        }
+
+        //返回找不到的结果
+        return ' ';
+    }
+}
+
+
+//哈希表法（字母，不是小写字母）：7ms，击败83.42%的用户
 class Solution {
     public char firstUniqChar(String s) {
         //定义数组
