@@ -2,8 +2,23 @@
 //思路：两次二分：分别差值左边界和右边界
 
 
+//暴力法：0ms/100%; 44.1 MB/88.39%
+class Solution {
+    public int search(int[] nums, int target) {
+        //暴力法：
+        int count = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == target)
+                count++;
+        }
+        return count;
+    }
+}
 
-//两次二分：0ms，击败100%的用户
+
+
+
+//两次二分：0ms/100%; 
 /*
 
   - 算法：
