@@ -2,7 +2,7 @@
 //思路：二叉搜索树的中序遍历：递增；逆序递减。
 
 
-
+//二叉搜索树-倒序中序遍历：0ms/100%; 41 MB/86.05%
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -12,34 +12,36 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-
-
-//二叉搜索树中序遍历的逆序
-/*
- - 算法：
-    - 终止条件： 当节点 root 为空（越过叶节点），则直接返回；
-    - 递归右子树： 即 dfs(root.right) ；
-    - 三项工作：
-      - 提前返回： 若 k=0 ，代表已找到目标节点，无需继续遍历，因此直接返回；
-      - 统计序号： 执行 k=k−1 （即从 k 减至 0 ）；
-      - 记录结果： 若 k=0 ，代表当前节点为第 k 大的节点，因此记录 res=root.val ；
-    - 递归左子树： 即 dfs(root.left) ；
-*/
 class Solution {
-    int result, k;
+    //声明全局变量：
+    int res, k;
 
     public int kthLargest(TreeNode root, int k) {
+        //全局k赋值
         this.k = k;
+
+        //调用函数dfs， 并返回结果
         dfs(root);
-        return result;
+        return res;
     }
 
-    private void dfs(TreeNode root){
+    public void dfs(TreeNode root){
+        //二叉搜索树的中序：递增；中序倒序：递减
+        //递归出口：越过叶节点
         if(root == null)
             return;
+
+        //右子树递归：
         dfs(root.right);
-        if(--k == 0)
-            result = root.val;
+
+        //本节点的三项工作：判k；更新k；更新res
+        if(k==0)
+            return;
+        k--;
+        if(k==0)
+            res = root.val;
+
+        //左子树递归
         dfs(root.left);
     }
 }
