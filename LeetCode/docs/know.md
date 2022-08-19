@@ -25,13 +25,16 @@
 
 
 ## 数组
+- ### 数组初始化
+  - 静态初始化格式：`数据类型[] 数组名 = new 数据类型[]{元素1,元素2,…};`
+    - 注意后面小括号不定义数组长度，以免不一致造成不确定性
+
 
 - ### ArrayList
   - 创建：`ArrayList<ArrayList<Integer>> result = new ArrayList<>();` 
     - 注：参考要求的返回值类型
   - 与数组int[]的相互转换：
     - `List<int[]> answer = new ArrayList<>(); return (int[][])answer.toArray(new int[0][]); `
-
 
 
 - ### Arrays常用方法：
