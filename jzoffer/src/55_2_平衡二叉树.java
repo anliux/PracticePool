@@ -3,7 +3,7 @@
 
 
 
-//自顶向下：2ms，击败17.5%的用户
+//自顶向下：1ms/56.05%; 41.3 MB/20.55%
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -35,7 +35,7 @@ class Solution {
 
 
 
-//自底向上：1ms，击败99.92%的用户
+//自底向上：1 ms/56.05%; 40.8 MB/82.62%
 //当发现不是平衡树时，后面的高度计算都没有意义了，因此一路返回-1，避免后续多余计算。
 class Solution {
     public boolean isBalanced(TreeNode root) {
