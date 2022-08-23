@@ -7,18 +7,23 @@
 
 
 ## 目录
-- ### [剑指offer](https://github.com/anliux/PracticePool/tree/master/jzoffer) | 更新中 |
+- ### [剑指offer](https://github.com/anliux/PracticePool/tree/master/jzoffer)
   - 内含剑指所有题目及解题思路，以及对应的代码链接
+  - 更新中
 
-- ### [LeetCode](https://github.com/anliux/PracticePool/tree/master/LeetCode) | 更新中 |
+- ### [LeetCode](https://github.com/anliux/PracticePool/tree/master/LeetCode) 
   - 分别按照难度(简中难)和涉及到的算法或数据结构点划分所有题目
-  - 未刷完
+  - 更新中，未刷完
 
 
-- ### [基础手撕](https://github.com/anliux/PracticePool/tree/master/base) | 待整理 |
+- ### [基础手撕](https://github.com/anliux/PracticePool/tree/master/base)
+  - 待整理
 
-- ### [PAT练兵场](https://github.com/anliux/PracticePool/tree/master/PAT) | 未更新 |
-- ### [校招真题](https://github.com/anliux/PracticePool/tree/master/campus) | 待整理 |
+- ### [PAT练兵场](https://github.com/anliux/PracticePool/tree/master/PAT) 
+  - 待整理
+  
+- ### [校招真题](https://github.com/anliux/PracticePool/tree/master/campus)
+  - 待整理
 
 
 
