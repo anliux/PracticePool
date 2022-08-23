@@ -2,6 +2,41 @@
 //牛客题目规定使用ArrayList。其中的思想还是一样，主要是开始时new和中途添加add
 
 
+//暴力法超时
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        //暴力法  
+        for(int i = 0; i < nums.length-1; i++){
+            for(int j = i+1; j < nums.length; j++){
+                if((nums[i] + nums[j]) == target)
+                    return new int[]{nums[i], nums[j]};
+            }
+        }
+        return new int[0];
+    }
+}
+
+
+//双指针夹逼：1 ms/99.89%; 59.8 MB/74.72%
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        //双指针
+        int i = 0, j = nums.length - 1;
+        while(i < j){
+            int sum = nums[i] + nums[j];
+            if(sum > target) 
+                j--;
+            else if(sum < target)   
+                i++;
+            else
+                return new int[]{nums[i], nums[j]};
+        }
+        return new int[0];
+    }
+}
+
+
+
 
 //返回值类型为ArrayList的情况：
 import java.util.ArrayList;
@@ -37,25 +72,5 @@ public class Solution {
         
 		//最后返回list
         return list;
-    }
-}
-
-
-
-//返回值类型为int[]的代码：2ms，击败98%的用户
-//注：结果数组：即用即new；判空和找不到写到一起。
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        int left = 0, right = nums.length - 1;
-        while(left<=right){
-            int sum = nums[left] + nums[right];
-            if(sum == target)
-                return new int[]{nums[left], nums[right]};
-            else if(sum < target)
-                left++;
-            else 
-                right--;                
-        }
-        return new int[]{};
     }
 }
