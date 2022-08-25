@@ -29,7 +29,8 @@ class Solution {
 class Solution {
     public String reverseWords(String s) {
         //双指针步骤：一次翻转，手动处理空格
-
+        s = s.trim();//先枝剪空格
+        
         //初始化：两指针和可变字符串
         int i = s.length() - 1;
         int j = i;
