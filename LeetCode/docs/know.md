@@ -34,7 +34,9 @@
   - 创建：`ArrayList<ArrayList<Integer>> result = new ArrayList<>();` 
     - 注：参考要求的返回值类型
   - 与数组int[]的相互转换：
-    - `List<int[]> answer = new ArrayList<>(); return (int[][])answer.toArray(new int[0][]); `
+    - `List<int[]> answer = new ArrayList<>();` 
+    - `return (int[][])answer.toArray(new int[0][]); `
+    - 注：ArrayList转为数组很烦，尽量直接新建数组
 
 
 - ### Arrays常用方法：
@@ -116,6 +118,8 @@
   - get(int index)：返回此列表中指定位置处的元素。
     - getFirst()：返回此列表的第一个元素。
     - getLast()：返回此列表的最后一个元素。
+  - peekFirst/peekLast:
+    - 与 getFirst/getLast 相似的功能，区别是如果为空，则返回null；而get会抛出异常NoSuchElementException 
   - poll()：获取并移除此列表的头（第一个元素）
     - pollFirst()：获取并移除此列表的第一个元素；如果此列表为空，则返回 null。
     - pollLast()：获取并移除此列表的最后一个元素；如果此列表为空，则返回 null。
