@@ -15,7 +15,7 @@
 */
 
 
-//1ms，击败85%的用户
+//排序+判重+求差：0ms/100%; 38.9 MB/64.85%
 class Solution {
     public boolean isStraight(int[] nums) {
         int joker = 0;
