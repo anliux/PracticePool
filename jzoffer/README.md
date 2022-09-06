@@ -3487,6 +3487,7 @@
       - 判重：n[i]==n[i+1]时，说明有重复数字，则false；
     - 求差：根据分析中的规律，当n[4]-n[joker]<5时，可以组成顺子
       - 注：中间间隔的部分用大小王填充，只要符合最值的差小于5即可。
+      - 注：这里减去的索引值是joker，不是0
 
 - ## 代码链接
   - [扑克牌顺子](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/61_扑克牌中的顺子.java)
