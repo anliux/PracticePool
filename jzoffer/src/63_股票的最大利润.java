@@ -29,25 +29,24 @@ class Solution {
 class Solution {
     public int maxProfit(int[] prices) {
         //判空
-        if(prices == null || prices.length < 2)
+        if(prices==null || prices.length<2)
             return 0;
-
+        
         //初始化两个最值
         int min = prices[0];
-        int maxDiff = 0;
-
+        int max = 0;
+        
         //循环：一次遍历，并得到最终的max
-        for(int i = 1; i < prices.length; i++){
+        for(int i = 1; i<prices.length;i++){
             //每次首先更新min
-            min = (prices[i-1]<min) ? prices[i-1] : min;
-
-            //加入后一个元素: 对比当前差值与最大差值
-            if(prices[i]-min > maxDiff)
-                maxDiff = prices[i] - min;
+            if(prices[i]<min)
+                min = prices[i];
+            //对比当前差值与最大差值：else即当前元素更小，为min，则不可能与min(为0了)的差值更大
+            else if(prices[i]-min > max)
+                max = prices[i]-min;
         }
-
         //返回最值max
-        return maxDiff;
+        return max;
     }
 }
 
