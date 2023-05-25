@@ -31,6 +31,31 @@ class Solution {
 */
 class Solution {
     public int maxProfit(int[] prices) {
+        //判空
+        if(prices==null || prices.length<2)
+            return 0;
+        
+        //初始化两个最值
+        int min = prices[0];
+        int max = 0;
+        
+        //循环：一次遍历，并得到最终的max
+        for(int i = 1; i<prices.length;i++){
+            //每次首先更新min
+            if(prices[i]<min)
+                min = prices[i];
+            //对比当前差值与最大差值：else即当前元素更小，为min，则不可能与min(为0了)的差值更大
+            else if(prices[i]-min > max)
+                max = prices[i]-min;
+        }
+        //返回最值max
+        return max;
+    }
+}
+
+//当没有判空时：初始化要用到Integer的最值
+class Solution {
+    public int maxProfit(int[] prices) {
         //定义最值，并初始化为合适的值。
         int min = Integer.MAX_VALUE; //初始化min必须特别小心
         int max = 0; //max作为最终返回值，最小为0，代表不存在
