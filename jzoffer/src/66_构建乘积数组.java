@@ -42,12 +42,18 @@ class Solution {
 //改进：节省一个数组的空间：1ms/100%; 53.6 MB/5.09%
 class Solution {
     public int[] constructArr(int[] a) {
+        //判空
         if(a==null || a.length==0)
             return a;
+
+        //初始化数组a的长度
         int len = a.length;
 
+        //初始化结果数组，并元素0位置赋初值
         int[] ans = new int[len];
         ans[0] = 1;
+
+        //初始化辅助变量：后期作为右侧下三角当前行的乘积进行更新
         int tmp = 1;
         
         //计算左侧的上三角
