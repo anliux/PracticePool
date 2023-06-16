@@ -1,31 +1,67 @@
 //66 - 构建乘积数组
-//不能使用除法，考虑从正面计算。
-//使用直接累积相乘的形式时间复杂度较高 O(n^2)
-//考虑从A[i]处分解为两部分，并从中寻找相应的规律。
-//    根据矩阵图，下三角按从上到下并递归；上三角按从下到上并在下三角基础上累积乘积因子。
+//维护两个三角的数组；改进：节省一个数组的空间
 
-import java.util.ArrayList;
-public class Solution {
-    public int[] multiply(int[] A) {
-        int length = A.length;
-        int[] B = new int[length];
-        if(length!=0){
-            B[0]=1;
-            //下三角的部分：从上到下。根据规律，可以用上一行再乘以自己新的因子。
-            for(int i=1; i<length; i++){
-                B[i]=B[i-1]*A[i-1];
-            }
-            
-            int temp=1;
-            //上三角的部分：从下到上
-            //注意：循环2是在循环1的基础上，所以可以直接用B[j]这样的表达
-            for(int j=length-2; j>=0; j--){
-                temp = temp*A[j+1];
-                //需要在上一个循环的基础上进行累乘，并且是自乘，因为循环1已经累积了一些因子。
-                B[j]=B[j]*temp;
-            }
-        }
+
+
+//维护两个三角的数组: 1ms/100%; 53.3 MB/19.93%
+class Solution {
+    public int[] constructArr(int[] a) {
+        //判空
+        if(a==null || a.length==0)
+            return a;
         
-        return B;
+        //构建左右两个三角的数组，并初始化
+        int len = a.length;
+        int[] left = new int[len];
+        int[] right = new int[len];
+        left[0] = right[len-1] = 1;
+
+        //左侧数组：递增，从上到下构建，规律是left(n)=left(n-1)*a(n-1);
+        for(int i = 1; i < len; i++){
+            left[i] = left[i-1] * a[i-1];
+        }
+
+        //右侧数组：递减，从下到上构建，规律是right(n)=right(n+1)*a(n+1);
+        for(int j = len-2; j>=0; j--){
+            right[j] = right[j+1] * a[j+1];
+        }
+
+        //构建结果数组：左右两个三角数组的同一行乘积
+        int[] ans = new int[len];
+        for(int i = 0; i < len; i++){
+            ans[i] = left[i] * right[i];
+        }
+
+        //返回结果数组
+        return ans;
+    }
+}
+
+
+
+//改进：节省一个数组的空间：1ms/100%; 53.6 MB/5.09%
+class Solution {
+    public int[] constructArr(int[] a) {
+        if(a==null || a.length==0)
+            return a;
+        int len = a.length;
+
+        int[] ans = new int[len];
+        ans[0] = 1;
+        int tmp = 1;
+        
+        //计算左侧的上三角
+        for(int i = 1; i < len; i++){
+            ans[i] = ans[i-1] * a[i-1];
+        }
+
+        //将右侧的下三角直接累乘到结果数组
+        for(int i = len-2; i>=0; i--){
+            tmp *= a[i+1];
+            ans[i] *= tmp;
+        }
+
+        //返回结果数组
+        return ans;
     }
 }
