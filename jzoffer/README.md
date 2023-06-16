@@ -3761,7 +3761,7 @@
       - 结果数组更新：将tmp累乘到左侧三角，即得结果数组的当前行：`ans[i] *= tmp;`
 
 - ## 代码链接
-  - [构建乘积数组]([https://github.com/anliux/PracticePool/blob/master/jzoffer/src/65_%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95.java](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/66_%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84.java))
+  - [构建乘积数组](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/66_%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
