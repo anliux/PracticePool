@@ -3761,6 +3761,8 @@
       - 思路：将右侧的下三角直接累乘到结果数组
       - tmp先更新：作为右侧三角数组的当前行乘积`tmp *= a[i+1];`
       - 结果数组更新：将tmp累乘到左侧三角，即得结果数组的当前行：`ans[i] *= tmp;`
+    - 注意：结果数组可以从构建开始，再次遍历时将tmp累乘到原数组即可
+      - 否则第二次遍历的时候会有问题 
 
 - ## 代码链接
   - [构建乘积数组](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/66_%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84.java)
