@@ -3844,6 +3844,8 @@
       - `Integer.MAX_VALUE + 1 = Integer.MIN_VALUE;`
     - 拼接时，字符先计算得到相应的数值，再进行拼接计算
       - 注意c是字符数组，c中的元素都是字符，不要忘记先转换为数值呀 `c[j]-'0'`
+    - 字符串方法charAt(i)可以直接获取串中指定索引的字符：
+      - 示例：`int pop = str.charAt(i) - '0'`
 - ## 代码链接
   - [把字符串转换成整数](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/67_%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0.java)
 
