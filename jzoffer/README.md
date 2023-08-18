@@ -3894,17 +3894,23 @@
       - 若 root.val=p.val ，则 p 和 root 指向 同一节点 。
   - 迭代:
     - 时间复杂度O(N), 空间复杂度O(1)
-    - 遍历二叉树：直到root==null时退出循环
+    - 遍历二叉树：直到 root==null 时退出循环
       - if判断：当 p, q的值比 root 值都大时，root 遍历至右子节点
       - else if: 当p, q的值比 root 都小时，root 遍历至左子节点
       - else：p，q分别在root两侧，符合，break退出循环
     - 返回结果root
     - PS: 迭代优化：循环中可减少判断条件
       - 取p,q节点值的最值max和min，循环中用最值进行判断 
-  - 递归
+  - 递归：
+    - 时间复杂度O(N), 空间复杂度O(1)
+    - 判断是否递归进入右子树：
+      - p, q的值都大于root节点的值时，return调用函数进入root.right
+    - 否则判断是否进入左子树
+      - p, q的值都小于root节点的值时，return调用函数进入root.left
+    - 否则返回root节点 
 
 - ## 代码链接
-  - []()
+  - [二叉搜索树的最近公共祖先](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/68.1_%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
