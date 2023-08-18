@@ -3961,7 +3961,7 @@
         - 返回null 
   
 - ## 代码链接
-  - [二叉树的最近公共祖先]()
+  - [二叉树的最近公共祖先](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/68.2_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.java)
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
