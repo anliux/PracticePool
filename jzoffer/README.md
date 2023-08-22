@@ -1339,7 +1339,7 @@
         - 以上 2. 3. 实质上是在对树 AA 做 先序遍历 。
 
 - ## 代码链接
-  - [树的子结构](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/26-%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.java)
+  - [树的子结构](https://github.com/anliux/PracticePool/blob/master/jzoffer/src/26_%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.java))
 
 <!-- GFM-TOC -->
 * ## [返回顶部目录](#剑指offer题解目录)
