@@ -62,3 +62,62 @@ class Solution {
         return res;
     }
 }
+
+
+
+//用每组从右往左指针遍历的方法不明原因报错：[4,5,6,7,8,9]，输出：-3？
+/*
+class Solution {
+    //声明成员变量
+    int[] tmp, nums;
+
+    public int reversePairs(int[] nums) {
+        this.nums = nums;
+        tmp = new int[nums.length];
+        return mergeSort(0, nums.length-1);
+    }
+
+    //定义归并排序函数
+    private int mergeSort(int left, int right){
+        //递归结束条件：递归至单个元素，逆序对为0
+        if(left>=right)
+            return 0;
+
+        //分解：定义中值mid和逆序对计数res
+        int mid = (left + right)/2;
+        int res = mergeSort(left, mid) + mergeSort(mid+1, right);
+
+        //合并：
+        //定义两指针：用于分别指向两个数组
+        int i = mid, j = right;
+
+        //将两组数组已有顺序存入辅助数组tmp：遍历[left, right]
+        for(int k = left; k <= right; k++){
+            tmp[k] = nums[k];
+        }
+
+        //遍历：针对两个指针对应的元素大小，分3类情况处理
+        for(int k = right; k >= left; k--){
+            //前一组已遍历到头：后一组从大到小放入nums
+            //前<后：较大的前一组放入nums，与 i==left-1 的处理一样
+            if(i==left-1 || tmp[i] <= tmp[j]){
+                nums[k] = tmp[j--];
+            }
+
+            //后一组已遍历到头：前一组从大到小放入nums
+            else if(j==mid){
+                nums[k] = tmp[i--];
+            }
+
+            //前>后：逆序，[mid+1,j]的元素均小于i对应元素；将较大的i放入nums
+            else if(tmp[i]>tmp[j]){
+                res = res+j-mid; //j-(mid+1)+1
+                nums[k] = tmp[i--];
+            }
+        }
+
+        //返回结果res
+        return res;
+    }
+}
+*/
