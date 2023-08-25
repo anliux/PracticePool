@@ -48,7 +48,7 @@ class Solution {
 
             //j==right+1,即后一组已遍历到头：将前一组元素依次放入nums数组
             //当前<后，即非逆序时，将前一组元素放入nums，并i++，与j==right+1处理相同，故合并
-            else if(j==right+1 || tmp[i] <= tmp[j])
+            else if(j==right+1 || tmp[i] <= tmp[j])//=的情况：取小值时，优先将小数组的值放入nums；
                 nums[k] = tmp[i++];
 
             //前>后：逆序对，将较小的后一组元素放入nums，并j++
